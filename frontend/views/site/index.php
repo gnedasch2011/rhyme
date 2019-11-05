@@ -2,52 +2,71 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+use frontend\modules\tests\models\Test;
+
+$this->title = 'Массажные кресла';
 ?>
-<div class="site-index">
+<?php
+$script = <<< JS
+  
+JS;
+//маркер конца строки, обязательно сразу, без пробелов и табуляции
+$this->registerJs($script, yii\web\View::POS_READY);
+?>
+<?php
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
+$form = ActiveForm::begin([
+    'id' => 'login-form',
+    'options' => ['class' => 'form-horizontal'],
+]) ?>
+    <div class="container">
         <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <?php
+                $model = new Test();
+                echo $form->field($model, 'checkboxList')
+                    ->radioList([
+                        'a' => 'Элемент А',
+                        'б' => 'Элемент Б',
+                        'в' => 'Элемент В',
+                    ]);
+                ?>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+                <div class="form-group">
+                    <div class="col-lg-offset-1 col-lg-11">
+                        <?= Html::submitButton('Вход', ['class' => 'btn btn-primary']) ?>
+                    </div>
+                </div>
+                <?php ActiveForm::end() ?>
             </div>
         </div>
-
     </div>
-</div>
+
+    <p>Массажжные кресла</p>
+
+<?php
+$script = <<< JS
+    $('#login-form').on('beforeSubmit', function(){
+        console.log('ff');
+       var data = $(this).serialize();
+        $.ajax({
+            url: '/tests/ajax/next-question',
+            type: 'POST',
+            data: data,
+            success: function(res){
+                console.log(res);
+            },
+            error: function(){
+                alert('Error!');
+            }
+        });
+        return false;
+    });
+
+JS;
+//маркер конца строки, обязательно сразу, без пробелов и табуляции
+$this->registerJs($script, yii\web\View::POS_READY);
+?>

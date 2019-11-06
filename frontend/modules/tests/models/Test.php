@@ -12,6 +12,11 @@ use yii\base\Model;
 
 class Test extends Model
 {
+    public $typeQustion = [
+        '1' => 'radio',
+        '2' => 'checkbox',
+        '3' => 'string'
+    ];
 
     public $checkboxList;
 

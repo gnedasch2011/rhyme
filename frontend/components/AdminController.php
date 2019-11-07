@@ -13,21 +13,21 @@ class AdminController extends Controller
 //    public $layout = '//admin/column2';
 
 
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'allow' => true,
-                        'actions' => ['login', 'signup'],
-                        'roles' => ['?'],
-                    ]
-                ],
-            ],
-        ];
-    }
+//    public function behaviors()
+//    {
+//        return [
+//            'access' => [
+//                'class' => AccessControl::className(),
+//                'rules' => [
+//                    [
+//                        'allow' => true,
+//                        'actions' => ['login', 'signup'],
+//                        'roles' => ['?'],
+//                    ]
+//                ],
+//            ],
+//        ];
+//    }
 
 
     public function init()

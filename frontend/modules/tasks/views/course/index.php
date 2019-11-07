@@ -17,12 +17,9 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Create Course', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
             'id',
             'name',
             'cost',

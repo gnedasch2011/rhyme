@@ -21,6 +21,9 @@ return [
             'class' => 'frontend\modules\tasks\Module',
             // ... другие настройки модуля ...
         ],
+        'admin' => [
+            'class' => 'frontend\modules\admin\Module',
+        ],
     ],
     'components' => [
         'request' => [

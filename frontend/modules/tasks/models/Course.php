@@ -27,10 +27,8 @@ class Course extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id'], 'required'],
             [['id'], 'integer'],
             [['name', 'cost'], 'string', 'max' => 45],
-            [['id'], 'unique'],
         ];
     }
 

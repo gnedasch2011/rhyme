@@ -2,7 +2,6 @@
 
 /* @var $this yii\web\View */
 
-use frontend\modules\tests\models\Test;
 
 $this->title = 'Массажные кресла';
 ?>
@@ -26,13 +25,13 @@ $form = ActiveForm::begin([
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <?php
-                $model = new Test();
-                echo $form->field($model, 'checkboxList')
-                    ->radioList([
-                        'a' => 'Элемент А',
-                        'б' => 'Элемент Б',
-                        'в' => 'Элемент В',
-                    ]);
+//                $model = new Test();
+//                echo $form->field($model, 'checkboxList')
+//                    ->radioList([
+//                        'a' => 'Элемент А',
+//                        'б' => 'Элемент Б',
+//                        'в' => 'Элемент В',
+//                    ]);
                 ?>
 
                 <div class="form-group">

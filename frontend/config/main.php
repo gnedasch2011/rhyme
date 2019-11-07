@@ -16,6 +16,12 @@ return [
             'class' => 'frontend\modules\tests\Module',
         ],
     ],
+    'modules'=>[
+        'tasks' => [
+            'class' => 'frontend\modules\tasks\Module',
+            // ... другие настройки модуля ...
+        ],
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',

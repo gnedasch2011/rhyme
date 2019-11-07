@@ -1,11 +1,11 @@
 <?php
 
-namespace app\modules\tests\controllers;
+namespace frontend\modules\type_exercises\controllers;
 
 use yii\web\Controller;
 
 /**
- * Default controller for the `tests` module
+ * Default controller for the `type_exercises` module
  */
 class DefaultController extends Controller
 {

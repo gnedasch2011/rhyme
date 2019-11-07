@@ -1,16 +1,16 @@
 <?php
 
-namespace frontend\modules\tests;
+namespace frontend\modules\type_exercises;
 
 /**
- * tests module definition class
+ * type_exercises module definition class
  */
 class Module extends \yii\base\Module
 {
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'app\modules\tests\controllers';
+    public $controllerNamespace = 'frontend\modules\type_exercises\controllers';
 
     /**
      * {@inheritdoc}

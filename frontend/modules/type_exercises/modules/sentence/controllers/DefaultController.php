@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\modules\course\controllers;
+namespace frontend\modules\type_exercises\modules\sentence\controllers;
 
 use yii\web\Controller;
 
 /**
- * Default controller for the `course` module
+ * Default controller for the `sentence` module
  */
 class DefaultController extends Controller
 {

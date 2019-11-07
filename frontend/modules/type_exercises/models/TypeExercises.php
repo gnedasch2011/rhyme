@@ -1,23 +1,23 @@
 <?php
 
-namespace frontend\modules\tests\models;
+namespace frontend\modules\type_exercises\models;
 
 use Yii;
 
 /**
- * This is the model class for table "type_test".
+ * This is the model class for table "type_exercises".
  *
  * @property int $id
  * @property string $name
  */
-class TypeTest extends \yii\db\ActiveRecord
+class TypeExercises extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'type_test';
+        return 'type_exercises';
     }
 
     /**

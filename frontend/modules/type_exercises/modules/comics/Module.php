@@ -1,16 +1,16 @@
 <?php
 
-namespace frontend\modules\course;
+namespace frontend\modules\type_exercises\modules\comics;
 
 /**
- * course module definition class
+ * comics module definition class
  */
 class Module extends \yii\base\Module
 {
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\course\controllers';
+    public $controllerNamespace = 'frontend\modules\type_exercises\modules\comics\controllers';
 
     /**
      * {@inheritdoc}

@@ -27,10 +27,9 @@ class Tasks extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'name', 'course_id'], 'required'],
+            [['name', 'course_id'], 'required'],
             [['id', 'course_id'], 'integer'],
             [['name'], 'string', 'max' => 45],
-            [['id'], 'unique'],
         ];
     }
 

@@ -10,7 +10,7 @@ use yii\web\Controller;
 class AdminController extends Controller
 {
 
-//    public $layout = '//admin/column2';
+    public $layout = '//admin';
 
 
 //    public function behaviors()

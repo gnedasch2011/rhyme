@@ -14,21 +14,7 @@ use frontend\components\AdminController;
  */
 class TasksController extends AdminController
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
-
+  
     /**
      * Lists all Tasks models.
      * @return mixed

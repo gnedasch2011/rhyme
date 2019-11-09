@@ -11,22 +11,26 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'modules' => [
-        'tests' => [
-            'class' => 'frontend\modules\tests\Module',
-        ],
-    ],
+
     'modules'=>[
         'tasks' => [
             'class' => 'frontend\modules\tasks\Module',
             // ... другие настройки модуля ...
         ],
+        'type_exercises' => [
+            'class' => 'frontend\modules\type_exercises\Module',
+            // ... другие настройки модуля ...
+        ],
         'admin' => [
             'class' => 'frontend\modules\admin\Module',
+        ],
+        'tests' => [
+            'class' => 'frontend\modules\tests\Module',
         ],
     ],
     'components' => [
         'request' => [
+            'baseUrl' => '',
             'csrfParam' => '_csrf-frontend',
         ],
         'user' => [

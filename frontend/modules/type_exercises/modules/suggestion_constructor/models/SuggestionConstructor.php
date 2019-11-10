@@ -22,6 +22,29 @@ class SuggestionConstructor extends \yii\db\ActiveRecord
         return 'suggestion_constructor';
     }
 
+    public function events()
+    {
+        return [
+            ActiveRecord::EVENT_AFTER_INSERT => 'afterSave',
+            ActiveRecord::EVENT_AFTER_UPDATE => 'afterSave',
+            ActiveRecord::EVENT_AFTER_DELETE => 'afterDelete',
+        ];
+    }
+    
+    public function afterSave($insert, $changedAttributes)
+    {
+        if(isset($this->parts)){
+            foreach ($this->parts as $parts){
+                $parts->suggestion_constructor_id = $this->id;
+                if(!$parts->save()){
+                  echo '<pre>';print_r($parts->errors);die();
+                }
+                
+            }
+        }
+ 
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -29,7 +52,7 @@ class SuggestionConstructor extends \yii\db\ActiveRecord
     {
         return [
             [['id', 'type_exercises_id'], 'integer'],
-            [['name', 'full_text'], 'string', 'max' => 45],
+            [['name', 'full_text'], 'string', 'max' => 500],
             [['id'], 'unique'],
         ];
     }
@@ -45,6 +68,12 @@ class SuggestionConstructor extends \yii\db\ActiveRecord
             'full_text' => 'Full Text',
             'type_exercises_id' => 'Type Exercises ID',
         ];
+    }
+
+
+    public function setParts($parts)
+    {
+        return $this->parts = $parts;
     }
 
 

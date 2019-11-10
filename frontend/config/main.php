@@ -27,6 +27,9 @@ return [
         'tests' => [
             'class' => 'frontend\modules\tests\Module',
         ],
+        'admin' => [
+            'class' => 'frontend\modules\admin\Module',
+        ],
     ],
     'components' => [
         'request' => [

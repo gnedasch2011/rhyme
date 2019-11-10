@@ -3,8 +3,11 @@
 namespace frontend\modules\type_exercises\modules\suggestion_constructor\controllers;
 
 use frontend\components\AdminController;
+use frontend\components\ModelLoader;
+use frontend\modules\type_exercises\modules\suggestion_constructor\models\PartsSuggestion;
 use Yii;
 use frontend\modules\type_exercises\modules\suggestion_constructor\models\SuggestionConstructor;
+use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -65,8 +68,16 @@ class SuggestionConstructorController extends AdminController
     public function actionCreate()
     {
         $model = new SuggestionConstructor();
-        $model->
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $model->populateRelation('parts', new PartsSuggestion());
+
+        $model->parts = ModelLoader::createLoadMultipleModel($model->parts, Yii::$app->request->post());
+
+        if ($model->load(Yii::$app->request->post())) {
+            ModelLoader::loadMultiple($model->parts, Yii::$app->request->post());
+
+            $model->save();
+
+            return $this->redirect(['create']);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

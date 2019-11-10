@@ -28,10 +28,9 @@ class PartsSuggestion extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'suggestion_constructor_id'], 'required'],
-            [['id', 'suggestion_constructor_id'], 'integer'],
-            [['text', 'position'], 'string', 'max' => 45],
-            [['id'], 'unique'],
+            [['suggestion_constructor_id'], 'required'],
+            [['id', 'suggestion_constructor_id','position'], 'integer'],
+            [['text', ], 'string'],
         ];
     }
 

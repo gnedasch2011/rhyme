@@ -15,10 +15,26 @@ class Sentence extends \yii\db\ActiveRecord
 {
     const TYPE_EXERCISES_ID = 3;
 
-    public function getTypeExercisesId()
+    public function afterSave($insert, $changedAttributes)
     {
+        if(isset($this->expressions)){
+
+            foreach ($this->expressions as $expressions){
+
+                $expressions->sentence_id = $this->id;
+                if(!$expressions->save()){
+                    echo '<pre>';print_r($expressions->errors);die();
+                }
+
+            }
+        }
 
     }
+    public function setExpressions($expressions)
+    {
+        return $this->expressions = $expressions;
+    }
+
 
     /**
      * {@inheritdoc}
@@ -34,9 +50,9 @@ class Sentence extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['type_exercises_id'], 'required'],
+            [['type_exercises_id','desc'], 'required'],
             [['type_exercises_id'], 'integer'],
-            [['desc'], 'string', 'max' => 450],
+            [['desc'], 'string', 'max' => 4500],
         ];
     }
 

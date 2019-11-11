@@ -2,6 +2,8 @@
 
 namespace frontend\modules\type_exercises\modules\sentence\controllers;
 
+use frontend\components\ModelLoader;
+use frontend\modules\type_exercises\modules\sentence\models\Expressions;
 use Yii;
 use frontend\modules\type_exercises\modules\sentence\models\Sentence;
 use frontend\modules\type_exercises\modules\sentence\models\SentenceSearch;
@@ -66,7 +68,16 @@ class DefaultController extends Controller
     {
         $model = new Sentence();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $model->populateRelation('expressions', new Expressions());
+        $model->expressions = ModelLoader::createLoadMultipleModel($model->expressions, Yii::$app->request->post());
+
+
+        if ($model->load(Yii::$app->request->post())) {
+            ModelLoader::loadMultiple($model->expressions, Yii::$app->request->post());
+
+
+           $model->save();
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

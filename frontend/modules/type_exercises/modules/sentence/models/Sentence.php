@@ -13,6 +13,13 @@ use Yii;
  */
 class Sentence extends \yii\db\ActiveRecord
 {
+    const TYPE_EXERCISES_ID = 3;
+
+    public function getTypeExercisesId()
+    {
+
+    }
+
     /**
      * {@inheritdoc}
      */

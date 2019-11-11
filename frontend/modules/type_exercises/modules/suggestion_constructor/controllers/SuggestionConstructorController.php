@@ -77,6 +77,7 @@ class SuggestionConstructorController extends AdminController
 
             $model->save();
 
+            return $this->redirect(['create']);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

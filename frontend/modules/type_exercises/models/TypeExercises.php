@@ -13,6 +13,8 @@ use yii\helpers\ArrayHelper;
  */
 class TypeExercises extends \yii\db\ActiveRecord
 {
+
+
     /**
      * {@inheritdoc}
      */

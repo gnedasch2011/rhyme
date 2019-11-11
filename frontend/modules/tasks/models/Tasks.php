@@ -44,4 +44,12 @@ class Tasks extends \yii\db\ActiveRecord
             'course_id' => 'Course ID',
         ];
     }
+    
+    
+        public function getExercises()
+        {
+            return $this->hasMany(Exercises::className(), ['id' => 'tasks_id']);
+        }
+    
 }
+

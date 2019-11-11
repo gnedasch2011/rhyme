@@ -24,6 +24,15 @@ class Module extends \yii\base\Module
                 // здесь имеет смысл использовать более лаконичное пространство имен
                 'class' => 'frontend\modules\type_exercises\modules\suggestion_constructor\Module',
             ],
+            'sentence' => [
+                // здесь имеет смысл использовать более лаконичное пространство имен
+                'class' => 'frontend\modules\type_exercises\modules\sentence\Module',
+            ],
+
+            'tests' => [
+                // здесь имеет смысл использовать более лаконичное пространство имен
+                'class' => 'frontend\modules\type_exercises\modules\tests\Module',
+            ],
         ];
         // custom initialization code goes here
     }

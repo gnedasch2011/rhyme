@@ -1,28 +1,32 @@
-$(document).on('click',".click_word" , function(e){
-$(e.target).addClass('inResult')
-$('.result').append('<div class="click_word_template inResult">'+ $(e.target).text() + '</div>');
-$(e.target).remove()
-})
+<script>
+    $(document).on('click', ".click_word", function (e) {
+        $(e.target).addClass('inResult')
+        $('.result').append('
+            < div
+    class
+        = "click_word_template inResult" > '+ $(e.target).text() + ' < /div>');
+        $(e.target).remove()
+    })
 
 
-
-$(document).on('click',".inResult" , function(e){
-$('.info').append('<div class="click_word_template click_word">'+ $(e.target).text() + '</div>');
-$(e.target).remove()
-})
-
-
-$(document).on('click', ".getString", function(e){
-var str = '';
-$(".result .click_word_template").each(function(i, val){
-var text = $.trim($(val).text());
-str = str + ' '+ text
-})
-checkStr(str)
-})
+    $(document).on('click', ".inResult", function (e) {
+        $('.info').append('
+            < div
+    class
+        = "click_word_template click_word" > '+ $(e.target).text() + ' < /div>');
+        $(e.target).remove()
+    })
 
 
-
+    $(document).on('click', ".getString", function (e) {
+        var str = '';
+        $(".result .click_word_template").each(function (i, val) {
+            var text = $.trim($(val).text());
+            str = str + ' ' + text
+        })
+        checkStr(str)
+    })
+</script>
 
 <div class="info">
     <div class="click_word click_word_template">
@@ -44,7 +48,7 @@ checkStr(str)
 
 
 <a class="getString"
-   data-success-str = "1 word 5 word 4 word 2 word"
+   data-success-str="1 word 5 word 4 word 2 word"
    href="#">
     Получить строку
 </a>
@@ -53,21 +57,23 @@ checkStr(str)
 
 </div>
 
-body {
-padding: 20px;
-font-family: Helvetica;
-}
+<style>
+    body {
+        padding: 20px;
+        font-family: Helvetica;
+    }
 
-.click_word_template{
-padding: 5px;
-display: inline-block;
-cursor: pointer;
-}
+    .click_word_template {
+        padding: 5px;
+        display: inline-block;
+        cursor: pointer;
+    }
 
-.wrong{
-color: red;
-}
+    .wrong {
+        color: red;
+    }
 
-.success{
-color: green;
-}
+    .success {
+        color: green;
+    }
+</style>

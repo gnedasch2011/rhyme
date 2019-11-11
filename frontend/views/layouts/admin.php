@@ -43,7 +43,7 @@ AdminAsset::register($this);
         ['label' => 'Курсы', 'url' => ['/tasks/course']],
         ['label' => 'Дни', 'url' => ['/tasks/tasks']], //тут будет название дня, теория видео и сочетание упражнений
         ['label' => 'Типы упражнений', 'url' => ['/type_exercises/default']],//тесты, комиксы, собрать вопросы
-        ['label' => 'Конструктор предложений', 'url' => ['/']],//вопросы, тип теста, правильный вариант ответа
+        ['label' => 'Конструктор предложений', 'url' => ['/type_exercises/suggestion_constructor/suggestion-constructor/']],//вопросы, тип теста, правильный вариант ответа
 
 
         ['label' => 'Тесты', 'url' => ['/']],//вопросы, тип теста, правильный вариант ответа
@@ -52,21 +52,9 @@ AdminAsset::register($this);
         ['label' => 'Вставить пропущенные слова', 'url' => ['/']], //файлы комиксов и привязка к
         ['label' => 'Проверка упражнений', 'url' => ['']],
 
-
     ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Курсы', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Дни', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
+
+
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,

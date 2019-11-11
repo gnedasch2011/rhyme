@@ -32,7 +32,7 @@ class Users extends \yii\db\ActiveRecord
         return [
             [['id', 'course_id'], 'required'],
             [['id', 'course_id'], 'integer'],
-            [['userscol', 'name', 'email', 'date_create'], 'string', 'max' => 45],
+            [['userscol', 'name', 'email', 'date_create'], 'string', 'max' => 450],
             [['id', 'course_id'], 'unique', 'targetAttribute' => ['id', 'course_id']],
         ];
     }

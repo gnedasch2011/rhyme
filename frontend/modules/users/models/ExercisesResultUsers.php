@@ -33,8 +33,8 @@ class ExercisesResultUsers extends \yii\db\ActiveRecord
         return [
             [['id', 'status_id'], 'required'],
             [['id', 'status_id'], 'integer'],
-            [['exercises_id', 'user_id', 'type_exercises_id', 'status'], 'string', 'max' => 45],
-            [['result'], 'string', 'max' => 450],
+            [['exercises_id', 'user_id', 'type_exercises_id', 'status'], 'string', 'max' => 450],
+            [['result'], 'string', 'max' => 4500],
             [['id'], 'unique'],
         ];
     }

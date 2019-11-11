@@ -32,7 +32,7 @@ class Orders extends \yii\db\ActiveRecord
         return [
             [['id', 'users_id', 'users_course_id'], 'required'],
             [['id', 'users_id', 'users_course_id'], 'integer'],
-            [['course_id', 'paid_success', 'date_paid'], 'string', 'max' => 45],
+            [['course_id', 'paid_success', 'date_paid'], 'string', 'max' => 450],
             [['id', 'users_id', 'users_course_id'], 'unique', 'targetAttribute' => ['id', 'users_id', 'users_course_id']],
         ];
     }

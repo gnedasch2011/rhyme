@@ -30,7 +30,7 @@ class Points extends \yii\db\ActiveRecord
         return [
             [['id', 'users_id', 'exercises_id'], 'required'],
             [['id', 'users_id', 'exercises_id'], 'integer'],
-            [['points_count'], 'string', 'max' => 45],
+            [['points_count'], 'string', 'max' => 450],
             [['id', 'users_id', 'exercises_id'], 'unique', 'targetAttribute' => ['id', 'users_id', 'exercises_id']],
         ];
     }

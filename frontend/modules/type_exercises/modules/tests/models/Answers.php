@@ -30,7 +30,7 @@ class Answers extends \yii\db\ActiveRecord
         return [
             [['id', 'qustions_id'], 'required'],
             [['id', 'qustions_id'], 'integer'],
-            [['text', 'right_answer'], 'string', 'max' => 45],
+            [['text', 'right_answer'], 'string', 'max' => 450],
             [['id', 'qustions_id'], 'unique', 'targetAttribute' => ['id', 'qustions_id']],
         ];
     }

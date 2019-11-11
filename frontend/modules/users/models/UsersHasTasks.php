@@ -31,7 +31,7 @@ class UsersHasTasks extends \yii\db\ActiveRecord
         return [
             [['id', 'course_id', 'tasks_id'], 'required'],
             [['id', 'course_id', 'tasks_id', 'is_open'], 'integer'],
-            [['user_id'], 'string', 'max' => 45],
+            [['user_id'], 'string', 'max' => 450],
             [['id', 'course_id', 'tasks_id'], 'unique', 'targetAttribute' => ['id', 'course_id', 'tasks_id']],
         ];
     }

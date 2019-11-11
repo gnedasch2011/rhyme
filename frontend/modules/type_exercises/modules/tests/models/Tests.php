@@ -30,7 +30,7 @@ class Tests extends \yii\db\ActiveRecord
         return [
             [['type_exercises_id', 'type_test_id1'], 'required'],
             [['type_exercises_id', 'type_test_id1'], 'integer'],
-            [['name'], 'string', 'max' => 45],
+            [['name'], 'string', 'max' => 450],
         ];
     }
 

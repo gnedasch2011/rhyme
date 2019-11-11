@@ -29,8 +29,8 @@ class Qustions extends \yii\db\ActiveRecord
     {
         return [
             [['id', 'tests_id'], 'required'],
-            [['id', 'tests_id'], 'integer'],
-            [['text', 'position'], 'string', 'max' => 45],
+            [['id', 'tests_id', 'position'], 'integer'],
+            [['text'], 'string', 'max' => 450],
             [['id'], 'unique'],
         ];
     }

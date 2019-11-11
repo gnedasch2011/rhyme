@@ -10,7 +10,7 @@ use Yii;
  * @property int $id
  * @property string $src
  * @property string $desc
- * @property int $type_exercises_id1
+ * @property int $type_exercises_id
  */
 class Comics extends \yii\db\ActiveRecord
 {
@@ -28,10 +28,10 @@ class Comics extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'type_exercises_id1'], 'required'],
-            [['id', 'type_exercises_id1'], 'integer'],
-            [['src'], 'string', 'max' => 45],
-            [['desc'], 'string', 'max' => 450],
+            [['id', 'type_exercises_id'], 'required'],
+            [['id', 'type_exercises_id'], 'integer'],
+            [['src'], 'string', 'max' => 450],
+            [['desc'], 'string', 'max' => 4500],
             [['id'], 'unique'],
         ];
     }
@@ -45,7 +45,7 @@ class Comics extends \yii\db\ActiveRecord
             'id' => 'ID',
             'src' => 'Src',
             'desc' => 'Desc',
-            'type_exercises_id1' => 'Type Exercises Id1',
+            'type_exercises_id' => 'Type Exercises Id1',
         ];
     }
 }

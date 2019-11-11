@@ -28,7 +28,7 @@ class TypeExercises extends \yii\db\ActiveRecord
     {
         return [
             [['id'], 'integer'],
-            [['name'], 'string', 'max' => 45],
+            [['name'], 'string', 'max' => 450],
         ];
     }
 

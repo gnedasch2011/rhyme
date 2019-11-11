@@ -28,7 +28,7 @@ class Course extends \yii\db\ActiveRecord
     {
         return [
             [['id'], 'integer'],
-            [['name', 'cost'], 'string', 'max' => 45],
+            [['name', 'cost'], 'string', 'max' => 450],
         ];
     }
 

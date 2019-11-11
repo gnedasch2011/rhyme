@@ -30,7 +30,7 @@ class Video extends \yii\db\ActiveRecord
         return [
             [['idvideo', 'tasks_id'], 'required'],
             [['idvideo', 'tasks_id'], 'integer'],
-            [['name', 'url'], 'string', 'max' => 45],
+            [['name', 'url'], 'string', 'max' => 450],
             [['idvideo', 'tasks_id'], 'unique', 'targetAttribute' => ['idvideo', 'tasks_id']],
         ];
     }

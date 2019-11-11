@@ -29,7 +29,7 @@ class Tasks extends \yii\db\ActiveRecord
         return [
             [['name', 'course_id'], 'required'],
             [['id', 'course_id'], 'integer'],
-            [['name'], 'string', 'max' => 45],
+            [['name'], 'string', 'max' => 450],
         ];
     }
 

@@ -31,8 +31,8 @@ class Exercises extends \yii\db\ActiveRecord
     {
         return [
             [['type_exercises_id', 'tasks_id'], 'required'],
-            [['id_exercises_diff', 'tasks_id'], 'integer'],
-            [['type_exercises_id', 'name', 'position'], 'string', 'max' => 45],
+            [['id_exercises_diff', 'tasks_id','position'], 'integer'],
+            [['type_exercises_id', 'name'], 'string', 'max' => 450],
         ];
     }
 

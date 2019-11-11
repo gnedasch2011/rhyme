@@ -29,7 +29,7 @@ class Sentence extends \yii\db\ActiveRecord
         return [
             [['type_exercises_id'], 'required'],
             [['type_exercises_id'], 'integer'],
-            [['desc'], 'string', 'max' => 45],
+            [['desc'], 'string', 'max' => 450],
         ];
     }
 

@@ -6,7 +6,6 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\type_exercises\models\TypeExercises */
 
-$this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Type Exercises', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);

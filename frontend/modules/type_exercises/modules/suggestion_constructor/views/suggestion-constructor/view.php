@@ -6,7 +6,6 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\type_exercises\modules\suggestion_constructor\models\SuggestionConstructor */
 
-$this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Suggestion Constructors', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -30,9 +29,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'name',
             'full_text',
             'type_exercises_id',
+
         ],
     ]) ?>
 

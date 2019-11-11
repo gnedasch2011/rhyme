@@ -29,8 +29,8 @@ class PartsSuggestion extends \yii\db\ActiveRecord
     {
         return [
             [['suggestion_constructor_id'], 'required'],
-            [['id', 'suggestion_constructor_id','position'], 'integer'],
-            [['text', ], 'string'],
+            [['id', 'suggestion_constructor_id', 'position'], 'integer'],
+            [['text',], 'string'],
         ];
     }
 
@@ -46,11 +46,11 @@ class PartsSuggestion extends \yii\db\ActiveRecord
             'position' => 'Position',
         ];
     }
-    
-    
-        public function getSuggestionConstructor()
-        {
-            return $this->hasOne(SuggestionConstructor::className(), ['id' => 'suggestion_constructor_id']);
-        }
-    
+
+
+    public function getSuggestionConstructor()
+    {
+        return $this->hasOne(SuggestionConstructor::className(), ['id' => 'suggestion_constructor_id']);
+    }
+
 }

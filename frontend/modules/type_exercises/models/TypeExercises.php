@@ -3,6 +3,7 @@
 namespace frontend\modules\type_exercises\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "type_exercises".
@@ -28,7 +29,6 @@ class TypeExercises extends \yii\db\ActiveRecord
         return [
             [['id'], 'integer'],
             [['name'], 'string', 'max' => 45],
-            [['id'], 'unique'],
         ];
     }
 
@@ -41,5 +41,11 @@ class TypeExercises extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
         ];
+    }
+
+    public static function allType()
+    {
+        $allType = self::find()->all();
+        return ArrayHelper::map($allType, 'id', 'name');
     }
 }

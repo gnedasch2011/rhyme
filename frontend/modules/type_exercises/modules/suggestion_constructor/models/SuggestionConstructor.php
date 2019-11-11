@@ -14,6 +14,8 @@ use Yii;
  */
 class SuggestionConstructor extends \yii\db\ActiveRecord
 {
+
+
     /**
      * {@inheritdoc}
      */
@@ -52,7 +54,8 @@ class SuggestionConstructor extends \yii\db\ActiveRecord
     {
         return [
             [['id', 'type_exercises_id'], 'integer'],
-            [['name', 'full_text'], 'string', 'max' => 500],
+            [['full_text'], 'required'],
+            [['full_text'], 'string', 'max' => 500],
             [['id'], 'unique'],
         ];
     }

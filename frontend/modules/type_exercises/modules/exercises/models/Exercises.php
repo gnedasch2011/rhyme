@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\modules\tasks\models;
+namespace frontend\modules\type_exercises\modules\exercises\models;
 
 use Yii;
 

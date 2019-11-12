@@ -28,8 +28,8 @@ class Tests extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['type_exercises_id', 'type_test_id1'], 'required'],
-            [['type_exercises_id', 'type_test_id1'], 'integer'],
+            [['type_exercises_id', 'type_test_id'], 'required'],
+            [['type_exercises_id', 'type_test_id'], 'integer'],
             [['name'], 'string', 'max' => 450],
         ];
     }

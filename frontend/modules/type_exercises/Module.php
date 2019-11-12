@@ -33,6 +33,10 @@ class Module extends \yii\base\Module
                 // здесь имеет смысл использовать более лаконичное пространство имен
                 'class' => 'frontend\modules\type_exercises\modules\tests\Module',
             ],
+            'exercises' => [
+                // здесь имеет смысл использовать более лаконичное пространство имен
+                'class' => 'frontend\modules\type_exercises\modules\exercises\Module',
+            ],
         ];
         // custom initialization code goes here
     }

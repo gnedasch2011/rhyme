@@ -1,19 +1,13 @@
 <script>
     $(document).on('click', ".click_word", function (e) {
         $(e.target).addClass('inResult')
-        $('.result').append('
-            < div
-    class
-        = "click_word_template inResult" > '+ $(e.target).text() + ' < /div>');
+        $('.result').append('<div class= "click_word_template inResult" > '+ $(e.target).text() + ' < /div>');
         $(e.target).remove()
     })
 
 
     $(document).on('click', ".inResult", function (e) {
-        $('.info').append('
-            < div
-    class
-        = "click_word_template click_word" > '+ $(e.target).text() + ' < /div>');
+        $('.info').append('<div class= "click_word_template click_word" > '+ $(e.target).text() + ' < /div>');
         $(e.target).remove()
     })
 

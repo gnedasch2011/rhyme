@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'tasks_id')->dropDownList(\frontend\modules\tasks\models\Tasks::allType()) ?>
-    <?= $form->field($model, 'type_exercises_id')->textInput() ?>
+    <?= $form->field($model, 'type_exercises_id')->dropDownList(\frontend\modules\type_exercises\models\TypeExercises::allType()) ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 

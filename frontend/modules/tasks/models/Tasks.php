@@ -58,13 +58,6 @@ class Tasks extends \yii\db\ActiveRecord
     }
 
 
-//    public static function allType()
-//    {
-//        $allType = self::find()->all();
-//        return ArrayHelper::map($allType, 'id', 'name');
-//    }
-
-
     public function getExercises()
     {
         return $this->hasMany(Exercises::className(), ['id' => 'tasks_id']);

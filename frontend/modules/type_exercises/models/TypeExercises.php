@@ -2,6 +2,7 @@
 
 namespace frontend\modules\type_exercises\models;
 
+use frontend\modules\admin\traits\CreateAdmitTrait;
 use Yii;
 use yii\helpers\ArrayHelper;
 
@@ -13,7 +14,7 @@ use yii\helpers\ArrayHelper;
  */
 class TypeExercises extends \yii\db\ActiveRecord
 {
-
+    use CreateAdmitTrait;
 
     /**
      * {@inheritdoc}

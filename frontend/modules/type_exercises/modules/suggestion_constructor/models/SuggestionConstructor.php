@@ -10,7 +10,6 @@ use Yii;
  * @property int $id
  * @property string $name
  * @property string $full_text
- * @property int $type_exercises_id
  */
 class SuggestionConstructor extends \yii\db\ActiveRecord
 {
@@ -53,7 +52,7 @@ class SuggestionConstructor extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'type_exercises_id'], 'integer'],
+            [['id', 'group_suggestion_constructor_id'], 'integer'],
             [['full_text'], 'required'],
             [['full_text'], 'string', 'max' => 500],
             [['id'], 'unique'],
@@ -69,7 +68,7 @@ class SuggestionConstructor extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'full_text' => 'Full Text',
-            'type_exercises_id' => 'Type Exercises ID',
+            'group_suggestion_constructor_id' => 'Type Exercises ID',
         ];
     }
 

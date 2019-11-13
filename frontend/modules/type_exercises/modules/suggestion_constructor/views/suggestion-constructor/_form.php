@@ -15,7 +15,7 @@ $parts = new \frontend\modules\type_exercises\modules\suggestion_constructor\mod
 
         <?= $form->field($model, 'full_text')->textInput(['maxlength' => true]) ?>
 
-        <?= $form->field($model, 'type_exercises_id')->dropDownList(\frontend\modules\type_exercises\models\TypeExercises::allType()) ?>
+        <?//= $form->field($model, 'type_exercises_id')->dropDownList(\frontend\modules\type_exercises\models\TypeExercises::allType()) ?>
 
         <h2>Части предолжения</h2>
         <div class="new-field">

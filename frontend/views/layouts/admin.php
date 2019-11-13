@@ -43,6 +43,16 @@ AdminAsset::register($this);
     $menuItems = [
         ['label' => 'Курсы', 'url' => ['/tasks/course']],
         ['label' => 'Дни', 'url' => ['/tasks/tasks']], //тут будет название дня, теория видео и сочетание упражнений
+
+        ['label' => 'Конструктор предложений',
+            'items' => [
+                ['label' => 'Группа предложений', 'url' => ['/type_exercises/sentence/group-sentence']],//вопросы, тип теста, правильный вариант ответа
+                ['label' => 'Конструктор предложений', 'url' => ['/type_exercises/suggestion_constructor/suggestion-constructor/']],//вопросы, тип теста, правильный вариант ответа
+
+            ],
+        ],//вопросы, тип теста, правильный вариант от
+
+
         ['label' => 'Типы упражнений',
             'items' => [
                 ['label' => 'Типы упражнений', 'url' => '/type_exercises/default'],

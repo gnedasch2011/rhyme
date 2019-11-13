@@ -19,7 +19,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true])->label('Имя упражнения') ?>
 
-
     <h2>Подтягивается ajax-ом после смены "Тип упражнений"</h2>
     <?= $form->field($model, 'id_exercises_diff')->textInput()->label('Id упражнений разных типов') ?>
 

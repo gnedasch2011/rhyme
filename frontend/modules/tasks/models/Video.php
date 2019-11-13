@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "video".
  *
- * @property int $idvideo
+ * @property int $id
  * @property string $name
  * @property string $url
  * @property int $tasks_id
@@ -28,10 +28,9 @@ class Video extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idvideo', 'tasks_id'], 'required'],
-            [['idvideo', 'tasks_id'], 'integer'],
+            [['id', 'tasks_id'], 'integer'],
             [['name', 'url'], 'string', 'max' => 450],
-            [['idvideo', 'tasks_id'], 'unique', 'targetAttribute' => ['idvideo', 'tasks_id']],
+            [['id', 'tasks_id'], 'unique', 'targetAttribute' => ['id', 'tasks_id']],
         ];
     }
 
@@ -41,7 +40,7 @@ class Video extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idvideo' => 'Idvideo',
+            'id' => 'id',
             'name' => 'Name',
             'url' => 'Url',
             'tasks_id' => 'Tasks ID',

@@ -17,8 +17,15 @@ class Module extends \yii\base\Module
      */
     public function init()
     {
+
         parent::init();
 
+        $this->modules = [
+            'test' => [
+                // здесь имеет смысл использовать более лаконичное пространство имен
+                'class' => 'frontend\modules\type_exercises\modules\suggestion_constructor\Module',
+            ]
+        ];
         // custom initialization code goes here
     }
 }

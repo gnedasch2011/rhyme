@@ -55,7 +55,7 @@ AdminAsset::register($this);
 
         ['label' => 'Типы упражнений',
             'items' => [
-                ['label' => 'Типы упражнений', 'url' => '/type_exercises/default'],
+                ['label' => 'Типы упражнений', 'url' => ' /type_exercises/default'],
                 ['label' => 'Сочетания упражнений', 'url' => ['/type_exercises/exercises']],//вопросы, тип теста, правильный вариант ответа
                 ['label' => 'Конструктор предложений', 'url' => '/type_exercises/suggestion_constructor/suggestion-constructor/'],
                 ['label' => 'Тесты', 'url' => ['/']],//вопросы, тип теста, правильный вариант ответа

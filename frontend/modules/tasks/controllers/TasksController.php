@@ -2,30 +2,45 @@
 
 namespace frontend\modules\tasks\controllers;
 
+use frontend\components\AdminController;
 use Yii;
 use frontend\modules\tasks\models\Tasks;
-use yii\data\ActiveDataProvider;
+use frontend\modules\tasks\models\TasksSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use frontend\components\AdminController;
+
 /**
  * TasksController implements the CRUD actions for Tasks model.
  */
 class TasksController extends AdminController
 {
-  
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
+    }
+
     /**
      * Lists all Tasks models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Tasks::find(),
-        ]);
+        $searchModel = new TasksSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }

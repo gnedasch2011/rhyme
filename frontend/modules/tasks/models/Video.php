@@ -28,9 +28,8 @@ class Video extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'tasks_id'], 'integer'],
             [['name', 'url'], 'string', 'max' => 450],
-            [['id', 'tasks_id'], 'unique', 'targetAttribute' => ['id', 'tasks_id']],
+            [['id'], 'unique', 'targetAttribute' => ['id']],
         ];
     }
 
@@ -43,7 +42,6 @@ class Video extends \yii\db\ActiveRecord
             'id' => 'id',
             'name' => 'Name',
             'url' => 'Url',
-            'tasks_id' => 'Tasks ID',
         ];
     }
 }

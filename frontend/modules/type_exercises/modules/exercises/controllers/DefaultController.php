@@ -2,17 +2,17 @@
 
 namespace frontend\modules\type_exercises\modules\exercises\controllers;
 
+use frontend\components\AdminController;
 use Yii;
 use frontend\modules\type_exercises\modules\exercises\models\Exercises;
 use frontend\modules\type_exercises\modules\exercises\models\ExercisesSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * DefaultController implements the CRUD actions for Exercises model.
  */
-class DefaultController extends Controller
+class DefaultController extends AdminController
 {
     /**
      * {@inheritdoc}

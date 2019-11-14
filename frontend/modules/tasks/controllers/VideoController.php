@@ -48,14 +48,13 @@ class VideoController extends AdminController
     /**
      * Displays a single Video model.
      * @param integer $id
-     * @param integer $tasks_id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($id, $tasks_id)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id, $tasks_id),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -69,7 +68,7 @@ class VideoController extends AdminController
         $model = new Video();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id, 'tasks_id' => $model->tasks_id]);
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
@@ -81,16 +80,15 @@ class VideoController extends AdminController
      * Updates an existing Video model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
-     * @param integer $tasks_id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id, $tasks_id)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($id, $tasks_id);
+        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id, 'tasks_id' => $model->tasks_id]);
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
@@ -102,13 +100,12 @@ class VideoController extends AdminController
      * Deletes an existing Video model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
-     * @param integer $tasks_id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($id, $tasks_id)
+    public function actionDelete($id)
     {
-        $this->findModel($id, $tasks_id)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -117,13 +114,12 @@ class VideoController extends AdminController
      * Finds the Video model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @param integer $tasks_id
      * @return Video the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id, $tasks_id)
+    protected function findModel($id)
     {
-        if (($model = Video::findOne(['id' => $id, 'tasks_id' => $tasks_id])) !== null) {
+        if (($model = Video::findOne($id)) !== null) {
             return $model;
         }
 

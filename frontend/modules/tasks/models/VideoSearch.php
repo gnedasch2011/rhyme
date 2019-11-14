@@ -17,7 +17,7 @@ class VideoSearch extends Video
     public function rules()
     {
         return [
-            [['id', 'tasks_id'], 'integer'],
+            [['id'], 'integer'],
             [['name', 'url'], 'safe'],
         ];
     }
@@ -59,7 +59,6 @@ class VideoSearch extends Video
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'tasks_id' => $this->tasks_id,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])

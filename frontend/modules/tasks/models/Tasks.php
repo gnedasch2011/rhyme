@@ -4,7 +4,6 @@ namespace frontend\modules\tasks\models;
 
 use frontend\modules\admin\traits\CreateAdmitTrait;
 use Yii;
-use frontend\modules\admin\behaviors\AdminCommonMethodsBehavior;
 
 /**
  * This is the model class for table "tasks".
@@ -12,22 +11,16 @@ use frontend\modules\admin\behaviors\AdminCommonMethodsBehavior;
  * @property int $id
  * @property string $name
  * @property int $course_id
+ * @property int $video_id
+ * @property int $teoriya_id
  */
 class Tasks extends \yii\db\ActiveRecord
 {
+
     use CreateAdmitTrait;
     /**
      * {@inheritdoc}
      */
-
-    public function behaviors()
-    {
-        return [
-            'class' => AdminCommonMethodsBehavior::className()
-        ];
-    }
-
-
     public static function tableName()
     {
         return 'tasks';
@@ -39,8 +32,8 @@ class Tasks extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'course_id'], 'required'],
-            [['id', 'course_id'], 'integer'],
+            [['name', 'course_id', 'video_id', 'teoriya_id'], 'required'],
+            [['course_id', 'video_id', 'teoriya_id'], 'integer'],
             [['name'], 'string', 'max' => 450],
         ];
     }
@@ -54,14 +47,8 @@ class Tasks extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'course_id' => 'Course ID',
+            'video_id' => 'Video ID',
+            'teoriya_id' => 'Teoriya ID',
         ];
     }
-
-
-    public function getExercises()
-    {
-        return $this->hasMany(Exercises::className(), ['id' => 'tasks_id']);
-    }
-
 }
-

@@ -2,6 +2,7 @@
 
 namespace frontend\modules\type_exercises\modules\sentence\controllers;
 
+use frontend\components\AdminController;
 use frontend\components\ModelLoader;
 use frontend\modules\type_exercises\modules\sentence\models\Expressions;
 use Yii;
@@ -14,7 +15,7 @@ use yii\filters\VerbFilter;
 /**
  * DefaultController implements the CRUD actions for Sentence model.
  */
-class DefaultController extends Controller
+class DefaultController extends AdminController
 {
     /**
      * {@inheritdoc}

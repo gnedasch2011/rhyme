@@ -13,10 +13,10 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'desc')->textInput(['maxlength' => true]) ?>
-    <?= $form->field($model, 'type_exercises_id')->dropDownList(\frontend\modules\type_exercises\models\TypeExercises::allType(), ['value' => $model::TYPE_EXERCISES_ID]) ?>
+    <?= $form->field($model, 'desc')->textInput(['maxlength' => true])->label('Описание упражнений "остров"') ?>
+    <?= $form->field($model, 'group_sentence_id')->dropDownList([\frontend\modules\type_exercises\modules\sentence\models\GroupSentence::allType()])->label('Описание группы упражнений "1 день"') ?>
 
-    <h2>Части предолжения</h2>
+    <h2>Что использовать</h2>
     <div class="new-field">
         <div class="row">
             <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">

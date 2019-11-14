@@ -2,6 +2,7 @@
 
 namespace frontend\modules\type_exercises\modules\sentence\models;
 
+use frontend\modules\admin\traits\CreateAdmitTrait;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use frontend\modules\type_exercises\modules\sentence\models\GroupSentence;
@@ -11,6 +12,7 @@ use frontend\modules\type_exercises\modules\sentence\models\GroupSentence;
  */
 class GroupSentenceSearch extends GroupSentence
 {
+
     /**
      * {@inheritdoc}
      */

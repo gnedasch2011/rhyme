@@ -2,6 +2,7 @@
 
 namespace frontend\modules\type_exercises\modules\sentence\models;
 
+use frontend\modules\admin\traits\CreateAdmitTrait;
 use Yii;
 
 /**
@@ -12,6 +13,7 @@ use Yii;
  */
 class GroupSentence extends \yii\db\ActiveRecord
 {
+    use CreateAdmitTrait;
     const TYPE_EXERCISES_ID = 3;
 
     /**
@@ -28,8 +30,8 @@ class GroupSentence extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'type_exercises_id'], 'required'],
             [['id', 'type_exercises_id'], 'integer'],
+            [['name'], 'string'],
             [['id'], 'unique'],
         ];
     }
@@ -42,6 +44,7 @@ class GroupSentence extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'type_exercises_id' => 'Type Exercises ID',
+            'name' => 'name',
         ];
     }
 }

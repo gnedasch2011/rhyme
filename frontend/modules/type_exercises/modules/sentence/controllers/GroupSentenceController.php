@@ -66,8 +66,12 @@ class GroupSentenceController extends AdminController
     public function actionCreate()
     {
         $model = new GroupSentence();
+      
+        if ($model->load(Yii::$app->request->post())) {
+            if(!$model->save()){
+                echo "<pre>"; print_r($model->errors);die();
+            }
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

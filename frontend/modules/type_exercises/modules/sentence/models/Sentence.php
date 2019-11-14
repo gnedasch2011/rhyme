@@ -9,7 +9,6 @@ use Yii;
  *
  * @property int $id
  * @property string $desc
- * @property int $type_exercises_id
  */
 class Sentence extends \yii\db\ActiveRecord
 {
@@ -28,8 +27,8 @@ class Sentence extends \yii\db\ActiveRecord
 
             }
         }
-
     }
+
     public function setExpressions($expressions)
     {
         return $this->expressions = $expressions;
@@ -50,8 +49,8 @@ class Sentence extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['type_exercises_id','desc'], 'required'],
-            [['type_exercises_id'], 'integer'],
+            [['desc'], 'required'],
+            [['group_sentence_id'], 'required'],
             [['desc'], 'string', 'max' => 4500],
         ];
     }
@@ -64,7 +63,7 @@ class Sentence extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'desc' => 'Desc',
-            'type_exercises_id' => 'Type Exercises ID',
+
         ];
     }
 }

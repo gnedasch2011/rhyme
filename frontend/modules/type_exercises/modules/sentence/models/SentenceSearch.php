@@ -17,7 +17,7 @@ class SentenceSearch extends Sentence
     public function rules()
     {
         return [
-            [['id', 'type_exercises_id'], 'integer'],
+            [['id'], 'integer'],
             [['desc'], 'safe'],
         ];
     }
@@ -59,7 +59,7 @@ class SentenceSearch extends Sentence
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'type_exercises_id' => $this->type_exercises_id,
+
         ]);
 
         $query->andFilterWhere(['like', 'desc', $this->desc]);

@@ -1368,3 +1368,440 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2019-11-15 09:40:48 [127.0.0.1][-][inf6g0f2mjhm6pduofv0ds9jhm8a9c5e][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "type_exercises/ajax/get-all-excercises". in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2019-11-15 09:40:48 [127.0.0.1][-][inf6g0f2mjhm6pduofv0ds9jhm8a9c5e][info][application] $_GET = []
+
+$_POST = [
+    'undefined' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '6e98c8d689e9ebf98e515850f50ecaae5e669b38fc0a2127ea1075f73997a46ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Quvy70Li0804tVWjeccnKHTkglce5IYd\";}'
+    'advanced-frontend' => 'inf6g0f2mjhm6pduofv0ds9jhm8a9c5e'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '10'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'MFFvYvHh49tOoXytl6D0HQLOQmSQDdtw6b0M8NQiZ89hJBkbxtGvsn6ZTJnj9qN3Z60hCttFjxuO0W-V4Ws-qw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf-frontend=6e98c8d689e9ebf98e515850f50ecaae5e669b38fc0a2127ea1075f73997a46ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Quvy70Li0804tVWjeccnKHTkglce5IYd%22%3B%7D; advanced-frontend=inf6g0f2mjhm6pduofv0ds9jhm8a9c5e'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '3365'
+    'REDIRECT_URL' => '/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1573800048.227
+    'REQUEST_TIME' => 1573800048
+    'argv' => []
+    'argc' => 0
+]
+2019-11-15 09:40:49 [127.0.0.1][-][inf6g0f2mjhm6pduofv0ds9jhm8a9c5e][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "type_exercises/ajax/get-all-excercises". in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2019-11-15 09:40:49 [127.0.0.1][-][inf6g0f2mjhm6pduofv0ds9jhm8a9c5e][info][application] $_GET = []
+
+$_POST = [
+    'undefined' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '6e98c8d689e9ebf98e515850f50ecaae5e669b38fc0a2127ea1075f73997a46ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Quvy70Li0804tVWjeccnKHTkglce5IYd\";}'
+    'advanced-frontend' => 'inf6g0f2mjhm6pduofv0ds9jhm8a9c5e'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '10'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'MFFvYvHh49tOoXytl6D0HQLOQmSQDdtw6b0M8NQiZ89hJBkbxtGvsn6ZTJnj9qN3Z60hCttFjxuO0W-V4Ws-qw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf-frontend=6e98c8d689e9ebf98e515850f50ecaae5e669b38fc0a2127ea1075f73997a46ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Quvy70Li0804tVWjeccnKHTkglce5IYd%22%3B%7D; advanced-frontend=inf6g0f2mjhm6pduofv0ds9jhm8a9c5e'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '3365'
+    'REDIRECT_URL' => '/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1573800049.446
+    'REQUEST_TIME' => 1573800049
+    'argv' => []
+    'argc' => 0
+]
+2019-11-15 09:42:02 [127.0.0.1][-][inf6g0f2mjhm6pduofv0ds9jhm8a9c5e][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "type_exercises/ajax/get-all-excercises". in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2019-11-15 09:42:02 [127.0.0.1][-][inf6g0f2mjhm6pduofv0ds9jhm8a9c5e][info][application] $_GET = []
+
+$_POST = [
+    'undefined' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '6e98c8d689e9ebf98e515850f50ecaae5e669b38fc0a2127ea1075f73997a46ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Quvy70Li0804tVWjeccnKHTkglce5IYd\";}'
+    'advanced-frontend' => 'inf6g0f2mjhm6pduofv0ds9jhm8a9c5e'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '10'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'twNaYZs7slwDMhEFudEVHhcu80_q255HJbH2rwF8swfmdiwYrAv-NTMKITHNh0J0ck2QIaGTyixC3ZXKNDXqYw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf-frontend=6e98c8d689e9ebf98e515850f50ecaae5e669b38fc0a2127ea1075f73997a46ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Quvy70Li0804tVWjeccnKHTkglce5IYd%22%3B%7D; advanced-frontend=inf6g0f2mjhm6pduofv0ds9jhm8a9c5e'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '3438'
+    'REDIRECT_URL' => '/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1573800122.373
+    'REQUEST_TIME' => 1573800122
+    'argv' => []
+    'argc' => 0
+]
+2019-11-15 09:42:24 [127.0.0.1][-][inf6g0f2mjhm6pduofv0ds9jhm8a9c5e][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "type_exercises/ajax/get-all-excercises". in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2019-11-15 09:42:24 [127.0.0.1][-][inf6g0f2mjhm6pduofv0ds9jhm8a9c5e][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '6e98c8d689e9ebf98e515850f50ecaae5e669b38fc0a2127ea1075f73997a46ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Quvy70Li0804tVWjeccnKHTkglce5IYd\";}'
+    'advanced-frontend' => 'inf6g0f2mjhm6pduofv0ds9jhm8a9c5e'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf-frontend=6e98c8d689e9ebf98e515850f50ecaae5e669b38fc0a2127ea1075f73997a46ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Quvy70Li0804tVWjeccnKHTkglce5IYd%22%3B%7D; advanced-frontend=inf6g0f2mjhm6pduofv0ds9jhm8a9c5e'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '3466'
+    'REDIRECT_URL' => '/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1573800144.914
+    'REQUEST_TIME' => 1573800144
+    'argv' => []
+    'argc' => 0
+]
+2019-11-15 09:44:16 [127.0.0.1][-][inf6g0f2mjhm6pduofv0ds9jhm8a9c5e][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: type_id in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-11-15 09:44:16 [127.0.0.1][-][inf6g0f2mjhm6pduofv0ds9jhm8a9c5e][info][application] $_GET = []
+
+$_POST = [
+    'undefined' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '6e98c8d689e9ebf98e515850f50ecaae5e669b38fc0a2127ea1075f73997a46ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Quvy70Li0804tVWjeccnKHTkglce5IYd\";}'
+    'advanced-frontend' => 'inf6g0f2mjhm6pduofv0ds9jhm8a9c5e'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '10'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => '8-UfpoqfBU89g-N2-U-N7lYJ-etL3QOjFVgUO45iLS6ikGnfva9JJg2700KNGdqEM2qahQCVV8hyNHdeuyt0Sg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf-frontend=6e98c8d689e9ebf98e515850f50ecaae5e669b38fc0a2127ea1075f73997a46ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Quvy70Li0804tVWjeccnKHTkglce5IYd%22%3B%7D; advanced-frontend=inf6g0f2mjhm6pduofv0ds9jhm8a9c5e'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '3605'
+    'REDIRECT_URL' => '/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1573800256.18
+    'REQUEST_TIME' => 1573800256
+    'argv' => []
+    'argc' => 0
+]
+2019-11-15 09:44:19 [127.0.0.1][-][inf6g0f2mjhm6pduofv0ds9jhm8a9c5e][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: type_id in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-11-15 09:44:19 [127.0.0.1][-][inf6g0f2mjhm6pduofv0ds9jhm8a9c5e][info][application] $_GET = []
+
+$_POST = [
+    'undefined' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '6e98c8d689e9ebf98e515850f50ecaae5e669b38fc0a2127ea1075f73997a46ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Quvy70Li0804tVWjeccnKHTkglce5IYd\";}'
+    'advanced-frontend' => 'inf6g0f2mjhm6pduofv0ds9jhm8a9c5e'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '10'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'LGqQIjTxcc46jmOoGLkb5kpRj4IIIrLCyrl1O-XhIPt9H-ZbA8E9pwq2U5xs70yMLzLs7ENq5qmt1RZe0Kh5nw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf-frontend=6e98c8d689e9ebf98e515850f50ecaae5e669b38fc0a2127ea1075f73997a46ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Quvy70Li0804tVWjeccnKHTkglce5IYd%22%3B%7D; advanced-frontend=inf6g0f2mjhm6pduofv0ds9jhm8a9c5e'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '3612'
+    'REDIRECT_URL' => '/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1573800259.61
+    'REQUEST_TIME' => 1573800259
+    'argv' => []
+    'argc' => 0
+]

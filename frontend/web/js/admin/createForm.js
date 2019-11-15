@@ -21,7 +21,7 @@ $(document).on('click', '.add_form', function (e) {
         method: "post",
         data: arr,
         success: function (data) {
-            formPlaceForNew.append(data)
+            formPlaceForNew.append(data);
         }
     });
 })

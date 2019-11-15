@@ -11,12 +11,14 @@ namespace frontend\modules\type_exercises\controllers;
 
 use yii\web\Controller;
 
-class AjaxControllers extends Controller
+class AjaxController extends Controller
 {
     
     
-    public function actionGetAllExcercises($type_id)
+    public function actionGetAllExcercises()
     {
-        echo "<pre>"; print_r($type_id);die();
+        $type_exercises_id =  \Yii::$app->request->post('type_exercises_id');
+
+
     }
 }

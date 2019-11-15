@@ -12,18 +12,15 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <h2>Video</h2>
+<?= $form->field($model, 'type_exercises_id')->dropDownList(\frontend\modules\type_exercises\models\TypeExercises::allType(), ['class'=>'form-control type_exerc type_exercises_id__change'])->label('Тип упражнений'); ?>
 
-    <h2>Teory</h2>
-    <?= $form->field($model, 'tasks_id')->dropDownList(\frontend\modules\tasks\models\Tasks::allType()) ?>
-    <?= $form->field($model, 'type_exercises_id')->dropDownList(\frontend\modules\type_exercises\models\TypeExercises::allType())->label('Тип упражнений'); ?>
+    <?= $form->field($model, 'name')->textInput(['maxlength' => true])->label('Имя упражнения для выбранного из типов') ?>
+    <?= $form->field($model, 'position')->textInput()->label('Позиция') ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true])->label('Имя упражнения') ?>
+    <?= $form->field($model, 'tasks_id')->dropDownList(\frontend\modules\tasks\models\Tasks::allType())->label('Теория'); ?>
 
-    <h2>Подтягивается ajax-ом после смены "Тип упражнений"</h2>
-    <?= $form->field($model, 'id_exercises_diff')->textInput()->label('Id упражнений разных типов') ?>
-
-    <?= $form->field($model, 'position')->textInput() ?>
+    <h2>Подтягивается ajax-ом после смены "Тип"</h2>
+    <?= $form->field($model, 'id_exercises_diff')->dropDownList(\frontend\modules\type_exercises\modules\suggestion_constructor\models\GroupSuggestionConstructor::allType())->label('Id упражнений разных типов') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
@@ -31,3 +28,15 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+
+<?php
+$script = <<< JS
+      $(document).on('change','.type_exercises_id__change',function (e) {
+             e.preventDefault();
+             console.log('te');
+      })
+JS;
+//маркер конца строки, обязательно сразу, без пробелов и табуляции
+$this->registerJs($script, yii\web\View::POS_READY);
+?>

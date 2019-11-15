@@ -14,7 +14,6 @@ use Yii;
 class SuggestionConstructor extends \yii\db\ActiveRecord
 {
 
-
     /**
      * {@inheritdoc}
      */

@@ -1,19 +1,18 @@
 <?php
 
-namespace frontend\modules\tasks\models;
+namespace frontend\modules\type_exercises\modules\suggestion_constructor\models;
 
 use frontend\modules\admin\traits\CreateAdmitTrait;
 use Yii;
 
 /**
- * This is the model class for table "video".
+ * This is the model class for table "group_suggestion_constructor".
  *
  * @property int $id
  * @property string $name
- * @property string $url
- * @property int $tasks_id
+ * @property int $type_exercises_id
  */
-class Video extends \yii\db\ActiveRecord
+class GroupSuggestionConstructor extends \yii\db\ActiveRecord
 {
 
     use CreateAdmitTrait;
@@ -22,7 +21,7 @@ class Video extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'video';
+        return 'group_suggestion_constructor';
     }
 
     /**
@@ -31,8 +30,8 @@ class Video extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'url'], 'string', 'max' => 450],
-            [['id'], 'unique', 'targetAttribute' => ['id']],
+            [['name'], 'string'],
+            [['type_exercises_id'], 'integer'],
         ];
     }
 
@@ -42,9 +41,9 @@ class Video extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'id',
+            'id' => 'ID',
             'name' => 'Name',
-            'url' => 'Url',
+            'type_exercises_id' => 'Type Exercises ID',
         ];
     }
 }

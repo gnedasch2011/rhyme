@@ -2,6 +2,7 @@
 
 namespace frontend\modules\tasks\models;
 
+use frontend\modules\admin\traits\CreateAdmitTrait;
 use Yii;
 
 /**
@@ -10,10 +11,11 @@ use Yii;
  * @property int $id
  * @property string $text
  * @property string $template
- * @property int $tasks_id
  */
 class Teoriya extends \yii\db\ActiveRecord
 {
+
+    use CreateAdmitTrait;
     /**
      * {@inheritdoc}
      */
@@ -28,10 +30,7 @@ class Teoriya extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'tasks_id'], 'required'],
-            [['id', 'tasks_id'], 'integer'],
-            [['text', 'template'], 'string', 'max' => 450],
-            [['id', 'tasks_id'], 'unique', 'targetAttribute' => ['id', 'tasks_id']],
+            [['text', 'template'], 'string'],
         ];
     }
 
@@ -44,7 +43,6 @@ class Teoriya extends \yii\db\ActiveRecord
             'id' => 'ID',
             'text' => 'Text',
             'template' => 'Template',
-            'tasks_id' => 'Tasks ID',
         ];
     }
 }

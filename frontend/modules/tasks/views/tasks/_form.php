@@ -11,14 +11,11 @@ use yii\widgets\ActiveForm;
 <div class="tasks-form">
 
     <?php $form = ActiveForm::begin(); ?>
+    <?= $form->field($model, 'video_id')->dropDownList(\frontend\modules\tasks\models\Video::allType())->label('Видео'); ?>
+    <?= $form->field($model, 'teoriya_id')->dropDownList(\frontend\modules\tasks\models\Teoriya::allType())->label('Теория'); ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'course_id')->textInput() ?>
-
-    <?= $form->field($model, 'video_id')->textInput() ?>
-
-    <?= $form->field($model, 'teoriya_id')->textInput() ?>
+    <?= $form->field($model, 'name')->textInput(['maxlength' => true])->label('Имя дня') ?>
+    <?= $form->field($model, 'course_id')->textInput(['value'=>1]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

@@ -12,6 +12,7 @@ use Yii;
  * @property string $name
  * @property int $type_exercises_id
  */
+
 class GroupSuggestionConstructor extends \yii\db\ActiveRecord
 {
 

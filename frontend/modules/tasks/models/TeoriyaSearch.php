@@ -18,7 +18,7 @@ class TeoriyaSearch extends Teoriya
     {
         return [
             [['id'], 'integer'],
-            [['text', 'template'], 'safe'],
+            [['name', 'template'], 'safe'],
         ];
     }
 
@@ -61,7 +61,7 @@ class TeoriyaSearch extends Teoriya
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'text', $this->text])
+        $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'template', $this->template]);
 
         return $dataProvider;

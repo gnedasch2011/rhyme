@@ -31,7 +31,7 @@ class TypeExercises extends \yii\db\ActiveRecord
     {
         return [
             [['id'], 'integer'],
-            [['name'], 'string', 'max' => 450],
+            [['name', 'class_construct'], 'string', 'max' => 450],
         ];
     }
 
@@ -43,12 +43,26 @@ class TypeExercises extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
+            'class_construct' => 'class_construct',
         ];
     }
 
-    public static function allType()
+    public function returnTypeModel($type_id)
     {
-        $allType = self::find()->all();
-        return ArrayHelper::map($allType, 'id', 'name');
+        $classModel = self::findOne($type_id);
+        $classModel = $classModel ?? false;
+
+        if ($classModel) {
+            $class_construct = $classModel->class_construct;
+            if($classModel->class_construct){
+                return new $class_construct ();
+            }
+            return false;
+        }
+
+        return false;
+
+
     }
+
 }

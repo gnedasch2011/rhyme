@@ -1805,3 +1805,1652 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2019-11-16 19:04:21 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][Error] Error: Class 'frontend\modules\type_exercises\models\FabricTypeExcercises' not found in C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\views\default\_form.php:9
+Stack trace:
+#0 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, NULL)
+#3 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\views\default\create.php(17): yii\base\View->render('_form', Array)
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\type_exercises\modules\exercises\controllers\DefaultController))
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('create', Array, Object(frontend\modules\type_exercises\modules\exercises\controllers\DefaultController))
+#8 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\controllers\DefaultController.php(75): yii\base\Controller->render('create', Array)
+#9 [internal function]: frontend\modules\type_exercises\modules\exercises\controllers\DefaultController->actionCreate()
+#10 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#13 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#14 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2019-11-16 19:04:21 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '11278'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/exercises/default/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/exercises/default/create'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573920261.619
+    'REQUEST_TIME' => 1573920261
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 19:04:23 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][Error] Error: Class 'frontend\modules\type_exercises\models\FabricTypeExcercises' not found in C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\views\default\_form.php:9
+Stack trace:
+#0 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, NULL)
+#3 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\views\default\create.php(17): yii\base\View->render('_form', Array)
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\type_exercises\modules\exercises\controllers\DefaultController))
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('create', Array, Object(frontend\modules\type_exercises\modules\exercises\controllers\DefaultController))
+#8 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\controllers\DefaultController.php(75): yii\base\Controller->render('create', Array)
+#9 [internal function]: frontend\modules\type_exercises\modules\exercises\controllers\DefaultController->actionCreate()
+#10 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#13 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#14 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2019-11-16 19:04:23 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '11279'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/exercises/default/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/exercises/default/create'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573920263.424
+    'REQUEST_TIME' => 1573920263
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 19:08:44 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][Error] Error: Class name must be a valid object or a string in C:\OSPanel\domains\testing\frontend\modules\type_exercises\models\TypeExercises.php:55
+Stack trace:
+#0 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\views\default\_form.php(9): frontend\modules\type_exercises\models\TypeExercises::returnTypeModel(1)
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, NULL)
+#4 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\views\default\create.php(17): yii\base\View->render('_form', Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\type_exercises\modules\exercises\controllers\DefaultController))
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('create', Array, Object(frontend\modules\type_exercises\modules\exercises\controllers\DefaultController))
+#9 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\controllers\DefaultController.php(75): yii\base\Controller->render('create', Array)
+#10 [internal function]: frontend\modules\type_exercises\modules\exercises\controllers\DefaultController->actionCreate()
+#11 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#15 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2019-11-16 19:08:44 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '11595'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/exercises/default/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/exercises/default/create'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573920524.04
+    'REQUEST_TIME' => 1573920524
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 19:09:59 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][Error] Error: Class name must be a valid object or a string in C:\OSPanel\domains\testing\frontend\modules\type_exercises\models\TypeExercises.php:55
+Stack trace:
+#0 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\views\default\_form.php(9): frontend\modules\type_exercises\models\TypeExercises::returnTypeModel(1)
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, NULL)
+#4 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\views\default\create.php(17): yii\base\View->render('_form', Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\type_exercises\modules\exercises\controllers\DefaultController))
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('create', Array, Object(frontend\modules\type_exercises\modules\exercises\controllers\DefaultController))
+#9 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\controllers\DefaultController.php(75): yii\base\Controller->render('create', Array)
+#10 [internal function]: frontend\modules\type_exercises\modules\exercises\controllers\DefaultController->actionCreate()
+#11 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#15 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2019-11-16 19:09:59 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '11676'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/exercises/default/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/exercises/default/create'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573920599.566
+    'REQUEST_TIME' => 1573920599
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 19:10:00 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][Error] Error: Class name must be a valid object or a string in C:\OSPanel\domains\testing\frontend\modules\type_exercises\models\TypeExercises.php:55
+Stack trace:
+#0 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\views\default\_form.php(9): frontend\modules\type_exercises\models\TypeExercises::returnTypeModel(1)
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, NULL)
+#4 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\views\default\create.php(17): yii\base\View->render('_form', Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\type_exercises\modules\exercises\controllers\DefaultController))
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('create', Array, Object(frontend\modules\type_exercises\modules\exercises\controllers\DefaultController))
+#9 C:\OSPanel\domains\testing\frontend\modules\type_exercises\modules\exercises\controllers\DefaultController.php(75): yii\base\Controller->render('create', Array)
+#10 [internal function]: frontend\modules\type_exercises\modules\exercises\controllers\DefaultController->actionCreate()
+#11 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#15 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2019-11-16 19:10:00 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '11677'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/exercises/default/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/exercises/default/create'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573920600.489
+    'REQUEST_TIME' => 1573920600
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 19:54:15 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][Error] Error: Class name must be a valid object or a string in C:\OSPanel\domains\testing\frontend\modules\type_exercises\models\TypeExercises.php:56
+Stack trace:
+#0 C:\OSPanel\domains\testing\frontend\modules\type_exercises\controllers\AjaxController.php(23): frontend\modules\type_exercises\models\TypeExercises::returnTypeModel('3')
+#1 [internal function]: frontend\modules\type_exercises\controllers\AjaxController->actionGetAllExcercises()
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-11-16 19:54:15 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = [
+    'type_exercises_id' => '3'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => '_7LZzhgve_fugYlVF3-S1vAFsJFlzQX-Hapbq_EC6d-41b-6QBgtgNfr_zdCLvSCnWbA3Qv7Sr967SPStlOviw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '14226'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573923255.599
+    'REQUEST_TIME' => 1573923255
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 19:55:32 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][Error] Error: Class name must be a valid object or a string in C:\OSPanel\domains\testing\frontend\modules\type_exercises\models\TypeExercises.php:57
+Stack trace:
+#0 C:\OSPanel\domains\testing\frontend\modules\type_exercises\controllers\AjaxController.php(23): frontend\modules\type_exercises\models\TypeExercises::returnTypeModel('2')
+#1 [internal function]: frontend\modules\type_exercises\controllers\AjaxController->actionGetAllExcercises()
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-11-16 19:55:32 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = [
+    'type_exercises_id' => '2'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => '_7LZzhgve_fugYlVF3-S1vAFsJFlzQX-Hapbq_EC6d-41b-6QBgtgNfr_zdCLvSCnWbA3Qv7Sr967SPStlOviw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '14298'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573923332.928
+    'REQUEST_TIME' => 1573923332
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 19:55:35 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][Error] Error: Class name must be a valid object or a string in C:\OSPanel\domains\testing\frontend\modules\type_exercises\models\TypeExercises.php:57
+Stack trace:
+#0 C:\OSPanel\domains\testing\frontend\modules\type_exercises\controllers\AjaxController.php(23): frontend\modules\type_exercises\models\TypeExercises::returnTypeModel('2')
+#1 [internal function]: frontend\modules\type_exercises\controllers\AjaxController->actionGetAllExcercises()
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-11-16 19:55:35 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = [
+    'type_exercises_id' => '2'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'ENIrIP4iv_7Ruc8P7ipmj33cyIPh4hmmuLrtfn4Bt8pXtU1UphXpiejTuW27ewDbEL-4z4_UVuff_ZUHOVDxng=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '14300'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573923335.504
+    'REQUEST_TIME' => 1573923335
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 19:57:24 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][Error] Error: Class name must be a valid object or a string in C:\OSPanel\domains\testing\frontend\modules\type_exercises\models\TypeExercises.php:57
+Stack trace:
+#0 C:\OSPanel\domains\testing\frontend\modules\type_exercises\controllers\AjaxController.php(23): frontend\modules\type_exercises\models\TypeExercises::returnTypeModel('2')
+#1 [internal function]: frontend\modules\type_exercises\controllers\AjaxController->actionGetAllExcercises()
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-11-16 19:57:24 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = [
+    'type_exercises_id' => '2'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'ENIrIP4iv_7Ruc8P7ipmj33cyIPh4hmmuLrtfn4Bt8pXtU1UphXpiejTuW27ewDbEL-4z4_UVuff_ZUHOVDxng=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '14406'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573923444.456
+    'REQUEST_TIME' => 1573923444
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 19:57:32 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][Error] Error: Class name must be a valid object or a string in C:\OSPanel\domains\testing\frontend\modules\type_exercises\models\TypeExercises.php:57
+Stack trace:
+#0 C:\OSPanel\domains\testing\frontend\modules\type_exercises\controllers\AjaxController.php(23): frontend\modules\type_exercises\models\TypeExercises::returnTypeModel('2')
+#1 [internal function]: frontend\modules\type_exercises\controllers\AjaxController->actionGetAllExcercises()
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-11-16 19:57:32 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = [
+    'type_exercises_id' => '2'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'bjpARHA70UftMqXh77bqCeoavoER5HlmsK1Pto4GDHYpXSYwKAyHMNRY04O654xdh3nOzX_SNifX6jfPyVdKIg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '14414'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573923452.852
+    'REQUEST_TIME' => 1573923452
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 19:58:05 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\OSPanel\domains\testing\frontend\modules\type_exercises\views\ajax\allTypeGroup.php in C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('allTypeGroup', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#2 C:\OSPanel\domains\testing\frontend\modules\type_exercises\controllers\AjaxController.php(25): yii\base\Controller->render('allTypeGroup')
+#3 [internal function]: frontend\modules\type_exercises\controllers\AjaxController->actionGetAllExcercises()
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-11-16 19:58:05 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = [
+    'type_exercises_id' => '2'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'oGyNIsMzGScAbF0j7Sp_jiLAuZr9HYsl0RrFRHgvMHTnC-tWmwRPUDkGK0G4exnaT6PJ1pMrxGS2Xb09P352IA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '14452'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573923485.867
+    'REQUEST_TIME' => 1573923485
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 19:58:15 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\OSPanel\domains\testing\frontend\modules\type_exercises\views\ajax\allTypeGroup.php in C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('allTypeGroup', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#2 C:\OSPanel\domains\testing\frontend\modules\type_exercises\controllers\AjaxController.php(25): yii\base\Controller->render('allTypeGroup')
+#3 [internal function]: frontend\modules\type_exercises\controllers\AjaxController->actionGetAllExcercises()
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-11-16 19:58:15 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = [
+    'type_exercises_id' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'oGyNIsMzGScAbF0j7Sp_jiLAuZr9HYsl0RrFRHgvMHTnC-tWmwRPUDkGK0G4exnaT6PJ1pMrxGS2Xb09P352IA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '14470'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573923495.56
+    'REQUEST_TIME' => 1573923495
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 19:59:33 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\OSPanel\domains\testing\frontend\modules\type_exercises\views\ajax\allTypeGroup.php in C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('allTypeGroup', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#2 C:\OSPanel\domains\testing\frontend\modules\type_exercises\controllers\AjaxController.php(25): yii\base\Controller->render('allTypeGroup')
+#3 [internal function]: frontend\modules\type_exercises\controllers\AjaxController->actionGetAllExcercises()
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-11-16 19:59:33 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = [
+    'type_exercises_id' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'eKDtrvhi3UY7JE6sJtW3Aex6jN9DSOAcobTtqBYBKKs_x4vaoFWLMQJOOM5zhNFVgRn8ky1-r13G85XRUVBu_w=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '14538'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573923573.723
+    'REQUEST_TIME' => 1573923573
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 20:05:17 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: frontend\modules\type_exercises\modules\tests\models\GroupTest::allType() in C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 C:\OSPanel\domains\testing\frontend\modules\type_exercises\views\ajax\allTypeGroup.php(4): yii\base\Component->__call('allType', Array)
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('allTypeGroup', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#5 C:\OSPanel\domains\testing\frontend\modules\type_exercises\controllers\AjaxController.php(26): yii\base\Controller->render('allTypeGroup', Array)
+#6 [internal function]: frontend\modules\type_exercises\controllers\AjaxController->actionGetAllExcercises()
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#10 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#11 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2019-11-16 20:05:17 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = [
+    'type_exercises_id' => '2'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'jc3wOBOivqUHw_Hpm3o3P7iqeDnx1vrJbYr7_5wB2QrKqpZMS5Xo0j6ph4vOK1Fr1ckIdZ_gtYgKzYOG21CfXg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '14946'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573923917.692
+    'REQUEST_TIME' => 1573923917
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 20:05:18 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][Error] Error: Call to a member function field() on null in C:\OSPanel\domains\testing\frontend\modules\type_exercises\views\ajax\allTypeGroup.php:5
+Stack trace:
+#0 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('allTypeGroup', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#4 C:\OSPanel\domains\testing\frontend\modules\type_exercises\controllers\AjaxController.php(26): yii\base\Controller->render('allTypeGroup', Array)
+#5 [internal function]: frontend\modules\type_exercises\controllers\AjaxController->actionGetAllExcercises()
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#9 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#10 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-11-16 20:05:18 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = [
+    'type_exercises_id' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'jc3wOBOivqUHw_Hpm3o3P7iqeDnx1vrJbYr7_5wB2QrKqpZMS5Xo0j6ph4vOK1Fr1ckIdZ_gtYgKzYOG21CfXg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '14948'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573923918.89
+    'REQUEST_TIME' => 1573923918
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 20:05:45 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: frontend\modules\type_exercises\modules\tests\models\GroupTest::allType() in C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 C:\OSPanel\domains\testing\frontend\modules\type_exercises\views\ajax\allTypeGroup.php(4): yii\base\Component->__call('allType', Array)
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('allTypeGroup', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#5 C:\OSPanel\domains\testing\frontend\modules\type_exercises\controllers\AjaxController.php(26): yii\base\Controller->render('allTypeGroup', Array)
+#6 [internal function]: frontend\modules\type_exercises\controllers\AjaxController->actionGetAllExcercises()
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#10 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#11 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2019-11-16 20:05:45 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = [
+    'type_exercises_id' => '2'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'mZWoHd1YCRVtYz9mZVzjP5y-pByGOHkUb9m6vLUEdMPe8s5phW9fYlQJSQQwDYVr8d3UUOgONlUInsLF8lUylw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '14978'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573923945.648
+    'REQUEST_TIME' => 1573923945
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 20:06:28 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: frontend\modules\type_exercises\modules\comics\models\Comics::allType() in C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 C:\OSPanel\domains\testing\frontend\modules\type_exercises\views\ajax\allTypeGroup.php(4): yii\base\Component->__call('allType', Array)
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\View.php(213): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Controller.php(49): yii\web\View->renderAjax('allTypeGroup', Array, Object(frontend\modules\type_exercises\controllers\AjaxController))
+#5 C:\OSPanel\domains\testing\frontend\modules\type_exercises\controllers\AjaxController.php(26): yii\web\Controller->renderAjax('allTypeGroup', Array)
+#6 [internal function]: frontend\modules\type_exercises\controllers\AjaxController->actionGetAllExcercises()
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('get-all-excerci...', Array)
+#10 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#11 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2019-11-16 20:06:28 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = [
+    'type_exercises_id' => '4'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '19'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'M-Jvnm7YADU4q6D-q7pgIdjcxkimfDCQ5DHuLRASmeN0hQnqNu9WQgHB1pz-6wZ1tb-2BMhKf9GDdpZUV0Pftw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/type_exercises/exercises/default/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '15037'
+    'REDIRECT_URL' => '/frontend/web/type_exercises/ajax/get-all-excercises'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/ajax/get-all-excercises'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573923988.031
+    'REQUEST_TIME' => 1573923988
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 20:24:00 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: frontend\modules\tasks\models\TeoriyaSearch::text in C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('text')
+#1 C:\OSPanel\domains\testing\frontend\modules\tasks\models\TeoriyaSearch.php(64): yii\db\BaseActiveRecord->__get('text')
+#2 C:\OSPanel\domains\testing\frontend\modules\tasks\controllers\TeoriyaController.php(40): frontend\modules\tasks\models\TeoriyaSearch->search(Array)
+#3 [internal function]: frontend\modules\tasks\controllers\TeoriyaController->actionIndex()
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks/teoriya', Array)
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-11-16 20:23:59 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://testing/tasks/video'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '16294'
+    'REDIRECT_URL' => '/frontend/web/tasks/teoriya'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/teoriya'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573925039.979
+    'REQUEST_TIME' => 1573925039
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 20:25:13 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: frontend\modules\tasks\models\Teoriya::text in C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('text')
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\helpers\BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('text')
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\DataColumn.php(232): yii\helpers\BaseArrayHelper::getValue(Object(frontend\modules\tasks\models\Teoriya), 'text')
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\DataColumn.php(244): yii\grid\DataColumn->getDataCellValue(Object(frontend\modules\tasks\models\Teoriya), 1, 0)
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(frontend\modules\tasks\models\Teoriya), 1, 0)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell(Object(frontend\modules\tasks\models\Teoriya), 1, 0)
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow(Object(frontend\modules\tasks\models\Teoriya), 1, 0)
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#9 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#10 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#14 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(140): yii\grid\GridView->run()
+#15 C:\OSPanel\domains\testing\frontend\modules\tasks\views\teoriya\index.php(24): yii\base\Widget::widget(Array)
+#16 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#17 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#18 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\tasks\controllers\TeoriyaController))
+#19 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(frontend\modules\tasks\controllers\TeoriyaController))
+#20 C:\OSPanel\domains\testing\frontend\modules\tasks\controllers\TeoriyaController.php(44): yii\base\Controller->render('index', Array)
+#21 [internal function]: frontend\modules\tasks\controllers\TeoriyaController->actionIndex()
+#22 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#23 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#24 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#25 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks/teoriya', Array)
+#26 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#28 {main}
+2019-11-16 20:25:13 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://testing/tasks/video'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '16386'
+    'REDIRECT_URL' => '/frontend/web/tasks/teoriya'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/teoriya'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573925113.527
+    'REQUEST_TIME' => 1573925113
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 20:25:35 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Unknown format type: nname in C:\OSPanel\domains\testing\vendor\yiisoft\yii2\i18n\Formatter.php:446
+Stack trace:
+#0 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\DataColumn.php(244): yii\i18n\Formatter->format('texttexttexttex...', 'nname')
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(frontend\modules\tasks\models\Teoriya), 1, 0)
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell(Object(frontend\modules\tasks\models\Teoriya), 1, 0)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow(Object(frontend\modules\tasks\models\Teoriya), 1, 0)
+#4 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#8 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#9 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#10 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#11 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(140): yii\grid\GridView->run()
+#12 C:\OSPanel\domains\testing\frontend\modules\tasks\views\teoriya\index.php(24): yii\base\Widget::widget(Array)
+#13 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#14 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#15 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\tasks\controllers\TeoriyaController))
+#16 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(frontend\modules\tasks\controllers\TeoriyaController))
+#17 C:\OSPanel\domains\testing\frontend\modules\tasks\controllers\TeoriyaController.php(44): yii\base\Controller->render('index', Array)
+#18 [internal function]: frontend\modules\tasks\controllers\TeoriyaController->actionIndex()
+#19 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#20 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#21 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#22 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks/teoriya', Array)
+#23 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#25 {main}
+2019-11-16 20:25:35 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://testing/tasks/video'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '16409'
+    'REDIRECT_URL' => '/frontend/web/tasks/teoriya'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/teoriya'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573925135.309
+    'REQUEST_TIME' => 1573925135
+    'argv' => []
+    'argc' => 0
+]
+2019-11-16 20:25:50 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\widgets\ActiveField::namearea() in C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 C:\OSPanel\domains\testing\frontend\modules\tasks\views\teoriya\_form.php(15): yii\base\Component->__call('namearea', Array)
+#1 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#3 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, NULL)
+#4 C:\OSPanel\domains\testing\frontend\modules\tasks\views\teoriya\create.php(17): yii\base\View->render('_form', Array)
+#5 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#7 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(frontend\modules\tasks\controllers\TeoriyaController))
+#8 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('create', Array, Object(frontend\modules\tasks\controllers\TeoriyaController))
+#9 C:\OSPanel\domains\testing\frontend\modules\tasks\controllers\TeoriyaController.php(75): yii\base\Controller->render('create', Array)
+#10 [internal function]: frontend\modules\tasks\controllers\TeoriyaController->actionCreate()
+#11 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks/teoriya/c...', Array)
+#15 C:\OSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\OSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2019-11-16 20:25:50 [127.0.0.1][-][97m16o0ba4c3jioqmmph4iv92i4nbgqa][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT\";}'
+    'advanced-frontend' => '97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://testing/tasks/teoriya'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,ru;q=0.8,und;q=0.7,la;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=41e8df4e8a716624f254b121f7f7b2a28fe678e7acc81f2443f426f316640412a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22GgftX7Vw9jvbUQfTmcpLn6OAgGxyGQFT%22%3B%7D; advanced-frontend=97m16o0ba4c3jioqmmph4iv92i4nbgqa'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/testing'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '16426'
+    'REDIRECT_URL' => '/frontend/web/tasks/teoriya/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/teoriya/create'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1573925150.121
+    'REQUEST_TIME' => 1573925150
+    'argv' => []
+    'argc' => 0
+]

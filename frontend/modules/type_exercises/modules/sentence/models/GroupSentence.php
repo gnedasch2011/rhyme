@@ -11,6 +11,7 @@ use Yii;
  * @property int $id
  * @property int $type_exercises_id
  */
+
 class GroupSentence extends \yii\db\ActiveRecord
 {
     use CreateAdmitTrait;

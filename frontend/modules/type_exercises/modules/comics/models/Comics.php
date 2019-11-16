@@ -2,6 +2,7 @@
 
 namespace frontend\modules\type_exercises\modules\comics\models;
 
+use frontend\modules\admin\traits\CreateAdmitTrait;
 use Yii;
 
 /**
@@ -14,6 +15,7 @@ use Yii;
  */
 class Comics extends \yii\db\ActiveRecord
 {
+    use CreateAdmitTrait;
     /**
      * {@inheritdoc}
      */

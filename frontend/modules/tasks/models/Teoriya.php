@@ -9,7 +9,7 @@ use Yii;
  * This is the model class for table "teoriya".
  *
  * @property int $id
- * @property string $text
+ * @property string $name
  * @property string $template
  */
 class Teoriya extends \yii\db\ActiveRecord
@@ -30,7 +30,7 @@ class Teoriya extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['text', 'template'], 'string'],
+            [['name', 'template'], 'string'],
         ];
     }
 
@@ -41,7 +41,7 @@ class Teoriya extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'text' => 'Text',
+            'name' => 'name',
             'template' => 'Template',
         ];
     }

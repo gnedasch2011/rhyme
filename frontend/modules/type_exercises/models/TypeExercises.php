@@ -47,7 +47,7 @@ class TypeExercises extends \yii\db\ActiveRecord
         ];
     }
 
-    public function returnTypeModel($type_id)
+    public static function returnTypeModel($type_id)
     {
         $classModel = self::findOne($type_id);
         $classModel = $classModel ?? false;
@@ -72,5 +72,15 @@ class TypeExercises extends \yii\db\ActiveRecord
         }
         return false;
     }
+
+    public static function returnTypeExcercise($type_id, $id)
+    {
+        $typeModel = self::returnTypeModel($type_id);
+        if($typeModel){
+            $excercise = $typeModel->find($id)->one();
+        }
+        echo "<pre>"; print_r($excercise);die();
+    }
+
 
 }

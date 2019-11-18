@@ -1,3 +1,6 @@
+/**
+ * Создание формы
+ */
 $(document).on('click', '.add_form', function (e) {
 
     var formName = $(e.currentTarget).attr('data-form-name'),
@@ -22,6 +25,25 @@ $(document).on('click', '.add_form', function (e) {
         data: arr,
         success: function (data) {
             formPlaceForNew.append(data);
+        }
+    });
+})
+
+/**
+ * Смена типа упражнения в создании связок
+ */
+$(document).on('change','.type_exercises_id__change',function (e) {
+    e.preventDefault();
+    let type_exercises_id= $(e.target).val(),
+        data = {type_exercises_id:type_exercises_id}
+
+    $.ajax({
+        url: '/type_exercises/ajax/get-all-excercises',
+        method: "post",
+        data: data,
+
+        success: function (data) {
+            $('.type_exercises_id__change_result').html(data);
         }
     });
 })

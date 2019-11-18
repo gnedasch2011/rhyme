@@ -2,6 +2,7 @@
 
 namespace frontend\modules\type_exercises\modules\exercises\models;
 
+use frontend\modules\type_exercises\models\TypeExercises;
 use Yii;
 
 /**
@@ -43,11 +44,17 @@ class Exercises extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'type_exercises_id' => 'Type Exercises ID',
-            'name' => 'Name',
-            'id_exercises_diff' => 'Id Exercises Diff',
-            'tasks_id' => 'Tasks ID',
-            'position' => 'Position',
+            'type_exercises_id' => 'Тип упражнения',
+            'name' => 'Общее описание группы упражнений',
+            'id_exercises_diff' => 'Id Упражнения',
+            'tasks_id' => 'Какой день',
+            'position' => 'Позиция',
         ];
     }
+    
+    public function getTypeExcercise()
+    {
+        return TypeExercises::returnAttrValue($this->type_exercises_id, 'name');
+    }
+    
 }

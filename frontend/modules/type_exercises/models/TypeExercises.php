@@ -54,15 +54,23 @@ class TypeExercises extends \yii\db\ActiveRecord
 
         if ($classModel) {
             $class_construct = $classModel->class_construct;
-            if($classModel->class_construct){
+            if ($classModel->class_construct) {
                 return new $class_construct ();
             }
             return false;
         }
 
         return false;
+    }
 
+    public static function returnAttrValue($typeId, $attr)
+    {
+        $model = self::findOne($typeId);
 
+        if ($model) {
+            return $model->$attr;
+        }
+        return false;
     }
 
 }

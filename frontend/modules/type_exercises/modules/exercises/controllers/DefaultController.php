@@ -3,9 +3,11 @@
 namespace frontend\modules\type_exercises\modules\exercises\controllers;
 
 use frontend\components\AdminController;
+use frontend\components\ModelLoader;
 use Yii;
 use frontend\modules\type_exercises\modules\exercises\models\Exercises;
 use frontend\modules\type_exercises\modules\exercises\models\ExercisesSearch;
+use yii\base\Model;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -67,8 +69,16 @@ class DefaultController extends AdminController
     {
         $model = new Exercises();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id, 'tasks_id' => $model->tasks_id]);
+        if (Yii::$app->request->post()) {
+            $models = ModelLoader::createLoadMultipleModel($model, Yii::$app->request->post());
+
+            if (Model::loadMultiple($models, Yii::$app->request->post()) && Model::validateMultiple($models)) {
+                foreach ($models as $model) {
+                    $model->save();
+                }
+                return $this->redirect(['view', 'id' => $model->id, 'tasks_id' => $model->tasks_id]);
+            }
+
         }
 
         return $this->render('create', [

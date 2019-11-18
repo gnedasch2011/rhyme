@@ -32,18 +32,19 @@ $(document).on('click', '.add_form', function (e) {
 /**
  * Смена типа упражнения в создании связок
  */
-$(document).on('change','.type_exercises_id__change',function (e) {
+$(document).on('change', '.type_exercises_id__change', function (e) {
     e.preventDefault();
-    let type_exercises_id= $(e.target).val(),
-        data = {type_exercises_id:type_exercises_id}
-
+    let type_exercises_id = $(e.target).val(),
+        data = {type_exercises_id: type_exercises_id},
+        $res = $(e.target).parents('.row').find('.type_exercises_id__change_result')
+console.log($res);
     $.ajax({
         url: '/type_exercises/ajax/get-all-excercises',
         method: "post",
         data: data,
 
         success: function (data) {
-            $('.type_exercises_id__change_result').html(data);
+            $res.html(data);
         }
     });
 })

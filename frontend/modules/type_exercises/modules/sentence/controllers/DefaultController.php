@@ -77,7 +77,7 @@ class DefaultController extends AdminController
             ModelLoader::loadMultiple($model->expressions, Yii::$app->request->post());
 
 
-           $model->save();
+            $model->save();
 
             return $this->redirect(['view', 'id' => $model->id]);
         }

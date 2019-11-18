@@ -26,6 +26,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
+            [
+                'label' => 'Тип упражнения',
+                'format' => 'raw',
+                'value' => function ($value) {
+                    return $value->getTypeExcercise();
+                },
+
+            ],
             'id',
             'type_exercises_id',
             'name',

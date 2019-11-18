@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 ?>
 <div class="row new_item">
-    <h2>Упражнение №<?= $positon; ?></h2>
+    <h2>Упражнение №<?= ++$positon; ?></h2>
     Имя упражнения для выбранного из типов
     <?= Html::dropDownList("$formName" . "[$positon]" . "[tasks_id]", null, \frontend\modules\tasks\models\Tasks::allType(), ['class' => 'form-control']) ?>
 

@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\modules\type_exercises\modules\exercises\models\Exercises */
 
-$this->title = 'Создание связок упражнений';
+$this->title = '';
 $this->params['breadcrumbs'][] = ['label' => 'Exercises', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

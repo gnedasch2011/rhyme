@@ -62,7 +62,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-//                'tasks/<id:\d+>'=>'tasks'
+                'tasks/<id:\d+>'=>'tasks'
             ],
         ],
 

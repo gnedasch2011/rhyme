@@ -3,7 +3,9 @@
 namespace frontend\modules\tasks\models;
 
 use frontend\modules\admin\traits\CreateAdmitTrait;
+use frontend\modules\type_exercises\modules\exercises\models\Exercises;
 use Yii;
+use frontend\modules\tasks\models\Video;
 
 /**
  * This is the model class for table "tasks".
@@ -18,6 +20,7 @@ class Tasks extends \yii\db\ActiveRecord
 {
 
     use CreateAdmitTrait;
+
     /**
      * {@inheritdoc}
      */
@@ -51,4 +54,20 @@ class Tasks extends \yii\db\ActiveRecord
             'teoriya_id' => 'Teoriya ID',
         ];
     }
+
+    public function getVideo()
+    {
+        return $this->hasOne(Video::className(), ['id' => 'video_id']);
+    }
+
+    public function getTeoriya()
+    {
+        return $this->hasOne(Teoriya::className(), ['id' => 'teoriya_id']);
+    }
+
+    public function getExercises()
+    {
+        return $this->hasMany(Exercises::className(), ['tasks_id' => 'id'])->orderBy('position');
+    }
+
 }

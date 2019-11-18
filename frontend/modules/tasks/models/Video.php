@@ -13,7 +13,7 @@ use Yii;
  * @property string $url
  * @property int $tasks_id
  */
-class Video extends \yii\db\ActiveRecord
+class   Video extends \yii\db\ActiveRecord
 {
 
     use CreateAdmitTrait;
@@ -46,5 +46,11 @@ class Video extends \yii\db\ActiveRecord
             'name' => 'Name',
             'url' => 'Url',
         ];
+    }
+
+    public function getTasks()
+    {
+        return $this->hasOne(Tasks::className(), ['video_id' => 'id']);
+
     }
 }

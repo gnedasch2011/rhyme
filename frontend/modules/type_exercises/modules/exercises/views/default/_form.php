@@ -12,10 +12,11 @@ use yii\widgets\ActiveForm;
 <div class="exercises-form">
 
     <?php $form = ActiveForm::begin(); ?>
-    <?= $form->field($model, '[0]tasks_id')->dropDownList(\frontend\modules\tasks\models\Tasks::allType())->label('День'); ?>
+
 
     <div class="new-field">
         <div class="row">
+            <?= $form->field($model, '[0]tasks_id')->dropDownList(\frontend\modules\tasks\models\Tasks::allType())->label('День'); ?>
             <?= $form->field($model, '[0]name')->textInput(['maxlength' => true])->label('Имя упражнения для выбранного из типов') ?>
             <?= $form->field($model, '[0]position')->textInput()->label('Позиция') ?>
             <?= $form->field($model, '[0]type_exercises_id')->dropDownList(\frontend\modules\type_exercises\models\TypeExercises::allType(), ['class' => 'form-control type_exerc type_exercises_id__change'])->label('Тип упражнений'); ?>

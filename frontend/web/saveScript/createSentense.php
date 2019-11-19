@@ -38,18 +38,13 @@
     <div class="click_word click_word_template">
         5 word
     </div>
+
+
+
+
 </div>
 
 
-<a class="getString"
-   data-success-str="1 word 5 word 4 word 2 word"
-   href="#">
-    Получить строку
-</a>
-
-<div class="result">
-
-</div>
 
 <style>
     body {

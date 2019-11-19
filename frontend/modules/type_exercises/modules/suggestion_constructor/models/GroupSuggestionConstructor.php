@@ -16,6 +16,8 @@ use Yii;
 class GroupSuggestionConstructor extends \yii\db\ActiveRecord
 {
 
+    public $template = 'suggestion_constructor';
+
     use CreateAdmitTrait;
     /**
      * {@inheritdoc}
@@ -47,4 +49,9 @@ class GroupSuggestionConstructor extends \yii\db\ActiveRecord
             'type_exercises_id' => 'Type Exercises ID',
         ];
     }
+    
+     public function getSuggestionConstructor()
+         {
+             return $this->hasMany(SuggestionConstructor::className(), ['group_suggestion_constructor_id' => 'id']);
+         }
 }

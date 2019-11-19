@@ -14,6 +14,8 @@ use Yii;
  */
 class GroupTest extends \yii\db\ActiveRecord
 {
+    public $template = 'group_test';
+
     use CreateAdmitTrait;
     /**
      * {@inheritdoc}

@@ -16,6 +16,7 @@ class GroupSentence extends \yii\db\ActiveRecord
 {
     use CreateAdmitTrait;
     const TYPE_EXERCISES_ID = 3;
+    public $template = "group_sentence";
 
     /**
      * {@inheritdoc}

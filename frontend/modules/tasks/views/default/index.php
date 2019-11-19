@@ -1,9 +1,15 @@
-<?php 
-    use frontend\modules\type_exercises\models\TypeExercises;
- ?>
+<?php
 
-<?php if($task->exercises):?>
-    <?php foreach($task->exercises as $exercise):?>
-            <?php echo "<pre>"; print_r(TypeExercises::returnTypeExcercise($exercise->type_exercises_id,$exercise->id));die(); ?>
-    <?php endforeach;?>
-<?php endif;?>
+use frontend\modules\type_exercises\models\TypeExercises;
+use frontend\widgets\fabric_widget\FabricWidget;
+
+?>
+<?php if ($task->exercises): ?>
+    <?php foreach ($task->exercises as $exercise): ?>
+        <?php
+        echo FabricWidget::widget([
+            'exercise' => $exercise
+        ]);
+        ?>
+    <?php endforeach; ?>
+<?php endif; ?>

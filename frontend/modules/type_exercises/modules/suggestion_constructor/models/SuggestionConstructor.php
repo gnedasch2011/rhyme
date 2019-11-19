@@ -80,7 +80,7 @@ class SuggestionConstructor extends \yii\db\ActiveRecord
 
     public function getPartsSuggestion()
     {
-        return $this->hasMany(PartsSuggestion::className(), ['id' => 'suggestion_constructor_id']);
+        return $this->hasMany(PartsSuggestion::className(), ['suggestion_constructor_id' => 'id']);
     }
 
 

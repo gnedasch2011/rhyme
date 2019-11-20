@@ -26,7 +26,7 @@ class AjaxController extends Controller
             }
         }
 
-        return false;
+        return json_encode(['success' => false]);
     }
 }
 

@@ -5,15 +5,8 @@
                 <span class="click_word click_word_template"><?= $partsSuggestion->text; ?></span>
             <?php endforeach; ?>
         </div>
-
-        <a class="getString"
-           data-success-str="1 word 5 word 4 word 2 word"
-           href="#">
-            Получить строку
-        </a>
         <div class="result"
-             data-id-full-text='<?= $suggestionConstructor->id; ?>'
-        ></div>
+             data-id-full-text='<?= $suggestionConstructor->id; ?>'></div>
     </div>
 <?php endforeach; ?>
 
@@ -23,20 +16,21 @@ $script = <<< JS
         
         let context = $(e.target).parents('.suggestion')
         $(e.target).addClass('inResult')
-        $('.result').append('<div class= "click_word_template inResult" > ' + $(e.target).text() + ' </div>');
-        $(e.target).remove()       
-                 
-        
-         ///передаём контекст, если там не остаётся слов, то ajax передаём проверку
+        context.find('.result').append('<div class= "click_word_template inResult" > ' + $(e.target).text() + ' </div>');
+        $(e.target).remove()      
+        ///передаём контекст, если там не остаётся слов, то ajax передаём проверку
          
          checkStr(context)
     })
 
 
     $(document).on('click', ".inResult", function (e) {
-        $('.suggestion .beginState').append('<div class= "click_word_template click_word" > ' + $(e.target).text() + ' </div>');
+        let context = $(e.target).parents('.suggestion');
+        context.find('.beginState').append('<div class= "click_word_template click_word" > ' + $(e.target).text() + ' </div>');
         $(e.target).remove()        
     })
+    
+    
     
     function checkStr(context)
     {
@@ -62,15 +56,28 @@ $script = <<< JS
                    $.ajax({
                                url: '/type_exercises/suggestion_constructor/ajax/check-full-suggestion',
                                method: "post",
+                               dataType: "json",
                                data: data,
                                
                               success: function (data) {
-                                   console.log(data.success);
+                                   if(data.success){
+                                       changeColorText(context, '.result', 'green')
+                                   } else {
+                                       console.log('notSuccess');
+                                        changeColorText(context, '.result', 'red')
+                                   }
+                                    
                               }
                            });    
                 }
          } 
      
+        function changeColorText(context, el, color) 
+        {
+          $(context).find(el).css({color:color})
+        }
+        
+        
     }
 
     // $(document).on('click', ".getString", function (e) {

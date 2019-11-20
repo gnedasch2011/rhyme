@@ -79,20 +79,6 @@ $script = <<< JS
         
         
     }
-
-    // $(document).on('click', ".getString", function (e) {
-    //     var str = '';
-    //     $(e.target).parents('.result').find('.click_word_template').each(function (i, val) {
-    //         var text = $.trim($(val).text());
-    //         str = str + ' ' + text
-    //     })
-    //     // $(".result .click_word_template").each(function (i, val) {
-    //     //     var text = $.trim($(val).text());
-    //     //     str = str + ' ' + text
-    //     // })
-    //     console.log(str);
-    //     checkStr(str)
-    // })
 JS;
 //маркер конца строки, обязательно сразу, без пробелов и табуляции
 $this->registerJs($script, yii\web\View::POS_READY);

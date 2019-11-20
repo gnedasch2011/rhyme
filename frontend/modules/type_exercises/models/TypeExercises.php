@@ -76,6 +76,7 @@ class TypeExercises extends \yii\db\ActiveRecord
     public static function returnTypeExcercise($type_id, $id)
     {
         $typeModel = self::returnTypeModel($type_id);
+
         if ($typeModel) {
             $excercise = $typeModel->find($id)->one();
         }

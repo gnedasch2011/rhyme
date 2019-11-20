@@ -1,5 +1,5 @@
 <?php foreach ($model->suggestionConstructor as $suggestionConstructor): ?>
-    <div class="info">
+    <div class="suggestion">
         <div class="beginState">
             <?php foreach ($suggestionConstructor->partsSuggestion as $partsSuggestion): ?>
                 <span class="click_word click_word_template"><?= $partsSuggestion->text; ?></span>
@@ -12,7 +12,7 @@
             Получить строку
         </a>
         <div class="result"
-            data-id-full-text = '<?= $suggestionConstructor->id ;?>'
+             data-id-full-text='<?= $suggestionConstructor->id; ?>'
         ></div>
     </div>
 <?php endforeach; ?>
@@ -20,27 +20,57 @@
 <?php
 $script = <<< JS
     $(document).on('click', ".click_word", function (e) {
+        
+        let context = $(e.target).parents('.suggestion')
         $(e.target).addClass('inResult')
         $('.result').append('<div class= "click_word_template inResult" > ' + $(e.target).text() + ' </div>');
-        $(e.target).remove()
+        $(e.target).remove()       
+                 
+        
+         ///передаём контекст, если там не остаётся слов, то ajax передаём проверку
+         
+         checkStr(context)
     })
 
 
     $(document).on('click', ".inResult", function (e) {
-        $('.info .beginState').append('<div class= "click_word_template click_word" > ' + $(e.target).text() + ' </div>');
-        $(e.target).remove()
+        $('.suggestion .beginState').append('<div class= "click_word_template click_word" > ' + $(e.target).text() + ' </div>');
+        $(e.target).remove()        
     })
     
-    function checkStr(str)
+    function checkStr(context)
     {
-        //если в .beginState 0 элементов, то отправляем строку на проверку
-         $(e.target).parents('.result').find('.click_word_template').each(function (i, val) {
-            var text = $.trim($(val).text());
-            str = str + ' ' + text
-        })
-        if(str==""){
-            
-        }
+        let elCount = context.find('.beginState .click_word_template').length,
+        str = '',
+        dataFullTextId = context.find('.result').attr('data-id-full-text')
+        ;
+        
+        if(elCount==0){
+             //если в .beginState 0 элементов, то отправляем строку на проверку
+                    context.find('.result .click_word_template').each(function (i, val) {     
+                   
+                    var text = $.trim($(val).text());
+                    str = str + ' ' + text
+                })
+                    
+                    let data= {
+                        str:str,
+                        dataFullTextId:dataFullTextId,
+                    };
+                    
+                if(str.length>0 && elCount==0){
+                   $.ajax({
+                               url: '/type_exercises/suggestion_constructor/ajax/check-full-suggestion',
+                               method: "post",
+                               data: data,
+                               
+                              success: function (data) {
+                                   console.log(data.success);
+                              }
+                           });    
+                }
+         } 
+     
     }
 
     // $(document).on('click', ".getString", function (e) {

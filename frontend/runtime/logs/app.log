@@ -10588,3 +10588,289 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2019-11-20 08:30:44 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "type_exercises/suggestion_constructor/ajax/check-full-suggestion". in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2019-11-20 08:30:44 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = []
+
+$_POST = [
+    'str' => ' suggestion constructor'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '27'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => '51FSB8EK01wr6SuvNLF-55HyUqNqMGsFg5Jkc9GF5gGiCBVgt2flLVveQ9lO5AmW25YWm0dEJ0j18CIkhdy5Sw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/tasks/1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '44345'
+    'REDIRECT_URL' => '/type_exercises/suggestion_constructor/ajax/check-full-suggestion'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/suggestion_constructor/ajax/check-full-suggestion'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574227844.758
+    'REQUEST_TIME' => 1574227844
+    'argv' => []
+    'argc' => 0
+]
+2019-11-20 08:31:44 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: fullStr in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('check-full-sugg...', Array)
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('type_exercises/...', Array)
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-11-20 08:31:44 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = []
+
+$_POST = [
+    'str' => ' suggestion constructor'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '27'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'Qe1ShL5j1yuuGqUEF87iHXuXypFROPbzxdWNt4W9iQUEtBXjyA7hWt4tzXJtm5VsMfOOqXxMur6zt8vg0eTWTw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/tasks/1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '44405'
+    'REDIRECT_URL' => '/type_exercises/suggestion_constructor/ajax/check-full-suggestion'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/suggestion_constructor/ajax/check-full-suggestion'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574227904.316
+    'REQUEST_TIME' => 1574227904
+    'argv' => []
+    'argc' => 0
+]
+2019-11-20 08:32:19 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Response content must not be an array. in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Response.php:1082
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Response.php(337): yii\web\Response->prepare()
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Response->send()
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2019-11-20 08:32:18 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = []
+
+$_POST = [
+    'str' => ' suggestion constructor'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '27'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'J0YZt8Haw0NhH8LrlAs2RCen8UJYuLDKn2vRs4V_ZEhiH17Qt7f1MhEoqp3uXkE1bcO1enXM_IfpCZfk0SY7Ag=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/tasks/1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '44441'
+    'REDIRECT_URL' => '/type_exercises/suggestion_constructor/ajax/check-full-suggestion'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/suggestion_constructor/ajax/check-full-suggestion'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574227938.97
+    'REQUEST_TIME' => 1574227938
+    'argv' => []
+    'argc' => 0
+]
+2019-11-20 08:37:23 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Response content must not be an array. in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Response.php:1082
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Response.php(337): yii\web\Response->prepare()
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Response->send()
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2019-11-20 08:37:23 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = []
+
+$_POST = [
+    'str' => ' suggestion_constructor suggestion_constructor'
+    'dataFullTextId' => '1'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '67'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://testing'
+    'HTTP_X_CSRF_TOKEN' => 'UZBXjpds7g7bQmsTjOxCVVreRMjY1_82qlk97bPOqXAUyRDp4QHYf6t1A2X2uTUkELoA8PWjs3vcO3u655f2Og=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://testing/tasks/1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '44771'
+    'REDIRECT_URL' => '/type_exercises/suggestion_constructor/ajax/check-full-suggestion'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/type_exercises/suggestion_constructor/ajax/check-full-suggestion'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574228243.779
+    'REQUEST_TIME' => 1574228243
+    'argv' => []
+    'argc' => 0
+]

@@ -25,7 +25,7 @@ $SentenceCheck = new SentenceCheck();
             'options' => ['class' => 'form-horizontal'],
         ]) ?>
         <?= $form->field($SentenceCheck, 'text', ['options' => []])->textarea([
-            'value' => 'iland I hate',
+            'value' => 'iland I hate poison',
             'class' => 'check_sentence form-control',
         ]) ?>
         <?php ActiveForm::end() ?>
@@ -86,8 +86,12 @@ $script = <<< JS
                  let errors = [];
                  
                 items.each(function(i, context) {      
-                    console.log(checkTextInSentence($(context)));
-                    // errors.push(checkTextInSentence($(context)));
+                    if (checkTextInSentence($(context))){
+                        $(context).find('.check_sentence ').css({'border':"5px solid green"})
+                    } else {
+                       $(context).find('.check_sentence ').css({'border':"5px solid red"})
+                    }
+                 
                 })
                 
           })

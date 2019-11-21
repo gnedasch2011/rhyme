@@ -14,7 +14,7 @@ $SentenceCheck = new SentenceCheck();
         <div>
             <ul class="sentence_item_expressions">
                 <?php foreach ($sentence->expressions as $expression): ?>
-                    <li><span class="expression_item"><?= $expression->expressions; ?>; </span></li>
+                    <li><span class="expression_item"><?= $expression->expressions; ?></span></li>
                 <?php endforeach; ?>
             </ul>
         </div>
@@ -25,7 +25,7 @@ $SentenceCheck = new SentenceCheck();
             'options' => ['class' => 'form-horizontal'],
         ]) ?>
         <?= $form->field($SentenceCheck, 'text', ['options' => []])->textarea([
-            'value' => 'iland;',
+            'value' => 'iland I hate',
             'class' => 'check_sentence form-control',
         ]) ?>
         <?php ActiveForm::end() ?>
@@ -38,7 +38,7 @@ $SentenceCheck = new SentenceCheck();
 $script = <<< JS
 
             function searchText(needle, haystack)
-            {
+            {      
                 if(haystack.indexOf(needle)== -1){
                     return false;
                 } else {
@@ -46,30 +46,48 @@ $script = <<< JS
                 }
             }
             
+            function checkErrors(errors)
+            {
+                // checks whether an element is even
+                let even = (error) => error===false;
+                
+                if(errors.some(even)){
+                    return false;
+                }
+                  return true;
+            }
+            /**
+            * Проверка каждой строки
+            * @param context
+            * @returns {boolean}
+            */
             function checkTextInSentence(context)
             {
                 let expressions = context.find('.sentence_item_expressions li'), 
                     textForCheck = context.find('.check_sentence').val()       
                     errors = []          
                     ;
-                              
-                expressions.each(function(i, val) {
-                    
-                    if(!searchText($(val).text, textForCheck)){
+                //проверяем каждую фразу в тексте
+                expressions.each(function(i, val) {                    
+                    if(!searchText($(val).text().trim(), textForCheck)){
                         errors.push(false);                       
-                    }                   
-                    console.log(errors);
-                })
+                    } else{
+                        errors.push(true);          
+                    }                         
+                })       
+                        
+               return checkErrors(errors);
                         
             }
             
           $(document).on('click','.check_everyone_sentence_item',function (e) { 
                  e.preventDefault();
                  let items = $('.sentence_item');
-                 let errors =[];
+                 let errors = [];
                  
                 items.each(function(i, context) {      
-                    errors.push(checkTextInSentence($(context)));
+                    console.log(checkTextInSentence($(context)));
+                    // errors.push(checkTextInSentence($(context)));
                 })
                 
           })

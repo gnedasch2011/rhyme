@@ -26,6 +26,7 @@ AdminAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
+<img src="/images/test.png" alt="">
 <?php $this->beginBody() ?>
 
 <div class="wrap">

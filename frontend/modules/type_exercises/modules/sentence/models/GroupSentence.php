@@ -49,4 +49,9 @@ class GroupSentence extends \yii\db\ActiveRecord
             'name' => 'name',
         ];
     }
+
+     public function getSentence()
+         {
+             return $this->hasMany(Sentence::className(), ['group_sentence_id' => 'id']);
+         }
 }

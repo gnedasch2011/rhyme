@@ -11014,3 +11014,794 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2019-11-21 08:15:06 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\base\ErrorException:4096] yii\base\ErrorException: Object of class frontend\modules\tasks\models\Video could not be converted to string in D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php:7
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php(7): yii\base\ErrorHandler->handleError(4096, 'Object of class...', 'D:\\OSUltimate\\S...', 7, Array)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\controllers\DefaultController.php(23): yii\base\Controller->render('index', Array)
+#6 [internal function]: frontend\modules\tasks\controllers\DefaultController->actionIndex('1')
+#7 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#10 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks', Array)
+#11 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+2019-11-21 08:15:06 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '56204'
+    'REDIRECT_URL' => '/tasks/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574313306.85
+    'REQUEST_TIME' => 1574313306
+    'argv' => []
+    'argc' => 0
+]
+2019-11-21 08:18:11 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: frontend\modules\tasks\models\Tasks::teory in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('teory')
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php(8): yii\db\BaseActiveRecord->__get('teory')
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#6 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\controllers\DefaultController.php(23): yii\base\Controller->render('index', Array)
+#7 [internal function]: frontend\modules\tasks\controllers\DefaultController->actionIndex('1')
+#8 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#11 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks', Array)
+#12 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2019-11-21 08:18:11 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '56367'
+    'REDIRECT_URL' => '/tasks/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574313491.487
+    'REQUEST_TIME' => 1574313491
+    'argv' => []
+    'argc' => 0
+]
+2019-11-21 08:18:19 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: frontend\modules\tasks\models\Tasks::teoria in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('teoria')
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php(8): yii\db\BaseActiveRecord->__get('teoria')
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#6 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\controllers\DefaultController.php(23): yii\base\Controller->render('index', Array)
+#7 [internal function]: frontend\modules\tasks\controllers\DefaultController->actionIndex('1')
+#8 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#11 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks', Array)
+#12 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2019-11-21 08:18:19 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '56393'
+    'REDIRECT_URL' => '/tasks/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574313499.752
+    'REQUEST_TIME' => 1574313499
+    'argv' => []
+    'argc' => 0
+]
+2019-11-21 08:26:47 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: frontend\modules\type_exercises\modules\sentence\models\GroupSentence::desc in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('desc')
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\views\group_sentence.php(4): yii\db\BaseActiveRecord->__get('desc')
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(236): yii\base\View->render('group_sentence', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#6 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\FabricWidget.php(32): yii\base\Widget->render('group_sentence', Array)
+#7 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(140): frontend\widgets\fabric_widget\FabricWidget->run()
+#8 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php(14): yii\base\Widget::widget(Array)
+#9 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#10 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#11 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#12 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#13 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\controllers\DefaultController.php(23): yii\base\Controller->render('index', Array)
+#14 [internal function]: frontend\modules\tasks\controllers\DefaultController->actionIndex('1')
+#15 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#18 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks', Array)
+#19 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#21 {main}
+2019-11-21 08:26:47 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '56956'
+    'REDIRECT_URL' => '/tasks/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574314007.055
+    'REQUEST_TIME' => 1574314007
+    'argv' => []
+    'argc' => 0
+]
+2019-11-21 08:28:51 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\base\ErrorException:256] yii\base\ErrorException: Exception (Unknown Property) 'yii\base\UnknownPropertyException' with message 'Getting unknown property: frontend\modules\type_exercises\modules\sentence\models\GroupSentence::username' 
+
+in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:154
+
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('username')
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\helpers\BaseHtml.php(2227): yii\db\BaseActiveRecord->__get('username')
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\helpers\BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(frontend\modules\type_exercises\modules\sentence\models\GroupSentence), 'username')
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\helpers\BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(frontend\modules\type_exercises\modules\sentence\models\GroupSentence), 'username', Array)
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\widgets\ActiveField.php(404): yii\helpers\BaseHtml::activeTextInput(Object(frontend\modules\type_exercises\modules\sentence\models\GroupSentence), 'username', Array)
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\widgets\ActiveField.php(204): yii\widgets\ActiveField->textInput()
+#6 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\widgets\ActiveField.php(176): yii\widgets\ActiveField->render()
+#7 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\views\group_sentence.php(16): yii\widgets\ActiveField->__toString()
+#8 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#9 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#10 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#11 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(236): yii\base\View->render('group_sentence', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#12 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\FabricWidget.php(32): yii\base\Widget->render('group_sentence', Array)
+#13 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(140): frontend\widgets\fabric_widget\FabricWidget->run()
+#14 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php(14): yii\base\Widget::widget(Array)
+#15 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#16 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#17 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#18 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#19 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\controllers\DefaultController.php(23): yii\base\Controller->render('index', Array)
+#20 [internal function]: frontend\modules\tasks\controllers\DefaultController->actionIndex('1')
+#21 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#22 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#23 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#24 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks', Array)
+#25 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#27 {main} in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\ErrorHandler.php:317
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(256, 'Exception (Unkn...', 'D:\\OSUltimate\\S...', 317, Array)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\ErrorHandler.php(317): trigger_error('Exception (Unkn...', 256)
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\widgets\ActiveField.php(178): yii\base\ErrorHandler::convertExceptionToError(Object(yii\base\UnknownPropertyException))
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\views\group_sentence.php(16): yii\widgets\ActiveField->__toString()
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', '[<span class="s...')
+#6 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#7 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(236): yii\base\View->render('group_sentence', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#8 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\FabricWidget.php(32): yii\base\Widget->render('group_sentence', Array)
+#9 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(140): frontend\widgets\fabric_widget\FabricWidget->run()
+#10 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php(14): yii\base\Widget::widget(Array)
+#11 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#12 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', '[<span class="s...')
+#13 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#14 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#15 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\controllers\DefaultController.php(23): yii\base\Controller->render('index', Array)
+#16 [internal function]: frontend\modules\tasks\controllers\DefaultController->actionIndex('1')
+#17 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#18 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#19 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#20 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks', Array)
+#21 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#23 {main}
+    in D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\views\group_sentence.php:16
+    in D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\FabricWidget.php:32
+    in D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php:14
+2019-11-21 08:28:51 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '57074'
+    'REDIRECT_URL' => '/tasks/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574314131.298
+    'REQUEST_TIME' => 1574314131
+    'argv' => []
+    'argc' => 0
+]
+2019-11-21 08:29:03 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\base\ErrorException:256] yii\base\ErrorException: Exception (Unknown Property) 'yii\base\UnknownPropertyException' with message 'Getting unknown property: frontend\modules\type_exercises\modules\sentence\models\GroupSentence::desc' 
+
+in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:154
+
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('desc')
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\helpers\BaseHtml.php(2227): yii\db\BaseActiveRecord->__get('desc')
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\helpers\BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(frontend\modules\type_exercises\modules\sentence\models\GroupSentence), 'desc')
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\helpers\BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(frontend\modules\type_exercises\modules\sentence\models\GroupSentence), 'desc', Array)
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\widgets\ActiveField.php(404): yii\helpers\BaseHtml::activeTextInput(Object(frontend\modules\type_exercises\modules\sentence\models\GroupSentence), 'desc', Array)
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\widgets\ActiveField.php(204): yii\widgets\ActiveField->textInput()
+#6 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\widgets\ActiveField.php(176): yii\widgets\ActiveField->render()
+#7 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\views\group_sentence.php(15): yii\widgets\ActiveField->__toString()
+#8 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#9 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#10 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#11 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(236): yii\base\View->render('group_sentence', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#12 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\FabricWidget.php(32): yii\base\Widget->render('group_sentence', Array)
+#13 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(140): frontend\widgets\fabric_widget\FabricWidget->run()
+#14 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php(14): yii\base\Widget::widget(Array)
+#15 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#16 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#17 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#18 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#19 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\controllers\DefaultController.php(23): yii\base\Controller->render('index', Array)
+#20 [internal function]: frontend\modules\tasks\controllers\DefaultController->actionIndex('1')
+#21 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#22 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#23 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#24 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks', Array)
+#25 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#27 {main} in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\ErrorHandler.php:317
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(256, 'Exception (Unkn...', 'D:\\OSUltimate\\S...', 317, Array)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\ErrorHandler.php(317): trigger_error('Exception (Unkn...', 256)
+#2 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\widgets\ActiveField.php(178): yii\base\ErrorHandler::convertExceptionToError(Object(yii\base\UnknownPropertyException))
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\views\group_sentence.php(15): yii\widgets\ActiveField->__toString()
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', '[<span class="s...')
+#6 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#7 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(236): yii\base\View->render('group_sentence', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#8 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\FabricWidget.php(32): yii\base\Widget->render('group_sentence', Array)
+#9 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(140): frontend\widgets\fabric_widget\FabricWidget->run()
+#10 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php(14): yii\base\Widget::widget(Array)
+#11 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#12 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', '[<span class="s...')
+#13 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#14 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#15 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\controllers\DefaultController.php(23): yii\base\Controller->render('index', Array)
+#16 [internal function]: frontend\modules\tasks\controllers\DefaultController->actionIndex('1')
+#17 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#18 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#19 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#20 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks', Array)
+#21 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#23 {main}
+    in D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\views\group_sentence.php:15
+    in D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\FabricWidget.php:32
+    in D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php:14
+2019-11-21 08:29:03 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '57086'
+    'REDIRECT_URL' => '/tasks/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574314143.115
+    'REQUEST_TIME' => 1574314143
+    'argv' => []
+    'argc' => 0
+]
+2019-11-21 08:29:23 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\base\ErrorException:1] yii\base\ErrorException: Method yii\widgets\ActiveField::__toString() must not throw an exception, caught Error: Call to a member function isAttributeRequired() on array in D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\views\group_sentence.php:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2019-11-21 08:29:23 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '57105'
+    'REDIRECT_URL' => '/tasks/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574314163.516
+    'REQUEST_TIME' => 1574314163
+    'argv' => []
+    'argc' => 0
+]
+2019-11-21 08:31:28 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\widgets\ActiveField::data-id-sentence in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:209
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\BaseYii.php(546): yii\base\Component->__set('data-id-sentenc...', 1)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(yii\widgets\ActiveField), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\di\Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\widgets\\Act...', Array, Array)
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\widgets\\Act...', Array, Array)
+#6 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#7 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\views\group_sentence.php(16): yii\widgets\ActiveForm->field(Object(frontend\modules\type_exercises\modules\sentence\models\SentenceCheck), 'text', Array)
+#8 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#9 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#10 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#11 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(236): yii\base\View->render('group_sentence', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#12 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\FabricWidget.php(32): yii\base\Widget->render('group_sentence', Array)
+#13 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(140): frontend\widgets\fabric_widget\FabricWidget->run()
+#14 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php(14): yii\base\Widget::widget(Array)
+#15 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#16 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#17 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#18 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#19 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\controllers\DefaultController.php(23): yii\base\Controller->render('index', Array)
+#20 [internal function]: frontend\modules\tasks\controllers\DefaultController->actionIndex('1')
+#21 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#22 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#23 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#24 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks', Array)
+#25 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#27 {main}
+2019-11-21 08:31:28 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '57222'
+    'REDIRECT_URL' => '/tasks/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574314288.437
+    'REQUEST_TIME' => 1574314288
+    'argv' => []
+    'argc' => 0
+]
+2019-11-21 08:34:34 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\widgets\ActiveField::data-id-sentence in D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Component.php:209
+Stack trace:
+#0 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\BaseYii.php(546): yii\base\Component->__set('data-id-sentenc...', 1)
+#1 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(yii\widgets\ActiveField), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\di\Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#4 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\widgets\\Act...', Array, Array)
+#5 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\widgets\\Act...', Array, Array)
+#6 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\widgets\ActiveForm.php(334): yii\BaseYii::createObject(Array)
+#7 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\views\group_sentence.php(17): yii\widgets\ActiveForm->field(Object(frontend\modules\type_exercises\modules\sentence\models\SentenceCheck), 'text', Array)
+#8 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#9 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#10 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#11 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(236): yii\base\View->render('group_sentence', Array, Object(frontend\widgets\fabric_widget\FabricWidget))
+#12 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\widgets\fabric_widget\FabricWidget.php(32): yii\base\Widget->render('group_sentence', Array)
+#13 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Widget.php(140): frontend\widgets\fabric_widget\FabricWidget->run()
+#14 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\views\default\index.php(14): yii\base\Widget::widget(Array)
+#15 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(348): require('D:\\OSUltimate\\S...')
+#16 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\OSUltimate\\S...', Array)
+#17 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\OSUltimate\\S...', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#18 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('index', Array, Object(frontend\modules\tasks\controllers\DefaultController))
+#19 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\modules\tasks\controllers\DefaultController.php(23): yii\base\Controller->render('index', Array)
+#20 [internal function]: frontend\modules\tasks\controllers\DefaultController->actionIndex('1')
+#21 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#22 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#23 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#24 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('tasks', Array)
+#25 D:\OSUltimate\SecondOSPanel\domains\testing\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 D:\OSUltimate\SecondOSPanel\domains\testing\frontend\web\index.php(17): yii\base\Application->run()
+#27 {main}
+2019-11-21 08:34:34 [127.0.0.1][-][pejoau0521rird850pp0qmftksfa5m0r][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'pejoau0521rird850pp0qmftksfa5m0r'
+    '_csrf-frontend' => '83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'testing'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'advanced-frontend=pejoau0521rird850pp0qmftksfa5m0r; _csrf-frontend=83edb7729b15c8cb6f55aa4f0efd2460603219330c6769189ae330ee37809569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22EYGgvm6qp7hvzUwqJdD8-tLMvbFWTY_J%22%3B%7D'
+    'PATH' => 'd:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\ext;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;d:\\osultimate\\secondospanel\\modules\\php\\PHP-7.2-x64;d:\\osultimate\\secondospanel\\modules\\imagemagick;d:\\osultimate\\secondospanel\\modules\\wget\\bin;d:\\osultimate\\secondospanel\\modules\\git;d:\\osultimate\\secondospanel\\modules\\git\\bin;d:\\osultimate\\secondospanel\\modules\\git\\mingw\\bin;d:\\osultimate\\secondospanel\\modules\\git\\cmd;d:\\osultimate\\secondospanel\\modules\\database\\MySQL-5.6\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;d:\\osultimate\\secondospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'testing'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSUltimate/SecondOSPanel/domains/testing/frontend/web/index.php'
+    'REMOTE_PORT' => '57396'
+    'REDIRECT_URL' => '/tasks/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tasks/1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1574314474.609
+    'REQUEST_TIME' => 1574314474
+    'argv' => []
+    'argc' => 0
+]

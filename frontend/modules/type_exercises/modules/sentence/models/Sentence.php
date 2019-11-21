@@ -16,13 +16,15 @@ class Sentence extends \yii\db\ActiveRecord
 
     public function afterSave($insert, $changedAttributes)
     {
-        if(isset($this->expressions)){
+        if (isset($this->expressions)) {
 
-            foreach ($this->expressions as $expressions){
+            foreach ($this->expressions as $expressions) {
 
                 $expressions->sentence_id = $this->id;
-                if(!$expressions->save()){
-                    echo '<pre>';print_r($expressions->errors);die();
+                if (!$expressions->save()) {
+                    echo '<pre>';
+                    print_r($expressions->errors);
+                    die();
                 }
 
             }
@@ -66,4 +68,10 @@ class Sentence extends \yii\db\ActiveRecord
 
         ];
     }
+
+    public function getExpressions()
+    {
+        return $this->hasMany(Expressions::className(), ['sentence_id' => 'id']);
+    }
+
 }

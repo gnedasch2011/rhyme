@@ -55,7 +55,6 @@ class SentenceInputWordsInWidget extends \yii\base\Widget
         $replace = $this->generateSpanWords($this->WordsForInput, count($search));
 
 
-
         if(count($search)!= count($replace)){
             throw new HttpException(404 ,'Не совпадают количество заменяемых слов');
         }

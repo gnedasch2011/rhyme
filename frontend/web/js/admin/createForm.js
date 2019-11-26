@@ -53,7 +53,6 @@ $(document).on('change', '.type_exercises_id__change', function (e) {
     Проверка упражнения "Вставь слова"
  */
 $(document).on('click', '.wordsForInput', function (e) {
-
     e.preventDefault();
     let sentenceinputwordsin = $(this).attr('data-id-sentenceinputwordsin'),
         wordsforinput = $(this).attr('data-id-wordsforinput'),
@@ -80,3 +79,27 @@ $(document).on('click', '.wordsForInput', function (e) {
         }
     });
 })
+
+
+/**
+ * Интерфейс для каждого упражнения, навешиваем событие checked_exercise
+ */
+$('.exercise_check').bind('checked_exercise', function (e) {
+
+})
+
+
+$('.sentence_check').bind('sentence_check', function (e) {
+        // console.log(sentence_check);
+})
+
+
+  $(document).on('click','.checkAllExercise',function (e) {
+         e.preventDefault();
+         $('.exercise_check').trigger('sentence_check')
+  })
+
+/*
+    Проверить все упражнения "Вставь слова" и сохранить
+ */
+

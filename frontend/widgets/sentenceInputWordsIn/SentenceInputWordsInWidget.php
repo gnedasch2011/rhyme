@@ -64,7 +64,9 @@ class SentenceInputWordsInWidget extends \yii\base\Widget
 
     public function run()
     {
-        echo '<br>';
-        echo $this->resString;
+        return $this->render('_sentenceinputwordsin', [
+            'resString' =>$this->resString,
+            'id_sentence_input_words_in' =>$this->SentenceInputWordsIn->id,
+        ]);
     }
 }

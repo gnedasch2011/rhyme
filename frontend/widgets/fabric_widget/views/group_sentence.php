@@ -80,6 +80,8 @@ $script = <<< JS
                         
             }
             
+
+            $('.sentence_check').bind('sentence_check')            
          
             $(document).on('sentence_check',function (e) {
                  let items = $('.sentence_item');

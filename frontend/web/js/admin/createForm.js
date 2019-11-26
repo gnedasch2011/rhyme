@@ -84,19 +84,12 @@ $(document).on('click', '.wordsForInput', function (e) {
 /**
  * Интерфейс для каждого упражнения, навешиваем событие checked_exercise
  */
-$('.exercise_check').bind('checked_exercise', function (e) {
-
-})
-
-
-$('.sentence_check').bind('sentence_check', function (e) {
-        // console.log(sentence_check);
-})
 
 
   $(document).on('click','.checkAllExercise',function (e) {
          e.preventDefault();
          $('.exercise_check').trigger('sentence_check')
+         $('.exercise_check').trigger('suggestion_check')
   })
 
 /*

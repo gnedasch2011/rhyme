@@ -1,12 +1,14 @@
 <?php foreach ($model->suggestionConstructor as $suggestionConstructor): ?>
-    <div class="suggestion">
-        <div class="beginState">
-            <?php foreach ($suggestionConstructor->partsSuggestion as $partsSuggestion): ?>
-                <span class="click_word click_word_template"><?= $partsSuggestion->text; ?></span>
-            <?php endforeach; ?>
+    <div class="exercise_check suggestion_check">
+        <div class="suggestion">
+            <div class="beginState">
+                <?php foreach ($suggestionConstructor->partsSuggestion as $partsSuggestion): ?>
+                    <span class="click_word click_word_template"><?= $partsSuggestion->text; ?></span>
+                <?php endforeach; ?>
+            </div>
+            <div class="result"
+                 data-id-full-text='<?= $suggestionConstructor->id; ?>'></div>
         </div>
-        <div class="result"
-             data-id-full-text='<?= $suggestionConstructor->id; ?>'></div>
     </div>
 <?php endforeach; ?>
 
@@ -77,6 +79,12 @@ $script = <<< JS
           $(context).find(el).css({color:color})
         }
         
+        
+         $('.suggestion_check').on('suggestion_check', function(e) {
+                console.log('te');
+         })
+        
+        $('.suggestion_check').bind('suggestion_check');
         
     }
 JS;

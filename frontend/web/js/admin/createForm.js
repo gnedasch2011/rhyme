@@ -37,7 +37,7 @@ $(document).on('change', '.type_exercises_id__change', function (e) {
     let type_exercises_id = $(e.target).val(),
         data = {type_exercises_id: type_exercises_id},
         $res = $(e.target).parents('.row').find('.type_exercises_id__change_result')
-console.log($res);
+    console.log($res);
     $.ajax({
         url: '/type_exercises/ajax/get-all-excercises',
         method: "post",
@@ -45,6 +45,38 @@ console.log($res);
 
         success: function (data) {
             $res.html(data);
+        }
+    });
+})
+
+/*
+    Проверка упражнения "Вставь слова"
+ */
+$(document).on('click', '.wordsForInput', function (e) {
+
+    e.preventDefault();
+    let sentenceinputwordsin = $(this).attr('data-id-sentenceinputwordsin'),
+        wordsforinput = $(this).attr('data-id-wordsforinput'),
+        value = $(this).val().trim();
+
+    let data = {
+        sentenceinputwordsin: sentenceinputwordsin,
+        wordsforinput: wordsforinput,
+        value: value,
+    };
+
+
+    $.ajax({
+        url: '/type_exercises/sentence_input_words_in/ajax/check-exercises',
+        method: "post",
+        data: data,
+
+        success: function (data) {
+            if(data){
+                $(e.target).css({"border":"1px solid green" })
+            } else {
+                $(e.target).css({"border":"1px solid red" })
+            }
         }
     });
 })

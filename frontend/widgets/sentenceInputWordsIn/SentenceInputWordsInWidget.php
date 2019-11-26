@@ -27,7 +27,7 @@ class SentenceInputWordsInWidget extends \yii\base\Widget
         $str = [];
 
         foreach ($models as $model) {
-            $str[] = Html::tag('span', '........', [
+            $str[] = Html::tag('input', '........', [
                     'class' => 'wordsForInput',
                     'data-id-sentenceInputWordsIn' => $model->sentence_input_words_in_id,
                     'data-id-wordsForInput' => $model->id,
@@ -64,6 +64,7 @@ class SentenceInputWordsInWidget extends \yii\base\Widget
 
     public function run()
     {
+        echo '<br>';
         echo $this->resString;
     }
 }

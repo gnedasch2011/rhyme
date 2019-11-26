@@ -37,6 +37,10 @@ class Module extends \yii\base\Module
                 // здесь имеет смысл использовать более лаконичное пространство имен
                 'class' => 'frontend\modules\type_exercises\modules\exercises\Module',
             ],
+            'sentence_input_words_in' => [
+                // здесь имеет смысл использовать более лаконичное пространство имен
+                'class' => 'frontend\modules\type_exercises\modules\sentence_input_words_in\Module',
+            ],
         ];
         // custom initialization code goes here
     }

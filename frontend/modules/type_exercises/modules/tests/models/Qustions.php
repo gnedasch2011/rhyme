@@ -47,4 +47,9 @@ class Qustions extends \yii\db\ActiveRecord
             'position' => 'Position',
         ];
     }
+
+    public function getAnswers()
+    {
+        return $this->hasMany(Answers::className(), ['qustions_id' => 'id']);
+    }
 }

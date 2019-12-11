@@ -17,6 +17,7 @@ class GroupTest extends \yii\db\ActiveRecord
     public $template = 'group_test';
 
     use CreateAdmitTrait;
+
     /**
      * {@inheritdoc}
      */
@@ -47,5 +48,10 @@ class GroupTest extends \yii\db\ActiveRecord
             'name' => 'Name',
             'type_exercises_id' => 'Type Exercises ID',
         ];
+    }
+
+    public function getQustions()
+    {
+        return $this->hasMany(Qustions::className(), ['tests_id' => 'id']);
     }
 }

@@ -24,7 +24,6 @@ class FabricWidget extends Widget
             throw new \Exception('Error!');
         }
         $this->model = TypeExercises::returnTypeExcercise($this->exercise->type_exercises_id, $this->exercise->id);
-
         $this->template = $this->model->template;
     }
 

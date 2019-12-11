@@ -17,6 +17,8 @@ class SentenceInputWordsInWidget extends \yii\base\Widget
     public $SentenceInputWordsIn;
     public $WordsForInput;
     public $resString;
+    public $sentence_input_words_in_type;
+    public $temp;
 
     /**
      * @param WordsForInput $models
@@ -42,29 +44,31 @@ class SentenceInputWordsInWidget extends \yii\base\Widget
     {
         parent::init();
 
-        $this->WordsForInput = $this->SentenceInputWordsIn->wordsForInput;
+        if ($this->SentenceInputWordsIn->sentence_input_words_in_type_id == 1) {
+            $this->WordsForInput = $this->SentenceInputWordsIn->wordsForInput;
 
-        //распарсить строку, сделать массив $search
-        //сгенерить массив $replace, дозаполнить недостающие
-        preg_match_all("/(#.*?#)/", $this->SentenceInputWordsIn->name, $mathesWords);
+            //распарсить строку, сделать массив $search
+            //сгенерить массив $replace, дозаполнить недостающие
+            preg_match_all("/(#.*?#)/", $this->SentenceInputWordsIn->name, $mathesWords);
 
-        $search = [];
-        if (isset($mathesWords[0])) {
-            $search = $mathesWords[0];
+            $search = [];
+            if (isset($mathesWords[0])) {
+                $search = $mathesWords[0];
+            }
+            $replace = $this->generateSpanWords($this->WordsForInput, count($search));
+
+            if (count($search) != count($replace)) {
+                throw new HttpException(404, 'Не совпадают количество заменяемых слов');
+            }
+            $this->resString = str_replace($search, $replace, $this->SentenceInputWordsIn->name);
+            $this->temp = '_sentenceinputwordsin';
         }
-        $replace = $this->generateSpanWords($this->WordsForInput, count($search));
-
-
-        if (count($search) != count($replace)) {
-            throw new HttpException(404, 'Не совпадают количество заменяемых слов');
-        }
-        $this->resString = str_replace($search, $replace, $this->SentenceInputWordsIn->name);
 
     }
 
     public function run()
     {
-        return $this->render('_sentenceinputwordsin', [
+        return $this->render($this->temp, [
             'resString' => $this->resString,
             'id_sentence_input_words_in' => $this->SentenceInputWordsIn->id,
         ]);

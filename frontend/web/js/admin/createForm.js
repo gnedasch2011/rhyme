@@ -52,7 +52,7 @@ $(document).on('change', '.type_exercises_id__change', function (e) {
 /*
     Проверка упражнения "Вставь слова"
  */
-$(document).on('click', '.wordsForInput', function (e) {
+$(document).on('change', '.wordsForInput', function (e) {
     e.preventDefault();
     let sentenceinputwordsin = $(this).attr('data-id-sentenceinputwordsin'),
         wordsforinput = $(this).attr('data-id-wordsforinput'),

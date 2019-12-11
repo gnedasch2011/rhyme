@@ -1,9 +1,8 @@
 <?php
 
-use frontend\widgets\sentenceInputWordsIn\SentenceInputWordsInWidget;
+use frontend\modules\type_exercises\modules\sentence_input_words_in\widgets\sentenceInputWordsIn\SentenceInputWordsInWidget;
 
 foreach ($model->sentenceInputWordsIn as $SentenceInputWordsIn) {
-
     echo SentenceInputWordsInWidget::widget([
         'SentenceInputWordsIn' => $SentenceInputWordsIn,
     ]);

@@ -10,7 +10,7 @@ $SentenceCheck = new SentenceCheck();
     <div class="exercise_check sentence_check">
         <div class="sentence_item" data-id-sentence="<?= $sentence->id; ?>">
             <h3> <?= $sentence->desc; ?></h3>
-            <p>Используйе данные фразы</p>
+            <p>Используйте данные фразы</p>
             <div>
                 <ul class="sentence_item_expressions">
                     <?php foreach ($sentence->expressions as $expression): ?>

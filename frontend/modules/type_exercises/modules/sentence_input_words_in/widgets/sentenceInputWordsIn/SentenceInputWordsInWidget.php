@@ -6,7 +6,7 @@
  * Time: 8:43
  */
 
-namespace frontend\widgets\sentenceInputWordsIn;
+namespace frontend\modules\type_exercises\modules\sentence_input_words_in\widgets\sentenceInputWordsIn;
 
 use frontend\modules\type_exercises\modules\sentence_input_words_in\models\WordsForInput;
 use yii\helpers\Html;
@@ -55,8 +55,8 @@ class SentenceInputWordsInWidget extends \yii\base\Widget
         $replace = $this->generateSpanWords($this->WordsForInput, count($search));
 
 
-        if(count($search)!= count($replace)){
-            throw new HttpException(404 ,'Не совпадают количество заменяемых слов');
+        if (count($search) != count($replace)) {
+            throw new HttpException(404, 'Не совпадают количество заменяемых слов');
         }
         $this->resString = str_replace($search, $replace, $this->SentenceInputWordsIn->name);
 
@@ -65,8 +65,8 @@ class SentenceInputWordsInWidget extends \yii\base\Widget
     public function run()
     {
         return $this->render('_sentenceinputwordsin', [
-            'resString' =>$this->resString,
-            'id_sentence_input_words_in' =>$this->SentenceInputWordsIn->id,
+            'resString' => $this->resString,
+            'id_sentence_input_words_in' => $this->SentenceInputWordsIn->id,
         ]);
     }
 }

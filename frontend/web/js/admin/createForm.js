@@ -89,7 +89,8 @@ $(document).on('change', '.wordsForInput', function (e) {
   $(document).on('click','.checkAllExercise',function (e) {
          e.preventDefault();
          $('.exercise_check').trigger('sentence_check')
-         $('.exercise_check').trigger('suggestion_check')
+         // $('.exercise_check').trigger('suggestion_check')
+         $('.exercise_check_tests').trigger('tests_several_check')
   })
 
 /*

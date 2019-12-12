@@ -39,17 +39,29 @@ button.on("click", function(e){
         $('.qustionBlock').bind('tests_several_check')          
          
             $(document).on('tests_several_check',function (e) {
-                let allTestBlock = $('.testBlock');
+                let allTestBlock = $('.testBlock')
+                    arrDataResultTest = []
+                ;
                 
+                //отправлять пачкой данных
                 $.each(allTestBlock, function(_, testBlock){
                     let question = testBlock.find('.qustionBlock'),
                          idCheckItems = testBlock.find('.item_test .item_test_active'),
                          idQustions =1,
                          idTest=1
                          ;
-                        
                     
                 })
+                
+                $.ajax({
+                            url: '',
+                            method: "post",
+                            data: {arrDataResultTest:arrDataResultTest},
+                            
+                           success: function (data) {
+                                console.log(data);
+                           }
+                        });    
             })
 
  

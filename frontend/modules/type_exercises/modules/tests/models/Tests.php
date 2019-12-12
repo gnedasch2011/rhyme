@@ -43,7 +43,12 @@ class Tests extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'type_exercises_id' => 'Type Exercises ID',
-            'type_test_id1' => 'Type Test Id1',
+            'type_test_id' => 'Type Test Id1',
         ];
+    }
+
+    public function getQustions()
+    {
+        return $this->hasMany(Qustions::className(), ['tests_id' => 'id']);
     }
 }

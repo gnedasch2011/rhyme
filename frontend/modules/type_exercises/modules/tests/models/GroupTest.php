@@ -50,8 +50,8 @@ class GroupTest extends \yii\db\ActiveRecord
         ];
     }
 
-    public function getQustions()
+    public function getTests()
     {
-        return $this->hasMany(Qustions::className(), ['tests_id' => 'id']);
+        return $this->hasMany(Tests::className(), ['group_test_id' => 'id']);
     }
 }

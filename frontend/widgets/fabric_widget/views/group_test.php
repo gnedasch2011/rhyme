@@ -1,10 +1,16 @@
-<?php foreach ($model->qustions as $qustions): ?>
-    <ul>
-        <?php foreach ($qustions->answers as $answer): ?>
-            <a class="item_test" data-id-answers=<?= $answer->id; ?> href="#"><?= $answer->test ;?></a>
+<?php
 
+use frontend\modules\type_exercises\modules\tests\widgets\testWidget\TestsFabricsWidget;
+?>
+
+<?php foreach ($model->tests as $test): ?>
+    <?= TestsFabricsWidget::widget(['test' => $test]); ?>
+    <ul data-id-question=<?= $qustions->id; ?>
+        <?php foreach ($qustions->answers as $answer): ?>
+        <a class="item_test"
+        data-id-answers=<?= $answer->id; ?> href="#"><?= $answer->text; ?></a>
         <?php endforeach; ?>
-    </ul>
+    </ul><br>
 <?php endforeach; ?>
 
 

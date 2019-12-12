@@ -30,7 +30,7 @@ class Qustions extends \yii\db\ActiveRecord
         return [
             [['id', 'tests_id'], 'required'],
             [['id', 'tests_id', 'position'], 'integer'],
-            [['text'], 'string', 'max' => 450],
+            [['name'], 'string', 'max' => 450],
             [['id'], 'unique'],
         ];
     }
@@ -42,7 +42,7 @@ class Qustions extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'text' => 'Text',
+            'name' => 'Text',
             'tests_id' => 'Tests ID',
             'position' => 'Position',
         ];

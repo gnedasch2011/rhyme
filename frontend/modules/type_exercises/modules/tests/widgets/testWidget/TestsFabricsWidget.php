@@ -13,25 +13,27 @@ class TestsFabricsWidget extends \yii\base\Widget
 {
     public $test;
     public $group_test_id;
-    public $temp;
+    public $temp = [
+        '1' => 'change_several',
+        '2' => 'change_one',
+        '3' => 'change_one_and_writing_your',
+    ];
+    public $templateTest;
 
     public function init()
     {
         parent::init();
 
         $test = $this->test;
-        echo "<pre>";
-        print_r($test->group_test_id);
-        die();
-
-
+        $this->templateTest = $this->temp[$test->group_test_id];
 
     }
 
     public function run()
     {
-        echo 'test';
-        $this->render();
+        return $this->render($this->templateTest, [
+            'test' => $this->test,
+        ]);
     }
 }
 /*

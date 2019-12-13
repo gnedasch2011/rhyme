@@ -1,6 +1,6 @@
 <h3><?= $test->name; ?></h3>
 
-<div class="testBlock">
+<div class="testBlock" data-test-id="<?= $test->id; ?>">
     <?php foreach ($test->qustions as $qustion): ?>
         <h4><?= $qustion->name; ?></h4>
 
@@ -36,22 +36,43 @@ button.on("click", function(e){
 	$(this).toggleClass('item_test_active')
 })	
 
-        $('.qustionBlock').bind('tests_several_check')          
+        $('.group_test_checks').bind('tests_several_check')          
          
             $(document).on('tests_several_check',function (e) {
                 let allTestBlock = $('.testBlock')
                     arrDataResultTest = []
                 ;
-                
-                //отправлять пачкой данных
-                $.each(allTestBlock, function(_, testBlock){
-                    let question = testBlock.find('.qustionBlock'),
-                         idCheckItems = testBlock.find('.item_test .item_test_active'),
-                         idQustions =1,
-                         idTest=1
-                         ;
+                                //отправлять пачкой данных
+                $.each(allTestBlock, function(_, blockTest){
+                    let testBlock = ($(blockTest)),                     
+                         idTest = testBlock.attr('data-test-id'),
+                         qustionBlocks = testBlock.find('.qustionBlock')
+                         ;  
+                                           
+                        //массив вида id_test:{id_вопроса:{id_ответов}}
+                         $.each(qustionBlocks, function(_, questionBlock) {                             
+                           let idQuestion = $(questionBlock).attr('data-id-qustion'),                            
+                               idCheckItems =  $(questionBlock).find('.item_test_active')                             
+                               ;
+                           
+                           var arrIdAnswers = [];
+                            
+                           $.each(idCheckItems, function(_, answer){                              
+                             let idCheck = $(answer).attr('data-id-answers');                             
+                             arrIdAnswers.push(idCheck)
+                           })
+                           console.log(arrIdAnswers);return false;
+                           // var res = {idTest:{idQuestion:{arrIdAnswers}}}
+                         })
+                       
+                         
+                         
+                    // arrDataResultTest.push(res);
+                        
                     
                 })
+                    return false;
+                //собираем пачкой, определяем тип и правильные ответы, возвращаем массив вида id_test: qustions:rightAnswers и перекрашиваем в success все ответы 
                 
                 $.ajax({
                             url: '',

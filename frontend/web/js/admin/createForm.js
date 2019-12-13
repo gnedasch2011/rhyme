@@ -90,7 +90,7 @@ $(document).on('change', '.wordsForInput', function (e) {
          e.preventDefault();
          $('.exercise_check').trigger('sentence_check')
          // $('.exercise_check').trigger('suggestion_check')
-         $('.exercise_check_tests').trigger('tests_several_check')
+         $('.group_test_checks').trigger('tests_several_check')
   })
 
 /*

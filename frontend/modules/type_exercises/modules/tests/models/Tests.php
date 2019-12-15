@@ -3,6 +3,7 @@
 namespace frontend\modules\type_exercises\modules\tests\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "tests".
@@ -50,5 +51,53 @@ class Tests extends \yii\db\ActiveRecord
     public function getQustions()
     {
         return $this->hasMany(Qustions::className(), ['tests_id' => 'id']);
+    }
+
+
+    /**
+     *   [
+     * 'idTest' => 1,
+     * 'idQuestion' => 1,
+     * 'arrIdAnswers' => [1, 2],
+     * ],
+     * @param $test
+     * return   [
+     * 'id_question' => 1,
+     * 'check' => true,
+     * 'rightAnswers' => [1, 2, 3]
+     * 'noRightAnswers' => [1, 2, 3]
+     * ],
+     */
+    public static function checkTest($inputTestArr)
+    {
+
+
+//        $inputTestArr = [
+//            'idTest' => 1,
+//            'idQuestion' => 1,
+//            'arrIdAnswers' => [1, 2, 3],
+//        ];
+
+        $check = false;
+        $id_question = $inputTestArr['idQuestion'];
+
+        $question = Qustions::findOne($id_question);
+        $checkAnswersArr = $inputTestArr['arrIdAnswers'] ?? [];
+        $rightAnswersArr = ArrayHelper::getColumn($question->rightAnswers, 'id');
+
+        $noRightAnswers = array_diff($checkAnswersArr, $rightAnswersArr);
+        $rightAnswers = array_intersect($checkAnswersArr, $rightAnswersArr);
+
+
+        if (empty($noRightAnswers)) {
+            $check = true;
+        }
+
+        return [
+            'id_question' => $id_question,
+            'check' => $check,
+            'rightAnswers' => $rightAnswers,
+            'noRightAnswers' => $noRightAnswers
+        ];
     }
 }

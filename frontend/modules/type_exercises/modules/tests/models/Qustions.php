@@ -52,4 +52,9 @@ class Qustions extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Answers::className(), ['qustions_id' => 'id']);
     }
+
+    public function getRightAnswers()
+    {
+        return $this->hasMany(Answers::className(), ['qustions_id' => 'id'])->where(['right_answer'=>1]);
+    }
 }

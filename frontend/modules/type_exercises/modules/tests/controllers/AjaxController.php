@@ -9,32 +9,20 @@
 namespace frontend\modules\type_exercises\modules\tests\controllers;
 
 
+use frontend\modules\type_exercises\modules\tests\models\Tests;
 use yii\web\Controller;
 
 class AjaxController extends Controller
 {
     public function actionCheckTests()
     {
-        $mockData = [
-            [
-                'idTest' => 1,
-                'idQuestion' => 1,
-                'arrIdAnswers' => [1],
-            ],
-            [
-                'idTest' => 2,
-                'idQuestion' => 3,
-                'arrIdAnswers' => [7, 8],
-            ],
-        ];
-    
+        $arrDataResultTest = \Yii::$app->request->post('arrDataResultTest');
+        $resCheck = [];
 
-        echo "<pre>"; print_r($mockData);die();
-//        $arrDataResultTest = \Yii::$app->request->post('data');
+        foreach ($arrDataResultTest as $test) {
+            $resCheck[] = Tests::checkTest($test);
+        }
 
-
-
+        return json_encode($resCheck);
     }
-    //проверка разных
-    //типов тестов
 }

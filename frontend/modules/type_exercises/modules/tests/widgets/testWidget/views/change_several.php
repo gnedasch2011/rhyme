@@ -9,7 +9,7 @@
              data-id-tests="<?= $test->id; ?>"
         >
             <?php foreach ($qustion->answers as $answer): ?>
-                <a class="item_test" data-id-answers="<?= $answer->id; ?>"
+                <a class="item_test_change_several" data-id-answers="<?= $answer->id; ?>"
                    href="#"><?= $answer->text; ?></a>
             <?php endforeach; ?>
         </div>
@@ -28,12 +28,12 @@ $this->registerJs($script, yii\web\View::POS_READY);
 
 <?php
 $script = <<< JS
- var button = $(".item_test")
+ var button = $(".item_test_change_several")
     
 // handle click and add class
 button.on("click", function(e){
   e.preventDefault()
-	$(this).toggleClass('item_test_active')
+	$(this).toggleClass('item_active item_test_change_several_active')
 })	
 
         $('.group_test_checks').bind('tests_several_check')          
@@ -52,10 +52,10 @@ button.on("click", function(e){
                         //массив вида id_test:{id_вопроса:{id_ответов}}
                          $.each(qustionBlocks, function(_, questionBlock) { 
                                idQuestion = $(questionBlock).attr('data-id-qustion'),
-                               idCheckItems =  $(questionBlock).find('.item_test_active') 
+                               idCheckItems =  $(questionBlock).find('.item_active') 
                                ;
                        
-                         let   arrIdAnswers = [];
+                         let arrIdAnswers = [];
                             
                            $.each(idCheckItems, function(_, answer){                              
                              let idCheckAnswer = $(answer).attr('data-id-answers');                                                 arrIdAnswers.push(idCheckAnswer)
@@ -67,20 +67,37 @@ button.on("click", function(e){
                           }                           
                           arrDataResultTest.push(res);
                          })
-                })
-                console.log(arrDataResultTest);
-                    return false;
+                        
+                })              
+               console.log(arrDataResultTest);
+                ajaxSend(arrDataResultTest, '/type_exercises/tests/ajax/check-tests', function(data){
+                    // console.log(data);
+                });
                 //собираем пачкой, определяем тип и правильные ответы, возвращаем массив вида id_test: qustions:rightAnswers и перекрашиваем в success все ответы 
                 
-                $.ajax({
-                            url: '',
+                /**
+                * 
+                * @param data
+                * @param url
+                * @param callback
+                */
+                function ajaxSend(data, url, callback)
+                {
+                    $.ajax({
+                            url:url,
                             method: "post",
-                            data: {arrDataResultTest:arrDataResultTest},
+                            data: {data:data},
                             
                            success: function (data) {
-                                console.log(data);
+                                if(data){
+                                     callback(data);
+                                }
+                              
                            }
                         });    
+                }
+                
+              
             })
 
  
@@ -90,13 +107,13 @@ $this->registerJs($script, yii\web\View::POS_READY);
 ?>
 
 <style>
-    .item_test {
+    .item_test_change_several {
         padding: 10px;
         background: #000;
         color: white;
     }
 
-    .item_test_active {
+    .item_test_change_several_active {
         padding: 10px;
         background: green;
         color: white;

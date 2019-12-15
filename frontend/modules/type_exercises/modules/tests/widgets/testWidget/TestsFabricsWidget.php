@@ -25,8 +25,7 @@ class TestsFabricsWidget extends \yii\base\Widget
         parent::init();
 
         $test = $this->test;
-        $this->templateTest = $this->temp[$test->group_test_id];
-
+        $this->templateTest = $this->temp[$test->type_test_id];
     }
 
     public function run()

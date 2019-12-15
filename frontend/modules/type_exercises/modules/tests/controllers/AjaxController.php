@@ -13,5 +13,28 @@ use yii\web\Controller;
 
 class AjaxController extends Controller
 {
-    //проверка разных типов тестов
+    public function actionCheckTests()
+    {
+        $mockData = [
+            [
+                'idTest' => 1,
+                'idQuestion' => 1,
+                'arrIdAnswers' => [1],
+            ],
+            [
+                'idTest' => 2,
+                'idQuestion' => 3,
+                'arrIdAnswers' => [7, 8],
+            ],
+        ];
+    
+
+        echo "<pre>"; print_r($mockData);die();
+//        $arrDataResultTest = \Yii::$app->request->post('data');
+
+
+
+    }
+    //проверка разных
+    //типов тестов
 }

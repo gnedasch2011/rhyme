@@ -48,30 +48,27 @@ button.on("click", function(e){
                          idTest = testBlock.attr('data-test-id'),
                          qustionBlocks = testBlock.find('.qustionBlock')
                          ;  
-                                               
+                         let  arrIdQuestion = []; 
                         //массив вида id_test:{id_вопроса:{id_ответов}}
-                         $.each(qustionBlocks, function(_, questionBlock) {                             
-                           let idQuestion = $(questionBlock).attr('data-id-qustion'),                            
-                               idCheckItems =  $(questionBlock).find('.item_test_active')                             
+                         $.each(qustionBlocks, function(_, questionBlock) { 
+                               idQuestion = $(questionBlock).attr('data-id-qustion'),
+                               idCheckItems =  $(questionBlock).find('.item_test_active') 
                                ;
-                            console.log(idCheckItems);
-                            arrIdAnswers = [];
+                       
+                         let   arrIdAnswers = [];
                             
                            $.each(idCheckItems, function(_, answer){                              
-                             let idCheck = $(answer).attr('data-id-answers');                             
-                             arrIdAnswers.push(idCheck)
+                             let idCheckAnswer = $(answer).attr('data-id-answers');                                                 arrIdAnswers.push(idCheckAnswer)
                            })
-                           
-                           // var res = {idTest:{idQuestion:{arrIdAnswers}}}
-                             console.log(arrIdAnswers);return false;
+                             res = {
+                              idTest:idTest,
+                              idQuestion:idQuestion,
+                              arrIdAnswers:arrIdAnswers  
+                          }                           
+                          arrDataResultTest.push(res);
                          })
-                     
-                         
-                         
-                    // arrDataResultTest.push(res);
-                        
-                    
                 })
+                console.log(arrDataResultTest);
                     return false;
                 //собираем пачкой, определяем тип и правильные ответы, возвращаем массив вида id_test: qustions:rightAnswers и перекрашиваем в success все ответы 
                 

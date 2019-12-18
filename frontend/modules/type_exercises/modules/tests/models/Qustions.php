@@ -55,6 +55,6 @@ class Qustions extends \yii\db\ActiveRecord
 
     public function getRightAnswers()
     {
-        return $this->hasMany(Answers::className(), ['qustions_id' => 'id'])->where(['right_answer'=>1]);
+        return $this->hasMany(Answers::className(), ['qustions_id' => 'id'])->where(['right_answer' => 1]);
     }
 }

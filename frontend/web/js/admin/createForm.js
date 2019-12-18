@@ -85,7 +85,6 @@ $(document).on('change', '.wordsForInput', function (e) {
  * Интерфейс для каждого упражнения, навешиваем событие checked_exercise
  */
 
-
   $(document).on('click','.checkAllExercise',function (e) {
          e.preventDefault();
          $('.exercise_check').trigger('sentence_check')

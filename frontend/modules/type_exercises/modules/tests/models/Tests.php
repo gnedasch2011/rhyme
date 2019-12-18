@@ -68,9 +68,8 @@ class Tests extends \yii\db\ActiveRecord
      * 'noRightAnswers' => [1, 2, 3]
      * ],
      */
-    public static function checkTest($inputTestArr)
+    public static function checkTest($inputTestArr = [])
     {
-
 
 //        $inputTestArr = [
 //            'idTest' => 1,
@@ -80,24 +79,31 @@ class Tests extends \yii\db\ActiveRecord
 
         $check = false;
         $id_question = $inputTestArr['idQuestion'];
-
         $question = Qustions::findOne($id_question);
         $checkAnswersArr = $inputTestArr['arrIdAnswers'] ?? [];
-        $rightAnswersArr = ArrayHelper::getColumn($question->rightAnswers, 'id');
 
-        $noRightAnswers = array_diff($checkAnswersArr, $rightAnswersArr);
-        $rightAnswers = array_intersect($checkAnswersArr, $rightAnswersArr);
+//        echo '<pre>';print_r($question->rightAnswers);
+        $rightAnswersArr = ArrayHelper::getColumn($question->rightAnswers, function ($element) {
+            return (int)$element['id'];
+        });
 
+        $noRightAnswers = array_diff($checkAnswersArr, $rightAnswersArr); //не правильно выбранные
+        $rightAnswersCheck = array_intersect($checkAnswersArr, $rightAnswersArr);//правильно выбранные
 
-        if (empty($noRightAnswers)) {
+        $noCheckRightAnswers = array_diff($rightAnswersArr, $rightAnswersCheck);
+
+        if (empty($noRightAnswers) && empty($noRightAnswersNoCheck)) {
             $check = true;
         }
 
         return [
             'id_question' => $id_question,
+            'noRightAnswers' => $noRightAnswers,
             'check' => $check,
-            'rightAnswers' => $rightAnswers,
-            'noRightAnswers' => $noRightAnswers
+            'rightAnswersCheck' => $rightAnswersCheck,
+            'rightAnswersArr' => $rightAnswersArr,
+            'noCheckRightAnswers' => $noCheckRightAnswers
         ];
+
     }
 }

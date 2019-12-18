@@ -16,6 +16,7 @@ class AjaxController extends Controller
 {
     public function actionCheckTests()
     {
+//        echo "<pre>"; print_r(Tests::checkTest($test));die();
         $arrDataResultTest = \Yii::$app->request->post('arrDataResultTest');
         $resCheck = [];
 

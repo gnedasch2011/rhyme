@@ -55,7 +55,7 @@ class ParserCommonController extends Controller
         $items = $resCache->get('resParser');
 
 
-        echo "<pre>"; print_r($parser->getItems($config));die();
+        echo "<pre>"; print_r($parser->getItems((object)$config));die();
         
         
         if (empty($items)) {

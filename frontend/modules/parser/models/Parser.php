@@ -40,14 +40,14 @@ class Parser extends Model
     public function initPHPQ()
     {
         $client = new Client();
+
         // отправляем запрос к странице Яндекса
         $res = $client->request('GET', $this->host . $this->uri, ['verify' => true]);
         // получаем данные между открывающим и закрывающим тегами body
-        echo "<pre>"; print_r($res);die();
+     
         $body = $res->getBody();
         // подключаем phpQuery
         $document = \phpQuery::newDocumentHTML($body);
-
         return $document;
     }
 
@@ -208,6 +208,7 @@ class Parser extends Model
         $parser = $this;
       
         $parser->host = $config->host;
+
         $parser->initPHPQ();
         //все ссылки на товары в категории
         echo "<pre>"; print_r($parser);die();

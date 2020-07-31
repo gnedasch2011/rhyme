@@ -15,8 +15,8 @@ class Parser extends Model
     const DIR_IMG_PRODUCT = "/web/images/products/";
     const DIR_FILES_PRODUCT = "/web/files/products/";
 
-    public $uri;
     public $host;
+    public $uri;
     public $config;
 
 
@@ -40,14 +40,15 @@ class Parser extends Model
     public function initPHPQ()
     {
         $client = new Client();
-
         // отправляем запрос к странице Яндекса
-        $res = $client->request('GET', $this->host . $this->uri, ['verify' => true]);
+        $res = $client->request('GET', $this->host . $this->uri);
         // получаем данные между открывающим и закрывающим тегами body
-     
+        
         $body = $res->getBody();
+        
         // подключаем phpQuery
         $document = \phpQuery::newDocumentHTML($body);
+
         return $document;
     }
 
@@ -159,18 +160,18 @@ class Parser extends Model
     public function getListUrl($listSelector, $itemSelector)
     {
         $listHref = [];
-
+      
         $doc = $this->initPHPQ();
-
         $listUrl = $doc->find($listSelector)->find($itemSelector);
 
         foreach ($listUrl as $url) {
             $url = pq($url);
 
             $url = $this->getOneUrl($url->find('a'));
+        
             $listHref[] = $url;
         }
-       
+
         return $listHref;
     }
 
@@ -208,11 +209,14 @@ class Parser extends Model
         $parser = $this;
       
         $parser->host = $config->host;
-
+      
+        $parser->uri = $config->uri;
+     
         $parser->initPHPQ();
         //все ссылки на товары в категории
-        echo "<pre>"; print_r($parser);die();
+
         $allItemsHref = $parser->getListUrl($config->forCategory['listItems'], $config->forCategory['itemBlock']);
+        echo "<pre>"; print_r($allItemsHref);die();
         $items = [];
 
         foreach ($allItemsHref as $detailHref) {

@@ -9,7 +9,7 @@ use phpQuery;
 use GuzzleHttp\Client;
 use yii\web\Controller; // подключаем Guzzle
 
-class ParserCommonController extends Controller
+class ParserPhpQueryController extends Controller
 {
 
     const DIR_IMG_PRODUCT = "/web/images/products/";
@@ -48,6 +48,7 @@ class ParserCommonController extends Controller
             ],
         ];
 
+
         $config = [
             'host' => 'http://yamaguchi.loc/',
             'uri' => 'massazhery-dlya-nog',
@@ -77,17 +78,15 @@ class ParserCommonController extends Controller
         $parser = new Parser($config);
 
 
-        $resCache = \Yii::$app->cache;
-        $items = $resCache->get('resParser');
-
-        echo "<pre>"; print_r($parser->getItems((object)$config));die();
+       $getItems = $parser->getItems((object)$config);
 
 
-        if (empty($items)) {
-            $forCache = $parser->getItemsInCategory("catalog/massazhnye-kresla");
-            $resCache->set('resParser', $forCache);
-        }
+//        if (empty($items)) {
+//            $forCache = $parser->getItemsInCategory("catalog/massazhnye-kresla");
+//            $resCache->set('resParser', $forCache);
+//        }
 
+        echo "<pre>"; print_r($getItems);die();
 
         $saveItem = new SaveItems();
 

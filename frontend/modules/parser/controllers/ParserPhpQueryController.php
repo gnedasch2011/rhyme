@@ -50,11 +50,11 @@ class ParserPhpQueryController extends Controller
 
 
         $config = [
-            'host' => 'http://yamaguchi.loc/',
-            'uri' => 'massazhery-dlya-nog',
+            'host' => 'https://residentname.ru/',
+            'uri' => 'countries.html',
 
             'forCategory' => [
-                'listItems' => '.listing-narrow',
+                'listItems' => '.table-condensed',
                 'itemBlock' => '.product-sm',
             ],
 
@@ -75,10 +75,32 @@ class ParserPhpQueryController extends Controller
             ],
         ];
 
+        //из файла
+
         $parser = new Parser($config);
 
+        $parser->host = $config['host'];
+        $parser->uri = $config['uri'];
 
-       $getItems = $parser->getItems((object)$config);
+        $doc = $parser->initPHPQ();
+
+        $getItems = $doc->find('.table-condensed tr');
+
+        $count = 0;
+
+        foreach ($getItems as $getItem) {
+
+            $getItemPq = pq($getItem);
+            echo '<pre>';print_r($getItemPq->find('td:eq(1)')->text());
+            $count++;
+            echo $count;
+        }
+
+        die('end');
+        $getItems = $parser->getItems((object)$config);
+        echo "<pre>";
+        print_r($getItems);
+        die();
         //test
 
 //        if (empty($items)) {
@@ -86,7 +108,9 @@ class ParserPhpQueryController extends Controller
 //            $resCache->set('resParser', $forCache);
 //        }
 
-        echo "<pre>"; print_r($getItems);die();
+        echo "<pre>";
+        print_r($getItems);
+        die();
 
         $saveItem = new SaveItems();
 

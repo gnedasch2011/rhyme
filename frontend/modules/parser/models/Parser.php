@@ -23,6 +23,7 @@ class Parser extends Model
     public function __construct($config)
     {
         $this->config = (object)$config;
+
     }
 
     public function init()
@@ -40,6 +41,7 @@ class Parser extends Model
     public function initPHPQ()
     {
         $client = new Client();
+
         // отправляем запрос к странице Яндекса
         $res = $client->request('GET', $this->host . $this->uri);
         // получаем данные между открывающим и закрывающим тегами body
@@ -160,18 +162,23 @@ class Parser extends Model
     public function getListUrl($listSelector, $itemSelector)
     {
         $listHref = [];
-      
         $doc = $this->initPHPQ();
         $listUrl = $doc->find($listSelector)->find($itemSelector);
 
-        foreach ($listUrl as $url) {
-            $url = pq($url);
+        foreach ($listUrl as $item) {
+            echo "<pre>"; print_r($item);die();
+        }
 
+        foreach ($listUrl as $url) {
+            echo "<pre>"; print_r($url);die();
+            $url = pq($url);
+            echo "<pre>"; print_r('f');die();
+            echo "<pre>"; print_r($url->find('.text-muted small')->text());die();
             $url = $this->getOneUrl($url->find('a'));
         
             $listHref[] = $url;
         }
-
+        echo "<pre>"; print_r('fd');die();
         return $listHref;
     }
 
@@ -209,14 +216,11 @@ class Parser extends Model
         $parser = $this;
       
         $parser->host = $config->host;
-      
         $parser->uri = $config->uri;
-     
         $parser->initPHPQ();
         //все ссылки на товары в категории
-
         $allItemsHref = $parser->getListUrl($config->forCategory['listItems'], $config->forCategory['itemBlock']);
-        echo "<pre>"; print_r($allItemsHref);die();
+      
         $items = [];
 
         foreach ($allItemsHref as $detailHref) {
@@ -224,7 +228,7 @@ class Parser extends Model
            
             $items[] = $parser->getDetailItem($config);
         }
-
+        echo "<pre>"; print_r($items);die();
         return $items;
     }
 

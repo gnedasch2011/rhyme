@@ -79,7 +79,7 @@ class ParserPhpQueryController extends Controller
 
 
        $getItems = $parser->getItems((object)$config);
-
+        //test
 
 //        if (empty($items)) {
 //            $forCache = $parser->getItemsInCategory("catalog/massazhnye-kresla");

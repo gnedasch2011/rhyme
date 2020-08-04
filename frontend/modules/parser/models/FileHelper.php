@@ -8,7 +8,7 @@
 
 namespace app\modules\parser\models;
 
-
+use yii\helpers\FileHelper as FileHelperYii;
 use yii\base\Model;
 
 class FileHelper extends Model
@@ -21,7 +21,7 @@ class FileHelper extends Model
 
         if ($existDirectory) {
             $imgUrlPath = $pathUri . "/" . $nameFile;
-            file_put_contents($imgUrlPath, file_get_contents($remoteImgLink));
+            file_put_contents($imgUrlPath, file_get_contents($remoteImgLink), true);
 
             return $nameFile;
         }
@@ -31,10 +31,10 @@ class FileHelper extends Model
 
     public static function createDirectory($folder)
     {
-        if (!is_dir($folder)) {
-            if (mkdir($folder, "0777")) {
-                return true;
-            }
+        if (is_file($folder)) {
+            return true;
+        } elseif (!is_dir($folder)) {
+            return mkdir('./' . $folder, "0777", true);
         } else {
             return true;
         }

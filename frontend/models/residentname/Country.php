@@ -53,16 +53,4 @@ class Country extends \yii\db\ActiveRecord
             'link' => 'Link',
         ];
     }
-
-    public function getNounseValueCountry()
-    {
-        return $this->hasMany(NounseValue::className(), ['item_id' => 'id'])
-            ->where([
-                'nounse_value.kinds_of_nouns_id' => 1,
-                'nounse_value.cases_id' => 2,
-                'nounse_value.declines_nouns_id' => 1,
-            ])
-
-            ;
-    }
 }

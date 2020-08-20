@@ -49,4 +49,24 @@ class HagenOrf extends \yii\db\ActiveRecord
             'word_with_accent' => 'Word With Accent',
         ];
     }
+
+    public static function mostAccurateRhymes($searchWord)
+    {
+
+        $word = HagenOrf::find()
+            ->where(['word' => $searchWord])
+            ->one();
+
+        if (isset($word->accent)) {
+            $wordsSearch = HagenOrf::find()
+                ->where(['accent' => $word->accent])
+                ->all();
+
+            return $wordsSearch;
+
+        }
+
+        return false;
+
+    }
 }

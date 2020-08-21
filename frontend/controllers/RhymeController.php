@@ -10,26 +10,71 @@ namespace frontend\controllers;
 
 
 use app\models\rhyme\HagenOrf;
+use app\models\rhyme\NamesOrf;
+use frontend\models\form\SearchRhyme;
 use yii\web\Controller;
 
 class RhymeController extends Controller
 {
     public function actionIndex()
     {
-        
-        echo "<pre>"; print_r('fd');die();
-      $hagenOrf = new HagenOrf();
+        $hagenOrf = new HagenOrf();
 
-        $searchWord = 'Карман';
+        $SearchRhyme = new SearchRhyme();
+        if ($SearchRhyme->load(\Yii::$app->request->post()) && $SearchRhyme->validate()) {
 
-        $mostAccurateRhymes = HagenOrf::mostAccurateRhymes($searchWord);
+            $searchWord = $SearchRhyme->query;
 
-        echo "<pre>"; print_r($mostAccurateRhymes);die();
-        echo "<pre>";
-        print_r($mostAccurateRhymes);
-        die();
+            return $this->redirect('/rhyme/' . $searchWord);
+        }
 
+        return $this->render('/rhyme/main', [
 
-        die();
+        ]);
+
     }
+
+
+    public function actionSearchRhyme()
+    {
+        if (\Yii::$app->request->get('rhyme')) {
+            $SearchRhyme = new SearchRhyme();
+
+            $SearchRhyme->query = \Yii::$app->request->get('rhyme');
+
+            if (!$SearchRhyme->validate()) {
+                return false;
+            };
+
+            $searchWord = $SearchRhyme->query;
+
+            $HagenOrf = new HagenOrf();
+            $HagenOrfs = $HagenOrf->mostAccurateRhymes($searchWord);
+
+
+            $NamesOrf = new NamesOrf();
+            $NamesOrfs = $NamesOrf->mostAccurateRhymes($searchWord);
+
+            $rhymesArr = $HagenOrf->getArrUrlName([$NamesOrfs, $HagenOrfs]);
+            $rhymesArrGroup = $HagenOrf->getRhymesArrGroup($rhymesArr);
+
+            return $this->render('/rhyme/search_page', [
+                'searchWord' => $searchWord,
+                'rhymesArrGroup' => $rhymesArrGroup,
+            ]);
+        }
+
+        return $this->redirect('/');
+    }
+
+    public function actionPageWithName()
+    {
+
+        return $this->render('/rhyme/pageWithName', [
+
+        ]);
+    }
+
+
 }
+

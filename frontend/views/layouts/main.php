@@ -12,6 +12,8 @@ use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
 AppAsset::register($this);
+$SearchRhyme = new \frontend\models\form\SearchRhyme();
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -27,10 +29,67 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
-    <?= $content ?>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <nav class="navbar navbar-default">
+
+                    <!-- Brand и toggle сгруппированы для лучшего отображения на мобильных дисплеях -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"></a>
+                    </div>
+
+                    <!-- Соберите навигационные ссылки, формы, и другой контент для переключения -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class=""><a href="#">Рифмы к словам<span class="sr-only"></span></a>
+                            <li class=""><a href="#">Рифмы к именам<span class="sr-only"></span></a>
+
+                        </ul>
+                        <?php
+
+                        use yii\widgets\ActiveForm;
+
+                        $form = ActiveForm::begin([
+                            'action' => '/rhyme/index',
+                            'options' => ['class' => 'navbar-form navbar-left'],
+                        ]) ?>
+
+                        <div class="form-group">
+                            <?= $form->field($SearchRhyme, 'query')
+                                ->textInput([
+                                    'class' => 'form-control',
+                                    'placeholder' => 'Поиск',
+                                ])->label('');
+                            ?>
+                        </div>
+
+                        <?= Html::submitButton('Найти', ['class' => 'btn btn-default buttonCenter']) ?>
+
+                        <?php ActiveForm::end() ?>
+
+                    </div><!-- /.navbar-collapse -->
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <?= $content ?>
+    </div>
 </div>
+
 <?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>
+<style>
+    .buttonCenter {
+        margin-bottom: 10px;
+    }
+</style>

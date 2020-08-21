@@ -6,7 +6,7 @@ use frontend\models\behaviors\Search;
 use Yii;
 
 /**
- * This is the model class for table "hagen_orf".
+ * This is the model class for table "names_orf".
  *
  * @property int $id
  * @property int $parent_id
@@ -14,26 +14,27 @@ use Yii;
  * @property string $accent
  * @property string $word_with_accent
  */
-class HagenOrf extends \yii\db\ActiveRecord
+class NamesOrf extends \yii\db\ActiveRecord
 {
 
     public function behaviors()
     {
         return [
             'Search' => [
-                'class' => Search::className(),
+            'class' => Search::className(),
 //            'prop1' => 'value1',
 //            'prop2' => 'value2',
-            ]
+             ]
         ];
     }
+
 
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'hagen_orf';
+        return 'names_orf';
     }
 
     /**
@@ -43,9 +44,7 @@ class HagenOrf extends \yii\db\ActiveRecord
     {
         return [
             [['parent_id'], 'integer'],
-            [['word'], 'string', 'max' => 100],
-            [['accent'], 'string', 'max' => 450],
-            [['word_with_accent'], 'string', 'max' => 45],
+            [['word', 'accent', 'word_with_accent'], 'string', 'max' => 100],
         ];
     }
 
@@ -62,5 +61,6 @@ class HagenOrf extends \yii\db\ActiveRecord
             'word_with_accent' => 'Word With Accent',
         ];
     }
+
 
 }

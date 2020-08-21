@@ -53,7 +53,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 'rhyme/index' => 'rhyme/index',
-                'rhyme/<rhyme:\w+>' => 'rhyme/search-rhyme',
+                'rhyme/<rhyme:\D+>' => 'rhyme/search-rhyme',
                 '' => 'rhyme/index',
             ],
         ],

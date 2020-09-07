@@ -31,7 +31,10 @@ class Search extends \yii\base\Behavior
 
     }
 
-
+    /**
+     * @param $arrs массив с массивами
+     * @return array
+     */
     public function getArrUrlName($arrs)
     {
         $countArr = count($arrs);

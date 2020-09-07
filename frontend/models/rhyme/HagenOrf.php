@@ -63,4 +63,31 @@ class HagenOrf extends \yii\db\ActiveRecord
         ];
     }
 
+    public static function randomArrWord()
+    {
+        $res = [];
+
+        $res = self::find()
+            ->limit(30)
+            ->orderBy('rand()')
+            ->asArray()
+            ->all();
+
+        return $res;
+
+    }
+
+    public static function popularArrWord()
+    {
+        $res = [];
+
+        $res = self::find()
+            ->limit(30)
+            ->orderBy('rand()')
+            ->where(['popular' => 1])
+            ->all();
+
+        return $res;
+    }
+
 }

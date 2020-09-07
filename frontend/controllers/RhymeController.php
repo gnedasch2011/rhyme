@@ -27,7 +27,7 @@ class RhymeController extends Controller
 
             return $this->redirect('/rhyme/' . $searchWord);
         }
-        $this->view->title= 'Рифмы';
+        $this->view->title = 'Рифмы';
 
         return $this->render('/rhyme/main', [
 
@@ -52,6 +52,7 @@ class RhymeController extends Controller
             $HagenOrf = new HagenOrf();
             $HagenOrfs = $HagenOrf->mostAccurateRhymes($searchWord);
 
+            $this->view->title = 'Рифмы к слову ' . $searchWord;
 
             $NamesOrf = new NamesOrf();
             $NamesOrfs = $NamesOrf->mostAccurateRhymes($searchWord);
@@ -59,9 +60,19 @@ class RhymeController extends Controller
             $rhymesArr = $HagenOrf->getArrUrlName([$NamesOrfs, $HagenOrfs]);
             $rhymesArrGroup = $HagenOrf->getRhymesArrGroup($rhymesArr);
 
+            //популярных
+            $popularWords = [];
+
+            //рандом из популярных
+            $popularWords = $what_were_you_looking_for_earlier = $HagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);;
+
+            $what_were_you_looking_for_earlier = $HagenOrf->getArrUrlName([HagenOrf::randomArrWord()]);
+
             return $this->render('/rhyme/search_page', [
                 'searchWord' => $searchWord,
                 'rhymesArrGroup' => $rhymesArrGroup,
+                'popularWords' => $popularWords,
+                'what_were_you_looking_for_earlier' => $what_were_you_looking_for_earlier,
             ]);
         }
 
@@ -76,7 +87,7 @@ class RhymeController extends Controller
         $res = $NamesOrf->getArrNamesWithUrl();
 
 
-            return $this->render('/rhyme/page_with_name', [
+        return $this->render('/rhyme/page_with_name', [
             'namesOrfAll' => $res,
         ]);
     }

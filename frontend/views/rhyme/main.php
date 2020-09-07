@@ -1,14 +1,13 @@
 <?php
 $SearchRhyme = new \frontend\models\form\SearchRhyme();
- ?>
+?>
 
 <h1>Генератор рифм - подобрать рифмы к слову онлайн</h1>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <p>Введите слово в поле ввода, затем нажмите «Найти рифмы». Если в слове есть буква ё, то не
         заменяйте её буквой е.</p>
-
-    <p>
+    <div>
         <?php
 
         use yii\widgets\ActiveForm;
@@ -18,26 +17,26 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
             'options' => ['class' => 'navbar-form navbar-left'],
         ]) ?>
 
-    <div class="form-group">
-        <?= $form->field($SearchRhyme, 'query')
-            ->textInput([
-                'class' => 'form-control',
-                'placeholder' => 'Поиск',
-            ])->label('');
-        ?>
+        <div class="form-group">
+            <?= $form->field($SearchRhyme, 'query')
+                ->textInput([
+                    'class' => 'form-control',
+                    'placeholder' => 'Поиск',
+                ])->label('');
+            ?>
+        </div>
+
+        <?= \yii\helpers\Html::submitButton('Найти', ['class' => 'btn btn-default buttonCenter']) ?>
+
+        <?php ActiveForm::end() ?>
     </div>
-
-    <?= \yii\helpers\Html::submitButton('Найти', ['class' => 'btn btn-default buttonCenter']) ?>
-
-    <?php ActiveForm::end() ?>
-    </p>
 
     <div class="border"><p>Рифма — это созвучие в окончании двух или нескольких слов. Иногда бывает
             необходимо написать стих, но вдохновение не всегда позволяет подбирать рифмы к словам.
             Для этой проблемы есть решение. Просто воспользуйтесь формой для поиска рифм на
             rhyme.ru. Введите слово, нажмите на кнопку и получите кучу рифм к нему, самые
             подходящие из которых в начале списка.</p>
-        <h2>Почему подбирать рифмы лучше с помощью <?= \Yii::$app->request->hostInfo ;?>?</h2>
+        <h2>Почему подбирать рифмы лучше с помощью <?= \Yii::$app->request->hostInfo; ?>?</h2>
         <ul>
             <li>Потому что подбор рифм происходит с учетом звучания слова, вы можете выбрать
                 ударение на любую гласную букву.

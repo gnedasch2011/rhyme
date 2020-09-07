@@ -50,8 +50,8 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
                 <!-- Соберите навигационные ссылки, формы, и другой контент для переключения -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class=""><a href="#">Рифмы к словам<span class="sr-only"></span></a>
-                        <li class=""><a href="#">Рифмы к именам<span class="sr-only"></span></a>
+                        <li class=""><a href="/">Рифмы к словам<span class="sr-only"></span></a>
+                        <li class=""><a href="/names">Рифмы к именам<span class="sr-only"></span></a>
 
                     </ul>
                     <?php

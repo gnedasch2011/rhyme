@@ -27,6 +27,7 @@ class RhymeController extends Controller
 
             return $this->redirect('/rhyme/' . $searchWord);
         }
+        $this->view->title= 'Рифмы';
 
         return $this->render('/rhyme/main', [
 

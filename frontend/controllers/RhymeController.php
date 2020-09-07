@@ -20,6 +20,7 @@ class RhymeController extends Controller
     {
         $hagenOrf = new HagenOrf();
 
+        $popularWords = $hagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);
         $SearchRhyme = new SearchRhyme();
         if ($SearchRhyme->load(\Yii::$app->request->post()) && $SearchRhyme->validate()) {
 
@@ -30,7 +31,7 @@ class RhymeController extends Controller
         $this->view->title = 'Рифмы';
 
         return $this->render('/rhyme/main', [
-
+            'popularWords' => $popularWords,
         ]);
 
     }
@@ -64,8 +65,8 @@ class RhymeController extends Controller
             $popularWords = [];
 
             //рандом из популярных
-            $popularWords = $what_were_you_looking_for_earlier = $HagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);;
 
+            $popularWords = $HagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);
             $what_were_you_looking_for_earlier = $HagenOrf->getArrUrlName([HagenOrf::randomArrWord()]);
 
             return $this->render('/rhyme/search_page', [

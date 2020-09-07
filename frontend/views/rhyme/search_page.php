@@ -24,7 +24,6 @@
 
 
 <?php if ($popularWords): ?>
-
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h3>Популярные слова для рифм:</h3>
         <?php

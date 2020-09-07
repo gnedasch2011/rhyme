@@ -36,7 +36,6 @@ class RhymeController extends Controller
 
     }
 
-
     public function actionSearchRhyme()
     {
         if (\Yii::$app->request->get('rhyme')) {

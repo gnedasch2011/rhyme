@@ -20,6 +20,9 @@ return [
             'class' => 'yii\gii\Module',
             'allowedIPs' => ['127.0.0.1', '::1'] // регулируйте в соответствии со своими нуждами
         ],
+        'sitemap' => [
+            'class' => 'app\modules\sitemap\Module',
+        ],
     ],
     'components' => [
         'request' => [
@@ -56,6 +59,7 @@ return [
                 'rhyme/<rhyme:\D+>' => 'rhyme/search-rhyme',
                 '' => 'rhyme/index',
                 'names' => 'rhyme/page-with-name',
+                'sitemap.xml' => 'sitemap/default'
             ],
         ],
 

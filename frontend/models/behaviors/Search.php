@@ -36,7 +36,6 @@ class Search extends \yii\base\Behavior
     {
         $countArr = count($arrs);
         $allRhymes = [];
-//        echo "<pre>"; print_r(count($arrs[0]) + count($arrs[1]));die();618
 
         for ($i = 0; $i < $countArr; $i++) {
             $allRhymes = array_merge($allRhymes, $arrs[$i]);
@@ -103,5 +102,6 @@ class Search extends \yii\base\Behavior
 
         return $RhymesArrGroup;
     }
+
 
 }

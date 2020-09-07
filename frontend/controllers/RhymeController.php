@@ -69,9 +69,14 @@ class RhymeController extends Controller
 
     public function actionPageWithName()
     {
+        $NamesOrf = new NamesOrf();
+        $NamesOrfAll = $NamesOrf::getNameAll();
 
-        return $this->render('/rhyme/pageWithName', [
+        $res = $NamesOrf->getArrNamesWithUrl();
 
+
+            return $this->render('/rhyme/page_with_name', [
+            'namesOrfAll' => $res,
         ]);
     }
 

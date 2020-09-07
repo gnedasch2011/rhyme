@@ -55,6 +55,7 @@ return [
                 'rhyme/index' => 'rhyme/index',
                 'rhyme/<rhyme:\D+>' => 'rhyme/search-rhyme',
                 '' => 'rhyme/index',
+                'names' => 'rhyme/page-with-name',
             ],
         ],
 

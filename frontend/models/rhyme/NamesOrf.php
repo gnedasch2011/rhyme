@@ -21,10 +21,10 @@ class NamesOrf extends \yii\db\ActiveRecord
     {
         return [
             'Search' => [
-            'class' => Search::className(),
+                'class' => Search::className(),
 //            'prop1' => 'value1',
 //            'prop2' => 'value2',
-             ]
+            ]
         ];
     }
 
@@ -61,6 +61,35 @@ class NamesOrf extends \yii\db\ActiveRecord
             'word_with_accent' => 'Word With Accent',
         ];
     }
+
+    public static function getNameAll()
+    {
+        $res = self::find()
+            ->orderBy('word')
+            ->asArray()
+            ->all();
+
+        return $res;
+    }
+
+
+    public function getArrNamesWithUrl()
+    {
+        $names = self::getNameAll();
+
+        $res = [];
+
+        foreach ($names as $rhyme) {
+            $res[$rhyme['word']]['word'] = $rhyme['word'];
+            $res[$rhyme['word']]['url'] = '/rhyme/' . $rhyme['word'];
+        }
+
+        return $res;
+        
+    }
+
+
+
 
 
 }

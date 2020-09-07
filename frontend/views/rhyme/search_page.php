@@ -4,7 +4,7 @@
 
 <?php if (empty($rhymesArrGroup)): ?>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h3>Рифм на такое слове</h3>
+        <h3>Рифм на такое слово</h3>
     </div>
 <?php else: ?>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

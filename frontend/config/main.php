@@ -59,10 +59,10 @@ return [
                 'rhyme/<rhyme:\D+>' => 'rhyme/search-rhyme',
                 '' => 'rhyme/index',
                 'names' => 'rhyme/page-with-name',
-                'sitemap.xml' => 'sitemap/default'
+                'sitemap.xml' => 'sitemap/default',
+                'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
             ],
         ],
-
 
     ],
     'params' => $params,

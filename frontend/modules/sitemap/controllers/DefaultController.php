@@ -22,54 +22,46 @@ class DefaultController extends Controller
         $headers = Yii::$app->response->headers;
         $headers->add('Content-Type', 'text/xml');
 
-        $urls = [];
 
-        $arrUrls = HelperUrl::getAllUrls();
-
-        $limit = 20;
-
-        $countPage = ceil(count($arrUrls) / $limit);
+        $countPage = HelperUrl::getCountPage();
 
         if ($countPage > 1) {
 
-            return $this->render('many_sitemap', [
-                'arrUrls' => $arrUrls,
+            return $this->renderPartial('many_sitemap', [
                 'countPage' => $countPage,
             ]);
         }
 
+        $arrUrls = HelperUrl::getAllUrls();
 
-        //получется если меньше 50 000, то обычный, если нет, то с ссылками на лимитированные
+        Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
+        $headers = Yii::$app->response->headers;
+        $headers->add('Content-Type', 'text/xml');
 
-        foreach ($arrUrls as $url) {
-            $urls[] = array(
-                'loc' => $url->url,
-                'changefreq' => 'weekly',
-                'priority' => 0.9,
-            );
-        }
+        return $this->renderPartial('sitemap', [
+            'array_urls' => $arrUrls,
+        ]);
 
-        $urls = array_merge([
-            [
-                'loc' => '',
-                'changefreq' => 'weekly',
-                'priority' => 1,
-            ]
-        ], $urls);
+    }
 
+    public function actionSitemap($index)
+    {
 
-        if (!$xml_sitemap = Yii::$app->cache->get('sitemap')) {
-            $xml_sitemap = $this->renderPartial('sitemap', array(
-                'host' => \Yii::$app->request->hostInfo,
-                'urls' => $urls,
-            ));
-            Yii::$app->cache->set('sitemap', $xml_sitemap, 60 * 60 * 12); // кэшируем результат на 12 ч
-        }
+        $arrUrls = HelperUrl::getAllUrls();
+        $limit = HelperUrl::LIMIT_CONST;        
+        
+        $countUrls = count($arrUrls);
 
-        //50 000
+        $array_urls = array_slice($arrUrls, $limit * $index, $limit);
 
+        Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
+        $headers = Yii::$app->response->headers;
+        $headers->add('Content-Type', 'text/xml');
 
-        return $xml_sitemap;
+        return $this->renderPartial('sitemap', [
+            'array_urls' => $array_urls,
+        ]);
+
     }
 
 }

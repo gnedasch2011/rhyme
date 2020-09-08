@@ -12,6 +12,7 @@ namespace frontend\controllers;
 use app\models\rhyme\HagenOrf;
 use app\models\rhyme\NamesOrf;
 use frontend\models\form\SearchRhyme;
+use http\Url;
 use yii\web\Controller;
 
 class RhymeController extends Controller
@@ -20,8 +21,16 @@ class RhymeController extends Controller
     {
         $hagenOrf = new HagenOrf();
 
-        $popularWords = $hagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);
+        $cache = \Yii::$app->cache;
+
+        $popularWords = $cache->getOrSet('popularWords', function () use ($hagenOrf) {
+            $popularWords = $hagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);
+            return $popularWords;
+        });
+
+
         $SearchRhyme = new SearchRhyme();
+
         if ($SearchRhyme->load(\Yii::$app->request->post()) && $SearchRhyme->validate()) {
 
             $searchWord = $SearchRhyme->query;
@@ -29,6 +38,11 @@ class RhymeController extends Controller
             return $this->redirect('/rhyme/' . $searchWord);
         }
         $this->view->title = 'Рифмы';
+
+        $this->view->params['breadcrumbs'][] = array(
+            'label' => 'Главная',
+        );
+
 
         return $this->render('/rhyme/main', [
             'popularWords' => $popularWords,
@@ -65,8 +79,18 @@ class RhymeController extends Controller
 
             //рандом из популярных
 
-            $popularWords = $HagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);
+
+            $cache = \Yii::$app->cache;
+            $popularWords = $cache->getOrSet($searchWord, function () use ($HagenOrf) {
+                $popularWords = $HagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);
+                return $popularWords;
+            });
+
             $what_were_you_looking_for_earlier = $HagenOrf->getArrUrlName([HagenOrf::randomArrWord()]);
+
+            $this->view->params['breadcrumbs'][] = array(
+                'label' => $searchWord,
+            );
 
             return $this->render('/rhyme/search_page', [
                 'searchWord' => $searchWord,
@@ -84,11 +108,26 @@ class RhymeController extends Controller
         $NamesOrf = new NamesOrf();
         $NamesOrfAll = $NamesOrf::getNameAll();
 
+
+        $patronymics = $NamesOrf::getPatronymics();
+
         $res = $NamesOrf->getArrNamesWithUrl();
 
+        $this->view->params['breadcrumbs'][] = array(
+            'label' => 'Мужские и женские имена, по алфавиту',
+        );
+
+        $this->view->title = '';
+        $this->view->registerMetaTag(
+            ['name' => 'keywords', 'content' => 'Рифмы к мужским и женским именам | Красивые | Смешные | Обидные | Пошлые | Матерные | Прикольные | Оскорбительные рифмы к имени мальчиков и девочек']
+        );
+        $this->view->registerMetaTag(
+            ['name' => 'description', 'content' => 'Рифмы к мужским и женским именам | Красивые и смешные рифмы для имён мальчиков и девочек | ' . \Yii::$app->request->hostInfo]
+        );
 
         return $this->render('/rhyme/page_with_name', [
             'namesOrfAll' => $res,
+            'patronymics' => $patronymics,
         ]);
     }
 

@@ -66,12 +66,23 @@ class NamesOrf extends \yii\db\ActiveRecord
     {
         $res = self::find()
             ->orderBy('word')
+            ->where(['parent_id' => 0])
             ->asArray()
             ->all();
 
         return $res;
     }
 
+    public static function getPatronymics()
+    {
+        $res = self::find()
+            ->orderBy('word')
+            ->where(['not', ['parent_id' => 0]])
+            ->asArray()
+            ->all();
+
+        return $res;
+    }
 
     public function getArrNamesWithUrl()
     {
@@ -85,11 +96,8 @@ class NamesOrf extends \yii\db\ActiveRecord
         }
 
         return $res;
-        
+
     }
-
-
-
 
 
 }

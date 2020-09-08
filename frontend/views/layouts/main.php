@@ -83,6 +83,20 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
         </div>
     </div>
     <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <?php
+            // $this is the view object currently being used
+            echo Breadcrumbs::widget([
+                'homeLink' => [
+                    'label' => 'Рифмы',
+                    'url' => Yii::$app->homeUrl,
+                    'title' => 'Рифмы',
+                ],
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]);
+            ?>
+        </div>
+
         <?= $content ?>
     </div>
 </div>

@@ -23,6 +23,7 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="image/x-icon" href="/images/main/favicon/favicon.ico" rel="icon">
+    <script src="/js/metrika.js"></script>
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -51,7 +52,8 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class=""><a href="/">Рифмы к словам<span class="sr-only"></span></a>
-                        <li class=""><a href="/names">Рифмы к именам<span class="sr-only"></span></a>
+                        <li class=""><a href="/names">Рифмы к именам<span
+                                        class="sr-only"></span></a>
 
                     </ul>
                     <?php

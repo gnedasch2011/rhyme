@@ -6,9 +6,7 @@ use Yii;
 use frontend\modules\url\model\HelperUrl;
 use yii\web\Controller;
 
-/**
- * Default controller for the `tests` module
- */
+
 class DefaultController extends Controller
 {
     /**
@@ -48,8 +46,8 @@ class DefaultController extends Controller
     {
 
         $arrUrls = HelperUrl::getAllUrls();
-        $limit = HelperUrl::LIMIT_CONST;        
-        
+        $limit = HelperUrl::LIMIT_CONST;
+
         $countUrls = count($arrUrls);
 
         $array_urls = array_slice($arrUrls, $limit * $index, $limit);

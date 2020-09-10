@@ -22,7 +22,9 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="image/x-icon" href="/images/main/favicon/favicon.ico" rel="icon">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
     <script src="/js/metrika.js"></script>
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>

@@ -67,14 +67,14 @@ class HagenOrf extends \yii\db\ActiveRecord
     {
         $res = [];
 
+        $arrRandomNumber = self::generateArrRandom(30, 1, 100000);
+
         $res = self::find()
-            ->limit(30)
-            ->orderBy('rand()')
+            ->where(['id' => $arrRandomNumber])
             ->asArray()
             ->all();
 
         return $res;
-
     }
 
     public static function popularArrWord()
@@ -82,10 +82,22 @@ class HagenOrf extends \yii\db\ActiveRecord
         $res = [];
 
         $res = self::find()
-            ->limit(30)
-            ->orderBy('rand()')
+            ->select('word')
             ->where(['popular' => 1])
+            ->orderBy('rand()')
+            ->limit(100)
             ->all();
+
+        return $res;
+    }
+
+    public static function generateArrRandom($countItem, $begin, $end)
+    {
+        $res = [];
+
+        for ($i = 0; $i < $countItem; $i++) {
+            $res[] = rand($begin, $end);
+        }
 
         return $res;
     }

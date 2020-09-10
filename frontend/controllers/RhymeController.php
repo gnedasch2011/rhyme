@@ -37,7 +37,13 @@ class RhymeController extends Controller
 
             return $this->redirect('/rhyme/' . $searchWord);
         }
-        $this->view->title = 'Рифмы';
+        $this->view->title = 'Рифма к слову | Генератор рифм онлайн | Словарь | Подобрать';
+
+
+        $this->view->registerMetaTag(
+            ['name' => 'description', 'content' => 'Подобрать рифму к слову онлайн | Генератор рифмы онлайн | Словарь Рифма.орг']
+        );
+
 
         $this->view->params['breadcrumbs'][] = array(
             'label' => 'Главная',
@@ -66,14 +72,15 @@ class RhymeController extends Controller
             $HagenOrf = new HagenOrf();
             $HagenOrfs = $HagenOrf->mostAccurateRhymes($searchWord);
 
-            $this->view->title = 'Рифмы к слову ' . $searchWord;
 
             $NamesOrf = new NamesOrf();
             $NamesOrfs = $NamesOrf->mostAccurateRhymes($searchWord);
 
             $rhymesArr = $HagenOrf->getArrUrlName([$NamesOrfs, $HagenOrfs]);
             $rhymesArrGroup = $HagenOrf->getRhymesArrGroup($rhymesArr);
+        
 
+            
             //популярных
             $popularWords = [];
 
@@ -81,6 +88,7 @@ class RhymeController extends Controller
 
 
             $cache = \Yii::$app->cache;
+
             $popularWords = $cache->getOrSet($searchWord, function () use ($HagenOrf) {
                 $popularWords = $HagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);
                 return $popularWords;
@@ -88,15 +96,55 @@ class RhymeController extends Controller
 
             $what_were_you_looking_for_earlier = $HagenOrf->getArrUrlName([HagenOrf::randomArrWord()]);
 
-            $this->view->params['breadcrumbs'][] = array(
-                'label' => $searchWord,
-            );
+            $isName = $NamesOrf->isName($searchWord);
+
+            if ($isName) {
+                $this->view->title = "Рифма к имени {$searchWord} | Подобрать онлайн | " . \Yii::$app->request->hostInfo;
+
+                $this->view->registerMetaTag(
+                    [
+                        'name' => 'description',
+                        'content' =>
+                            "Подобрать рифму к имени {$searchWord} | Генератор рифмы онлайн | Словарь " . \Yii::$app->request->hostInfo
+                    ]
+                );
+
+                $this->view->params['breadcrumbs'][] = array(
+                    'label' => 'Имена',
+                );
+                $this->view->params['breadcrumbs'][] = array(
+                    'label' => $searchWord,
+                );
+
+
+            } else {
+                $this->view->title = "Рифма к слову {$searchWord} | Подобрать онлайн | Рифма.орг";
+
+                $this->view->registerMetaTag(
+                    [
+                        'name' => 'description',
+                        'content' =>
+                            "Подобрать рифму к слову {$searchWord} | Генератор рифмы онлайн | Словарь " . \Yii::$app->request->hostInfo
+                    ]
+                );
+
+
+                $this->view->params['breadcrumbs'][] = array(
+                    'label' => 'Слова',
+                );
+                $this->view->params['breadcrumbs'][] = array(
+                    'label' => $searchWord,
+                );
+
+            }
+
 
             return $this->render('/rhyme/search_page', [
                 'searchWord' => $searchWord,
                 'rhymesArrGroup' => $rhymesArrGroup,
                 'popularWords' => $popularWords,
                 'what_were_you_looking_for_earlier' => $what_were_you_looking_for_earlier,
+                'isName' => $isName,
             ]);
         }
 
@@ -114,7 +162,7 @@ class RhymeController extends Controller
         $res = $NamesOrf->getArrNamesWithUrl();
 
         $this->view->params['breadcrumbs'][] = array(
-            'label' => 'Мужские и женские имена, по алфавиту',
+            'label' => 'Имена',
         );
 
         $this->view->title = 'Рифмы к мужским и женским именам | Красивые | Смешные | Обидные | Пошлые | Матерные | Прикольные | Оскорбительные рифмы к имени мальчиков и девочек';

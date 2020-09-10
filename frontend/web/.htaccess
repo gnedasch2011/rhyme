@@ -3,6 +3,9 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 # Otherwise forward the request to index.php
-RewriteRule . index-test.php
+RewriteRule . index.php
 
 #php_value max_input_vars 2000
+
+RewriteCond %{HTTP_HOST} ^www.rifma.org$ [NC]
+RewriteRule ^(.*)$ http://rifma.org/$1 [R=301,L]

@@ -100,4 +100,19 @@ class NamesOrf extends \yii\db\ActiveRecord
     }
 
 
+    public function isName($word)
+    {
+        $res= [];
+
+        $res=  self::find()
+            ->where(['word'=>$word])
+            ->one();
+
+        if($res){
+            return true;
+        }
+
+        return false;
+    }
+
 }

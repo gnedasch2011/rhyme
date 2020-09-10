@@ -81,6 +81,7 @@ class RhymeController extends Controller
 
 
             $cache = \Yii::$app->cache;
+
             $popularWords = $cache->getOrSet($searchWord, function () use ($HagenOrf) {
                 $popularWords = $HagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);
                 return $popularWords;
@@ -88,6 +89,11 @@ class RhymeController extends Controller
 
             $what_were_you_looking_for_earlier = $HagenOrf->getArrUrlName([HagenOrf::randomArrWord()]);
 
+            $isName = $NamesOrf->isName($searchWord);
+
+            $this->view->params['breadcrumbs'][] = array(
+                'label' => ($isName) ? 'Имена' : 'Слова',
+            );
             $this->view->params['breadcrumbs'][] = array(
                 'label' => $searchWord,
             );

@@ -20,6 +20,7 @@ class Search extends \yii\base\Behavior
         if (isset($word->accent)) {
             $wordsSearch = $this->owner->find()
                 ->where(['accent' => $word->accent])
+                ->andWhere(['!=', 'id', 1])
                 ->asArray()
                 ->all();
 

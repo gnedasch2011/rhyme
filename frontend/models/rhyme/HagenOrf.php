@@ -74,9 +74,7 @@ class HagenOrf extends \yii\db\ActiveRecord
             ->asArray()
             ->all();
 
-
         return $res;
-
     }
 
     public static function popularArrWord()
@@ -84,9 +82,10 @@ class HagenOrf extends \yii\db\ActiveRecord
         $res = [];
 
         $res = self::find()
-            ->limit(30)
+            ->select('word')
             ->where(['popular' => 1])
-//            ->orderBy('rand()')
+            ->orderBy('rand()')
+            ->limit(100)
             ->all();
 
         return $res;

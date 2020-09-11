@@ -15,13 +15,12 @@ class Search extends \yii\base\Behavior
     {
 
         //test
-        $searchWord = 'дуб';
+//        $searchWord = 'жизнь';
 
         $word = $this->owner->find()
             ->where(['word' => $searchWord])
             ->one();
 
-        $res = [];
 
         //сильные рифмы
 
@@ -30,13 +29,22 @@ class Search extends \yii\base\Behavior
                 ->where(['accent' => $word->accent])
                 ->andWhere(['!=', 'id', 1])
                 ->asArray()
-                ->all()
             ;
-          
-//            $res = $this->regulationsInQuery($res, $searchWord, $word->accent);
 
+
+           $res = $this->regulationsInQuery($res, $searchWord);
+
+
+
+            return $res->asArray()->all();
         }
 
+        return [];
+
+        if($res->asArray()->all()){
+            return $res->asArray()->all();
+        }
+        
 
 //        foreach ($res->all() as $item) {
 //
@@ -48,8 +56,8 @@ class Search extends \yii\base\Behavior
 //            echo $item['word'] . PHP_EOL;
 //        }
 
+        return [];
 
-        return $res;
 
     }
 
@@ -61,12 +69,32 @@ class Search extends \yii\base\Behavior
             ->where(['word' => $searchWord])
             ->one();
 
+
         $regulationsArray = [
-            "у\'б"=>["у\'б"]
-        
+            "у'б" => ["у'п", "у'пь", "у'бь"],
+            "а'в" => ["а'ф"],
+            "а'з" => ["а'с"],
+            "о'д" => ["о'т"],
+            "о'жь" => ["о'шь"],
+            "у'ж" => ["у'ш"],
+            "о'г" => ["о'к"],
+            "и'х" => ["и'г"],
+            "о'жь" => ["о'ж"],
+            "и'ж" => ["и'шь"],
+            "у'сь" => ["у'з"],
+            "а'ть" => ["а'т"],
+            "а'з" => ["я'зь"],
         ];
+
+
+        //обработка составных гласных
+        if($word->accent){
+            $res->orWhere(['accent' => $regulationsArray[$word->accent]]);
+        }
+     
+        return $res;
     }
-        
+
     /**
      * @param $arrs массив с массивами
      * @return array

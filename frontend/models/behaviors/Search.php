@@ -13,25 +13,60 @@ class Search extends \yii\base\Behavior
 
     public function mostAccurateRhymes($searchWord)
     {
+
+        //test
+        $searchWord = 'дуб';
+
         $word = $this->owner->find()
             ->where(['word' => $searchWord])
             ->one();
 
+        $res = [];
+
+        //сильные рифмы
+
         if (isset($word->accent)) {
-            $wordsSearch = $this->owner->find()
+            $res = $this->owner->find()
                 ->where(['accent' => $word->accent])
                 ->andWhere(['!=', 'id', 1])
                 ->asArray()
-                ->all();
-
-            return $wordsSearch;
+                ->all()
+            ;
+          
+//            $res = $this->regulationsInQuery($res, $searchWord, $word->accent);
 
         }
 
-        return [];
+
+//        foreach ($res->all() as $item) {
+//
+//            if ($item['word'] == 'глуп') {
+//                echo 'ok';
+//                die();
+//            }
+//
+//            echo $item['word'] . PHP_EOL;
+//        }
+
+
+        return $res;
 
     }
 
+    //здесь в запрос вкидываются правила
+
+    public function regulationsInQuery($res, $searchWord)
+    {
+        $word = $this->owner->find()
+            ->where(['word' => $searchWord])
+            ->one();
+
+        $regulationsArray = [
+            "у\'б"=>["у\'б"]
+        
+        ];
+    }
+        
     /**
      * @param $arrs массив с массивами
      * @return array

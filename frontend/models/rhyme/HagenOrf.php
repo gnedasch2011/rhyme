@@ -112,6 +112,17 @@ class HagenOrf extends \yii\db\ActiveRecord
                 ->where(['word' => $this->query])
                 ->one();
 
+            if($idWord->parent_id==0){
+
+                $res = self::find()
+                    ->where(['parent_id' => $idWord->id])
+                    ->asArray()
+                    ->all();
+
+                return $res;
+            }
+
+
             $res = self::find()
                 ->where(['parent_id' => $idWord->parent_id])
                 ->asArray()

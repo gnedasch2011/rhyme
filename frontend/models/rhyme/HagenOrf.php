@@ -16,6 +16,7 @@ use Yii;
  */
 class HagenOrf extends \yii\db\ActiveRecord
 {
+    public $query;
 
     public function behaviors()
     {
@@ -102,4 +103,23 @@ class HagenOrf extends \yii\db\ActiveRecord
         return $res;
     }
 
+    public function anotherFormWord()
+    {
+        $res = [];
+
+        if (isset($this->query) && !empty($this->query)) {
+            $idWord = self::find()
+                ->where(['word' => $this->query])
+                ->one();
+
+            $res = self::find()
+                ->where(['parent_id' => $idWord->parent_id])
+                ->asArray()
+                ->all();
+
+            return $res;
+        }
+
+        return $res;
+    }
 }

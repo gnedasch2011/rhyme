@@ -32,7 +32,18 @@
         ]);
         ?>
     </div>
+
+<?php endif; ?><?php if ($anotherFormWord): ?>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h3>Другие формы слова:</h3>
+        <?php
+        echo $this->render('/rhyme/block/_output_words', [
+            'words' => $anotherFormWord,
+        ]);
+        ?>
+    </div>
 <?php endif; ?>
+
 
 <?php if ($what_were_you_looking_for_earlier): ?>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

@@ -68,8 +68,9 @@ class RhymeController extends Controller
             };
 
             $searchWord = $SearchRhyme->query;
-
             $HagenOrf = new HagenOrf();
+            $HagenOrf->query = $searchWord;
+
             $HagenOrfs = $HagenOrf->mostAccurateRhymes($searchWord);
 
 
@@ -78,9 +79,8 @@ class RhymeController extends Controller
 
             $rhymesArr = $HagenOrf->getArrUrlName([$NamesOrfs, $HagenOrfs]);
             $rhymesArrGroup = $HagenOrf->getRhymesArrGroup($rhymesArr);
-        
 
-            
+
             //популярных
             $popularWords = [];
 
@@ -138,11 +138,14 @@ class RhymeController extends Controller
 
             }
 
+            $anotherFormWord = $HagenOrf->anotherFormWord();
+            $anotherFormWord = $HagenOrf->getArrUrlName([$anotherFormWord]);
 
             return $this->render('/rhyme/search_page', [
                 'searchWord' => $searchWord,
                 'rhymesArrGroup' => $rhymesArrGroup,
                 'popularWords' => $popularWords,
+                'anotherFormWord' => $anotherFormWord,
                 'what_were_you_looking_for_earlier' => $what_were_you_looking_for_earlier,
                 'isName' => $isName,
             ]);

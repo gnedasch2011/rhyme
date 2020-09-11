@@ -88,7 +88,7 @@ class Search extends \yii\base\Behavior
 
 
         //обработка составных гласных
-        if($word->accent){
+        if($word->accent && isset($regulationsArray[$word->accent])){
             $res->orWhere(['accent' => $regulationsArray[$word->accent]]);
         }
      

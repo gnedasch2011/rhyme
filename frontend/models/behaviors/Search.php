@@ -101,6 +101,7 @@ class Search extends \yii\base\Behavior
      */
     public function getArrUrlName($arrs)
     {
+       
         $countArr = count($arrs);
         $allRhymes = [];
 
@@ -109,7 +110,6 @@ class Search extends \yii\base\Behavior
         }
 
         $res = [];
-
         foreach ($allRhymes as $rhyme) {
             $res[$rhyme['word']]['word'] = $rhyme['word'];
             $res[$rhyme['word']]['url'] = '/rhyme/' . $rhyme['word'];

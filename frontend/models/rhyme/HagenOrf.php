@@ -92,6 +92,22 @@ class HagenOrf extends \yii\db\ActiveRecord
         return $res;
     }
 
+    const MOST_POPULAR = 2;
+
+    public static function popularArrWordInAMain()
+    {
+        $res = [];
+
+        $res = self::find()
+            ->select('word')
+            ->where(['popular' => self::MOST_POPULAR])
+            ->limit(200)
+            ->all();
+
+
+        return $res;
+    }
+
     public static function generateArrRandom($countItem, $begin, $end)
     {
         $res = [];
@@ -112,7 +128,7 @@ class HagenOrf extends \yii\db\ActiveRecord
                 ->where(['word' => $this->query])
                 ->one();
 
-            if($idWord->parent_id==0){
+            if ($idWord->parent_id == 0) {
 
                 $res = self::find()
                     ->where(['parent_id' => $idWord->id])

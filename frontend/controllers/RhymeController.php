@@ -23,8 +23,10 @@ class RhymeController extends Controller
 
         $cache = \Yii::$app->cache;
 
-        $popularWords = $cache->getOrSet('popularWords', function () use ($hagenOrf) {
-            $popularWords = $hagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);
+        $popularWords = $hagenOrf->getArrUrlName([HagenOrf::popularArrWordInAMain()]);
+
+        $popularWords = $cache->getOrSet('popularWordsInMain', function () use ($hagenOrf) {
+            $popularWords = $hagenOrf->getArrUrlName([HagenOrf::popularArrWordInAMain()]);
             return $popularWords;
         });
 

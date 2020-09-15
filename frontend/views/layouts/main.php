@@ -17,7 +17,7 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<<<<<<< HEAD
+
 <meta charset="<?= Yii::$app->charset ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,16 +45,7 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
 <?php $this->registerCsrfMetaTags() ?>
 <title><?= Html::encode($this->title) ?></title>
 <?php $this->head() ?>
-=======
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <script src="/js/metrika.js"></script>
-    <?php $this->registerCsrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
->>>>>>> 2c80bdbaef91a03cc9c9b930d31846f68aa62b3f
+
 </head>
 <body>
 <?php $this->beginBody() ?>

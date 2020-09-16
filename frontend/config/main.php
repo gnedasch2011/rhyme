@@ -61,6 +61,7 @@ return [
                 'names' => 'rhyme/page-with-name',
                 'sitemap.xml' => 'sitemap/default',
                 'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
+                'admin/add-article' => 'admin/add-article',
             ],
         ],
 

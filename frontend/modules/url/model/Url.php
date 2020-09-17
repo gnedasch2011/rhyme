@@ -35,7 +35,7 @@ class Url extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['alias', 'title', 'keyword', 'route', 'description', 'status'], 'string', 'max' => 255],
+            [['alias', 'title', 'keywords', 'route', 'description', 'status'], 'string', 'max' => 255],
             [['param'], 'integer']
 
         ];
@@ -50,7 +50,7 @@ class Url extends \yii\db\ActiveRecord
             'id' => 'ID',
             'alias' => 'Alias',
             'title' => 'Title',
-            'keyword' => 'Keyword',
+            'keywords' => 'Keyword',
             'param' => 'Param',
             'route' => 'Route',
             'description' => 'Description',
@@ -66,10 +66,7 @@ class Url extends \yii\db\ActiveRecord
     public function afterSave($insert, $changedAttributes)
     {
         parent::afterSave($insert, $changedAttributes);
-
-
     }
-
 
     public function getPage()
     {

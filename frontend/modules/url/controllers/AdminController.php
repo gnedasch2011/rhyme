@@ -15,6 +15,25 @@ use yii\filters\VerbFilter;
  */
 class AdminController extends Controller
 {
+    public function beforeAction($action)
+    {
+
+        if (Yii::$app->request->get('solt') != 'EJrZEMGlxXxVN1LO') {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+        // your custom code here, if you want the code to run before action filters,
+        // which are triggered on the [[EVENT_BEFORE_ACTION]] event, e.g. PageCache or AccessControl
+
+        if (!parent::beforeAction($action)) {
+            return false;
+        }   
+
+
+        // other custom code here
+
+        return true; // or false to not run the action
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -65,6 +84,10 @@ class AdminController extends Controller
      */
     public function actionCreate()
     {
+
+
+
+
         $model = new Url();
         $model->populateRelation('page', $model->page ?? new Page());
 
@@ -92,6 +115,7 @@ class AdminController extends Controller
      */
     public function actionUpdate($id)
     {
+
         $model = $this->findModel($id);
         $model->populateRelation('page', $model->page ?? new Page());
 

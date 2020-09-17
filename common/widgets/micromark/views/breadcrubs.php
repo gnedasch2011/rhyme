@@ -13,25 +13,28 @@ $countItems = count($items) + 1;
 $i = 1;
 $jsonLtdItem = '';
 
-foreach ($itemsLtd as $item) {
-    $url = (isset($item['url'])) ? $item['url'] : '#';
-    $separator = ($i < $countItems) ? ',' : '';
+if (isset($itemsLtd) && is_array($itemsLtd)) {
+    foreach ($itemsLtd as $item) {
 
-    $jsonLtdItem .=
-        '{
+        $url = (isset($item['url'])) ? $item['url'] : '#';
+        $separator = ($i < $countItems) ? ',' : '';
+        $itemLab = isset($item['label']) ? $item['label'] : '';
+
+        $jsonLtdItem .=
+            '{
         "@type": "ListItem",
                 "position": ' . $i . ',
                 "item":
                 {
                     "@id": "' . $url . '",
-                    "name": "' . $item['label'] . '"
+                    "name": "' . $itemLab . '"
                 }
             }' . $separator;
 
-    $i++;
-}
+        $i++;
+    }
 
-$jsonLtd = '{
+    $jsonLtd = '{
         "@context": "http://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement":
@@ -39,6 +42,9 @@ $jsonLtd = '{
             ' . $jsonLtdItem . '
         ]
     }';
+}
+
+
 ?>
 
 

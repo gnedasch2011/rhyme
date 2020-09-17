@@ -17,7 +17,7 @@ class m200915_151925_create_url_table extends Migration
             'alias' => $this->string(),
             'title' => $this->string(),
             'keyword' => $this->string(),
-            'param' => $this->string(),
+            'param' => $this->integer(),
             'route' => $this->string(),
             'description' => $this->string(),
             'status' => $this->string(),

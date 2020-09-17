@@ -23,6 +23,10 @@ return [
         'sitemap' => [
             'class' => 'app\modules\sitemap\Module',
         ],
+          'url' => [
+            'class' => 'app\modules\url\Module',
+        ],
+
     ],
     'components' => [
         'request' => [
@@ -61,7 +65,8 @@ return [
                 'names' => 'rhyme/page-with-name',
                 'sitemap.xml' => 'sitemap/default',
                 'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
-                'admin/add-article' => 'admin/add-article',
+                '<module:[\w-]+>/admin/<action:[\w-]+>/<id:\d+>' => '<module>/admin/<action>',
+                '<module:[\w-]+>/admin/<action:[\w-]+>' => '<module>/admin/<action>',
             ],
         ],
 

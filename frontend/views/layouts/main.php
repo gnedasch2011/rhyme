@@ -121,8 +121,3 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
 </body>
 </html>
 <?php $this->endPage() ?>
-<style>
-    .buttonCenter {
-        margin-bottom: 10px;
-    }
-</style>

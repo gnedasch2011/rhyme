@@ -39,6 +39,7 @@ class RhymeController extends Controller
 
             return $this->redirect('/rhyme/' . $searchWord);
         }
+
         $this->view->title = 'Рифма к слову | Генератор рифм онлайн | Словарь | Подобрать';
 
 

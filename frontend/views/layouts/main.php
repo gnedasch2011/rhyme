@@ -41,7 +41,9 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
     <script src="/js/metrika.js"></script>
+
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -93,6 +95,8 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
             </nav>
         </div>
     </div>
+    <!-- Yandex.RTB R-A-632107-1 -->
+
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <?php
@@ -106,6 +110,9 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]);
             ?>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div id="yandex_rtb_R-A-632107-1"></div>
         </div>
         <?php
         echo common\widgets\micromark\MicromarkWidget::widget([
@@ -127,3 +134,4 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
     }
 </style>
 
+<script src="/js/advertising.js"></script>

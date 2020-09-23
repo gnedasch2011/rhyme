@@ -23,6 +23,13 @@ return [
         'sitemap' => [
             'class' => 'app\modules\sitemap\Module',
         ],
+        'url' => [
+            'class' => 'app\modules\url\Module',
+        ],
+        'page' => [
+            'class' => 'app\modules\page\Module',
+        ],
+
     ],
     'components' => [
         'request' => [
@@ -61,6 +68,11 @@ return [
                 'names' => 'rhyme/page-with-name',
                 'sitemap.xml' => 'sitemap/default',
                 'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
+                '<module:[\w-]+>/admin/<action:[\w-]+>/<id:\d+>' => '<module>/admin/<action>',
+                '<module:[\w-]+>/admin/<action:[\w-]+>' => '<module>/admin/<action>',
+                [
+                    'class' => 'frontend\modules\url\components\rule\UrlRule',
+                ],
             ],
         ],
 

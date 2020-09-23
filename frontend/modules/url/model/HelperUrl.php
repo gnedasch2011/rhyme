@@ -25,7 +25,6 @@ class HelperUrl extends Model
             $res = [];
 
 
-
             $HagenOrfs = HagenOrf::find()
                 ->asArray()
                 ->orderBy('popular desc')
@@ -67,6 +66,11 @@ class HelperUrl extends Model
         }
 
         return $countPage;
+
+    }
+
+    public static function setParamInPage($page)
+    {
 
     }
 }

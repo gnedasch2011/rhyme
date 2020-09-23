@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\url;
+namespace app\modules\article;
 
 /**
  * tests module definition class
@@ -10,7 +10,7 @@ class Module extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'frontend\modules\url\controllers';
+    public $controllerNamespace = 'app\modules\article\controllers';
 
 
     /**

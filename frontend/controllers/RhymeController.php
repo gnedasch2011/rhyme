@@ -187,7 +187,7 @@ class RhymeController extends Controller
     {
         $this->view->title = 'Ассонансные и диссонансные рифмы | Рифма.орг';
         $this->view->registerMetaTag(
-            ['name' => 'description', 'content' => 'Ассонансные и диссонансные рифмы | Рифма.орг' . \Yii::$app->request->hostInfo]
+            ['name' => 'description', 'content' => 'то такое ассонансные и диссонансные рифмы? Чем отличаются ассонансы и диссонансы? Ответ на ' . \Yii::$app->request->hostInfo]
         );
 
         $this->view->params['breadcrumbs'][] = array(

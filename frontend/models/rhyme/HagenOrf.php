@@ -88,7 +88,6 @@ class HagenOrf extends \yii\db\ActiveRecord
             ->orderBy('rand()')
             ->limit(120)
             ->all();
-        echo "<pre>"; print_r(count($res));die();
         return $res;
     }
 

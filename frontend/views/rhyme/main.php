@@ -60,6 +60,9 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
             поэту, как рифмус, рифмоплёт, рифматор и другие словари.
             </li>
         </ul>
+        
+        <h3><a href="/types-of-rhymes">Виды рифм</a></h3>
+        
     </div>
 
     <?php if ($popularWords): ?>

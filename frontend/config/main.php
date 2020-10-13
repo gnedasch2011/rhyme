@@ -66,6 +66,7 @@ return [
                 'rhyme/<rhyme:\D+>' => 'rhyme/search-rhyme',
                 '' => 'rhyme/index',
                 'names' => 'rhyme/page-with-name',
+                'types-of-rhymes' => 'rhyme/types-of-rhymes',
                 'sitemap.xml' => 'sitemap/default',
                 'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
                 '<module:[\w-]+>/admin/<action:[\w-]+>/<id:\d+>' => '<module>/admin/<action>',

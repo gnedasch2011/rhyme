@@ -96,7 +96,7 @@ class RhymeController extends Controller
                 $popularWords = $HagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);
                 return $popularWords;
             });
-        
+
             $what_were_you_looking_for_earlier = $HagenOrf->getArrUrlName([HagenOrf::randomArrWord()]);
 
             $isName = $NamesOrf->isName($searchWord);
@@ -181,6 +181,20 @@ class RhymeController extends Controller
             'namesOrfAll' => $res,
             'patronymics' => $patronymics,
         ]);
+    }
+
+    public function actionTypesOfRhymes()
+    {
+        $this->view->title = 'Ассонансные и диссонансные рифмы | Рифма.орг';
+        $this->view->registerMetaTag(
+            ['name' => 'description', 'content' => 'Ассонансные и диссонансные рифмы | Рифма.орг' . \Yii::$app->request->hostInfo]
+        );
+
+        $this->view->params['breadcrumbs'][] = array(
+            'label' => 'Имена',
+        );
+
+        return $this->render('types-of-rhymes');
     }
 
 

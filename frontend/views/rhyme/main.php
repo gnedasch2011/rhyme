@@ -65,7 +65,8 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
     <?php if ($popularWords): ?>
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h3>Популярные слова для рифм:</h3>
+            <h3>
+                Популярные слова для рифм:</h3>
             <?php
             echo $this->render('/rhyme/block/_output_words', [
                 'words' => $popularWords,

@@ -86,9 +86,9 @@ class HagenOrf extends \yii\db\ActiveRecord
             ->select('word')
             ->where(['popular' => 1])
             ->orderBy('rand()')
-            ->limit(100)
+            ->limit(120)
             ->all();
-
+        echo "<pre>"; print_r(count($res));die();
         return $res;
     }
 

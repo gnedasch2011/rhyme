@@ -96,7 +96,7 @@ class RhymeController extends Controller
                 $popularWords = $HagenOrf->getArrUrlName([HagenOrf::popularArrWord()]);
                 return $popularWords;
             });
-
+        
             $what_were_you_looking_for_earlier = $HagenOrf->getArrUrlName([HagenOrf::randomArrWord()]);
 
             $isName = $NamesOrf->isName($searchWord);

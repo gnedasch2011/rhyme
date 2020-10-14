@@ -62,7 +62,7 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
         
         <h3>Виды рифм</h3>
         <p>
-        <a href="/types-of-rhymes">Типы рифм</a>
+        <a href="/types-of-rhymes">А диссонансное и ассонансные рифмы</a>
         <a href="/masculine-rhyme">Мужская рифма</a>
         <a href="/feminine-rhyme">Женская рифма</a>
         </p>

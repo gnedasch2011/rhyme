@@ -197,6 +197,34 @@ class RhymeController extends Controller
         return $this->render('types-of-rhymes');
     }
 
+    public function actionMasculineRhyme()
+    {
+        $this->view->title = 'Ассонансные и диссонансные рифмы | Рифма.орг';
+        $this->view->registerMetaTag(
+            ['name' => 'description', 'content' => 'то такое ассонансные и диссонансные рифмы? Чем отличаются ассонансы и диссонансы? Ответ на ' . \Yii::$app->request->hostInfo]
+        );
+
+        $this->view->params['breadcrumbs'][] = array(
+            'label' => 'Имена',
+        );
+
+        return $this->render('MasculineRhyme');
+    }
+
+    public function actionFeminineRhyme()
+    {
+        $this->view->title = 'Ассонансные и диссонансные рифмы | Рифма.орг';
+        $this->view->registerMetaTag(
+            ['name' => 'description', 'content' => 'то такое ассонансные и диссонансные рифмы? Чем отличаются ассонансы и диссонансы? Ответ на ' . \Yii::$app->request->hostInfo]
+        );
+
+        $this->view->params['breadcrumbs'][] = array(
+            'label' => 'Имена',
+        );
+
+        return $this->render('FeminineRhyme');
+    }
+
 
 }
 

@@ -67,6 +67,8 @@ return [
                 '' => 'rhyme/index',
                 'names' => 'rhyme/page-with-name',
                 'types-of-rhymes' => 'rhyme/types-of-rhymes',
+                'masculine-rhyme' => 'rhyme/masculine-rhyme',
+                'feminine-rhyme' => 'rhyme/feminine-rhyme',
                 'sitemap.xml' => 'sitemap/default',
                 'sitemap/<index:\d+>' => 'sitemap/default/sitemap',
                 '<module:[\w-]+>/admin/<action:[\w-]+>/<id:\d+>' => '<module>/admin/<action>',

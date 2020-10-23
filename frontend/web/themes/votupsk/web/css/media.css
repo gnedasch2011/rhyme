@@ -30,6 +30,7 @@ aside{
 }
 .baner_side.baner-fixed{
 	position: static;
+	max-width: 300px;
 }
 .main_sec{
 	padding-bottom: 0;

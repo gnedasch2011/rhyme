@@ -1,0 +1,144 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+.search_block form input{
+	width: 160px;
+}
+.search_block{
+	margin-right: 25px;
+}
+.letter{
+	width: 70px;
+}
+aside{
+	padding-bottom: 50px;
+}
+.bottom_mnu{
+	padding-bottom: 30px;
+}
+.metric_block{
+	width: 34%;
+}
+.soc_icons{
+	margin-left: 26px;
+}
+.baner_side.baner-fixed{
+	position: static;
+}
+.main_sec{
+	padding-bottom: 0;
+}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+.top_city{
+	display: none;
+}
+.logo{
+	width: 100px;
+	padding-right: 0;
+}
+.logo::after{
+	display: none;
+}
+.search_block{
+	display: none;
+}
+.city_select_block{
+	flex-wrap: wrap;
+}
+.top_line .col-md-4{
+	width: 50%;
+}
+.top_line .col-md-8{
+	width: 50%;
+}
+.main_text h2{
+	font-size: 25px;
+}
+.main_text p{
+	font-size: 12px;
+}
+.city_select{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.letter{
+	padding-bottom: 20px;
+}
+.letter_city{
+	width: 100%;
+}
+.container{
+	padding: 0 15px;
+}
+footer .bottom_mnu ul{
+	width: 100%;
+}
+.copy_flex{
+	padding-top: 0;
+}
+.metric_block {
+    width: 100%;
+}
+.copyright{
+	padding: 15px 0;
+}
+.soc_icons{
+	margin-left: 0;
+}
+.top_mnu_item {
+    width: 100%;
+    padding-bottom: 15px;
+}
+.owl-item{
+	    padding: 12px 25px;
+}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

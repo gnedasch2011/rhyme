@@ -30,7 +30,6 @@ class RhymeController extends Controller
             return $popularWords;
         });
 
-
         $SearchRhyme = new SearchRhyme();
 
         if ($SearchRhyme->load(\Yii::$app->request->post()) && $SearchRhyme->validate()) {

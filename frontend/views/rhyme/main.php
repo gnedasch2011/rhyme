@@ -8,27 +8,12 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
     <p>Введите слово в поле ввода, затем нажмите «Найти рифмы». Если в слове есть буква ё, то не
         заменяйте её буквой е.</p>
     <div>
-        <?php
-
-        use yii\widgets\ActiveForm;
-
-        $form = ActiveForm::begin([
-            'action' => '/rhyme/index',
-            'options' => ['class' => 'navbar-form navbar-left'],
-        ]) ?>
-
-        <div class="form-group">
-            <?= $form->field($SearchRhyme, 'query')
-                ->textInput([
-                    'class' => 'form-control',
-                    'placeholder' => 'Поиск',
-                ])->label('');
-            ?>
-        </div>
-
-        <?= \yii\helpers\Html::submitButton('Найти', ['class' => 'btn btn-default buttonCenter']) ?>
-
-        <?php ActiveForm::end() ?>
+        <form action="/search/default/index" method="post">
+            <div class="search_block">
+                <input type="search" placeholder="Поиск по сайту">
+                <button type="submit" class="btn_search">Найти</button>
+            </div>
+        </form>
     </div>
 
     <div class="border"><p>Рифма — это созвучие в окончании двух или нескольких слов. Иногда бывает

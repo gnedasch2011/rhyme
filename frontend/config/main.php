@@ -29,9 +29,22 @@ return [
         'page' => [
             'class' => 'app\modules\page\Module',
         ],
-
+        'search' => [
+            'class' => 'frontend\modules\search\Module',
+        ],
     ],
     'components' => [
+        'view' => [
+//            'class' => 'app\modules\common\components\View',
+            'theme' => [
+                'basePath' => '@app/themes/votpusk',
+                'baseUrl' => '@web/themes/votpusk',
+                'pathMap' => [
+                    '@app/views' => '@app/themes/votpusk',
+                    '@app/modules' => '@app/themes/votpusk/modules',
+                ]
+            ]
+        ],
         'request' => [
             'csrfParam' => '_csrf-frontend',
             'enableCsrfValidation' => false,
@@ -64,6 +77,7 @@ return [
             'rules' => [
                 'rhyme/index' => 'rhyme/index',
                 'rhyme/<rhyme:\D+>' => 'rhyme/search-rhyme',
+                'search/default/index' => 'search/default/index',
                 '' => 'rhyme/index',
                 'names' => 'rhyme/page-with-name',
                 'assonansnye-i-dissonansnye-rifmy' => 'rhyme/types-of-rhymes',

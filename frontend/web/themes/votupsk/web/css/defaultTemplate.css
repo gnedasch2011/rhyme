@@ -1,0 +1,75 @@
+/*header*/
+
+/* Обычный */
+
+@font-face {
+    font-family: Mulish;
+    src: url('/css/fonts/Mulish/Mulish-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url('/css/fonts/Ubuntu/Ubuntu-Regular.ttf');
+}
+
+
+body {
+    font-family: 'Ubuntu';
+}
+
+.navbar-default {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #fff;
+}
+
+.navbar-nav {
+    margin-left: 90px;
+}
+
+.navbar {
+    border: none;
+}
+
+h1 {
+    font-family: 'Ubuntu';
+}
+
+.buttonCenter {
+    margin-bottom: 10px;
+}
+
+.cont_tags a {
+    background-color: #f5f5f5;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 3px 10px;
+    margin-bottom: 5px;
+}
+
+.glyphicon-tag::before {
+    content: "\e041";
+}
+
+.cont_tags .glyphicon {
+    margin-right: 2px;
+    color: #847146;
+}
+
+.block-puzzles {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.gr4 {
+    background-color: #ffe8dd;
+}
+
+
+.gr5 {
+    background-color: #fbf1ff;
+}
+

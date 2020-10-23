@@ -41,75 +41,14 @@ use common\widgets\Alert;
                 <div class="col-md-3">
                     <aside>
                         <div>
-                            <!-- Yandex.RTB R-A-653585-3 -->
-                            <div id="yandex_rtb_R-A-653585-3"></div>
-                            <script type="text/javascript">
-                                (function(w, d, n, s, t) {
-                                    w[n] = w[n] || [];
-                                    w[n].push(function() {
-                                        Ya.Context.AdvManager.render({
-                                            blockId: "R-A-653585-3",
-                                            renderTo: "yandex_rtb_R-A-653585-3",
-                                            async: true
-                                        });
-                                    });
-                                    t = d.getElementsByTagName("script")[0];
-                                    s = d.createElement("script");
-                                    s.type = "text/javascript";
-                                    s.src = "//an.yandex.ru/system/context.js";
-                                    s.async = true;
-                                    t.parentNode.insertBefore(s, t);
-                                })(this, this.document, "yandexContextAsyncCallbacks");
-                            </script>
+                            <?= $this->render('@votpuskView/layouts/block/adversting/block_2') ;?>
+
                         </div>
 
-                        <!-- Yandex.RTB R-A-653585-1 -->
-                        <div class="baner_side"><!-- Yandex.RTB R-A-653585-2 -->
-                            <!-- Yandex.RTB R-A-653585-2 -->
-                            <div id="yandex_rtb_R-A-653585-2"></div>
-                            <script type="text/javascript">
-                                (function (w, d, n, s, t) {
-                                    w[n] = w[n] || [];
-                                    w[n].push(function () {
-                                        Ya.Context.AdvManager.render({
-                                            blockId: "R-A-653585-2",
-                                            renderTo: "yandex_rtb_R-A-653585-2",
-                                            async: true
-                                        });
-                                    });
-                                    t = d.getElementsByTagName("script")[0];
-                                    s = d.createElement("script");
-                                    s.type = "text/javascript";
-                                    s.src = "//an.yandex.ru/system/context.js";
-                                    s.async = true;
-                                    t.parentNode.insertBefore(s, t);
-                                })(this, this.document, "yandexContextAsyncCallbacks");
-                            </script>
-                            <?php /*?>
 
-                        <div class="baner_side"><!-- Yandex.RTB R-A-653585-2 -->
-                            <!-- Yandex.RTB R-A-653585-2 -->
-                            <div id="yandex_rtb_R-A-653585-2"></div>
-                            <script type="text/javascript">
-                                (function(w, d, n, s, t) {
-                                    w[n] = w[n] || [];
-                                    w[n].push(function() {
-                                        Ya.Context.AdvManager.render({
-                                            blockId: "R-A-653585-2",
-                                            renderTo: "yandex_rtb_R-A-653585-2",
-                                            async: true
-                                        });
-                                    });
-                                    t = d.getElementsByTagName("script")[0];
-                                    s = d.createElement("script");
-                                    s.type = "text/javascript";
-                                    s.src = "//an.yandex.ru/system/context.js";
-                                    s.async = true;
-                                    t.parentNode.insertBefore(s, t);
-                                })(this, this.document, "yandexContextAsyncCallbacks");
-                            </script>
-                        </div>
-    <?php */ ?>
+                        <div class="baner_side">
+                            <?= $this->render('@votpuskView/layouts/block/adversting/block_3') ;?>
+
                         </div>
                     </aside>
 

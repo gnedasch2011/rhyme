@@ -45,9 +45,37 @@ use common\widgets\Alert;
 
                         </div>
 
+                        <div class="news_side">
+                            <h3><a href="#">Статьи</a></h3>
+                            <?php
+                            $items = [
+                                    [
+                                            'label'=>'А диссонансное и ассонансные рифмы',
+                                            'url'=>'/assonansnye-i-dissonansnye-rifmy',
+                                    ],
+                                          [
+                                            'label'=>'Мужская рифма',
+                                            'url'=>'/muzhskie-rifmy',
+                                    ],
+                                     [
+                                            'label'=>'Женская рифма',
+                                            'url'=>'/zhenskie-rifmy',
+                                    ],
+
+                            ];
+
+                            echo \yii\widgets\Menu::widget([
+                                'items' => $items,
+                                'itemOptions' => ['class' => '', 'style' => 'font-size = 12px;'],
+                                'submenuTemplate' => "\n<ul class='dropdown-menu' role='menu'>\n{items}\n</ul>\n",
+                                'options' => ['class' => 'nav text-center'],
+                            ]);
+                            ?>
+
+                        </div>
 
                         <div class="baner_side">
-                            <?= $this->render('@votpuskView/layouts/block/adversting/block_3') ;?>ё
+                            <?= $this->render('@votpuskView/layouts/block/adversting/block_3') ;?>
                         </div>
                     </aside>
 

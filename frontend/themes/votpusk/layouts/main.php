@@ -47,8 +47,7 @@ use common\widgets\Alert;
 
 
                         <div class="baner_side">
-                            <?= $this->render('@votpuskView/layouts/block/adversting/block_3') ;?>
-
+                            <?= $this->render('@votpuskView/layouts/block/adversting/block_3') ;?>ё
                         </div>
                     </aside>
 

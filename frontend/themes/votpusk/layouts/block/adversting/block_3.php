@@ -1,12 +1,12 @@
-<!-- Yandex.RTB R-A-653585-2 -->
-<div id="yandex_rtb_R-A-653585-2"></div>
+<!-- Yandex.RTB R-A-632107-3 -->
+<div id="yandex_rtb_R-A-632107-3"></div>
 <script type="text/javascript">
-    (function (w, d, n, s, t) {
+    (function(w, d, n, s, t) {
         w[n] = w[n] || [];
-        w[n].push(function () {
+        w[n].push(function() {
             Ya.Context.AdvManager.render({
-                blockId: "R-A-653585-2",
-                renderTo: "yandex_rtb_R-A-653585-2",
+                blockId: "R-A-632107-3",
+                renderTo: "yandex_rtb_R-A-632107-3",
                 async: true
             });
         });

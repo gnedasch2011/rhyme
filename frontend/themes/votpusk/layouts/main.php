@@ -46,7 +46,7 @@ use common\widgets\Alert;
                         </div>
 
                         <div class="news_side">
-                            <h3><a href="#">Статьи</a></h3>
+                            <h3><a href="#">О РИФМАХ</a></h3>
                             <?php
                             $items = [
                                     [

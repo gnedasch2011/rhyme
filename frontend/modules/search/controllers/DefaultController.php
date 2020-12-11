@@ -17,9 +17,10 @@ class DefaultController extends Controller
     public function actionIndex()
     {
         $SearchQuery = new SearchQuery();
+        $searchWord = $SearchQuery->query;
         if ($SearchQuery->load(\Yii::$app->request->post()) && $SearchQuery->validate()) {
 
-            $searchWord = $SearchQuery->query;
+
 
             $items = Items::searchItems($searchWord);
             return $this->render('resultSearch', [

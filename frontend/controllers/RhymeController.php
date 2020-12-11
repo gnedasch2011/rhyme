@@ -64,7 +64,7 @@ class RhymeController extends Controller
             $SearchRhyme = new SearchRhyme();
 
             $SearchRhyme->query = \Yii::$app->request->get('rhyme');
-
+         
             if (!$SearchRhyme->validate()) {
                 return false;
             };

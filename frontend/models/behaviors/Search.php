@@ -20,7 +20,7 @@ class Search extends \yii\base\Behavior
         $word = $this->owner->find()
             ->where(['word' => $searchWord])
             ->one();
-
+      
 
         //сильные рифмы
 
@@ -33,7 +33,6 @@ class Search extends \yii\base\Behavior
 
 
            $res = $this->regulationsInQuery($res, $searchWord);
-
 
 
             return $res->asArray()->all();

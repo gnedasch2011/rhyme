@@ -46,20 +46,28 @@ use common\widgets\Alert;
                         </div>
 
                         <div class="news_side">
-                            <h3><a href="#">О РИФМАХ</a></h3>
+                            <h3><a href="#">Всё про рифму</a></h3>
                             <?php
                             $items = [
-                                    [
-                                            'label'=>'А диссонансное и ассонансные рифмы',
-                                            'url'=>'/assonansnye-i-dissonansnye-rifmy',
+							[
+                                            'label'=>'Рифмы к словам',
+                                            'url'=>'/',
                                     ],
-                                          [
+									[
+                                            'label'=>'Рифма к именам',
+                                            'url'=>'/names',
+                                    ],
+                                                                              [
                                             'label'=>'Мужская рифма',
                                             'url'=>'/muzhskie-rifmy',
                                     ],
                                      [
                                             'label'=>'Женская рифма',
                                             'url'=>'/zhenskie-rifmy',
+                                    ],
+									[
+                                            'label'=>'Ассонансные и диссонансные рифмы',
+                                            'url'=>'/assonansnye-i-dissonansnye-rifmy',
                                     ],
 
                             ];

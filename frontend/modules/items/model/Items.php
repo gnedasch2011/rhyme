@@ -106,20 +106,27 @@ class Items extends \yii\db\ActiveRecord
 
     public static function searchItems($query)
     {
-        $items = self::find()
-            ->where(['like', 'word',  $query, false])
-            ->orWhere(['like', 'word', '%' . $query . '%', false])
-            ->limit(40)
-            ->orderBy('word')
-            ->all();
-
         $res = [];
 
-        for ($i = 0; $i < count($items); $i++) {
-            $item = $items[$i];
-            $res[$i]['url'] = $item->getDetailUrl();
-            $res[$i]['title'] = $item->getFullTitleName();
-        }
+      if($query){
+          $items = self::find()
+              ->where(['like', 'word',  $query, false])
+              ->orWhere(['like', 'word', '%' . $query . '%', false])
+              ->limit(40)
+              ->orderBy('word')
+              ->all();
+       
+          for ($i = 0; $i < count($items); $i++) {
+              $item = $items[$i];
+              $res[$i]['url'] = $item->getDetailUrl();
+              $res[$i]['title'] = $item->getFullTitleName();
+          }
+      }
+
+
+
+
+
 
         return $res;
     }

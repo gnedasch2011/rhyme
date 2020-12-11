@@ -1,9 +1,26 @@
 <footer>
     <div class="container">
-<!--        <div class="row">-->
-<!--            <div class="col-md-3 col-xs-6">-->
-<!--                <div class="bottom_mnu">-->
-<!--                    <h3><a href="#">Страны</a></h3>-->
+        <div class="row">
+            <div class="col-md-3 col-xs-6">
+                <div class="bottom_mnu" itemscope itemtype="http://schema.org/Organization">
+				
+		  <span itemprop="name">Рифма.ОРГ</span>
+  Контакты:
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    Адрес:
+    <span itemprop="streetAddress">Кузнецкий Мост, 17</span>
+    <span itemprop="postalCode"> 107031</span>
+    <span itemprop="addressLocality">Москва</span>,
+  </div>
+  Телефон:<span itemprop="telephone">+7 980 653–95–94</span>,
+  Электронная почта: <span itemprop="email">info@rifma.org</span>
+</div>
+				
+				
+				
+				
+				
+
 <!--                    <ul>-->
 <!--                        <li><a href="#">Египет</a></li>-->
 <!--                        <li><a href="#">Израиль</a></li>-->
@@ -96,12 +113,10 @@
 <!--                        <a href="#" class="soc_icon"></a>-->
 <!--                        <a href="#" class="soc_icon"></a>-->
 <!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
 
 <div class="hidden"></div>
-
-

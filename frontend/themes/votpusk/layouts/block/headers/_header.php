@@ -26,14 +26,14 @@ $SearchQuery = new SearchQuery();
                         <form action="/search/default/index" method="post">
                             <div class="search_block">
                                 <input type="search" name="SearchQuery[query]" placeholder="Поиск по сайту">
-                                <button type="submit" class="btn_search">Найти</button>
+                                <button type="submit" class="btn_search">Найти рифму</button>
                             </div>
                         </form>
 
-                        <div class="top_user">
+                        <?php /*?><div class="top_user">
                             <button class="user_icon"></button>
                         </div>
-                        <button class="toggle_btn"></button>
+                        <button class="toggle_btn"></button><?php */ ?>
                     </div>
                 </div>
             </div>

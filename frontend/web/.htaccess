@@ -9,3 +9,4 @@ RewriteRule . index.php
 
 RewriteCond %{HTTP_HOST} ^www.rifma.org$ [NC]
 RewriteRule ^(.*)$ http://rifma.org/$1 [R=301,L]
+Redirect 301 /types-of-rhymes /assonansnye-i-dissonansnye-rifmy

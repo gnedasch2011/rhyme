@@ -31,7 +31,7 @@ class DefaultController extends Controller
 
         return $this->render('resultSearch', [
             'items' => $items ?? [],
-            'searchWord' => $searchWord,
+            'searchWord' => $searchWord ?? '',
         ]);
     }
 }

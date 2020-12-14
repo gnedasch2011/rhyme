@@ -12,8 +12,7 @@ class WordHelper extends Model
     {
         $numberOfVowels = 0;
 
-        preg_match_all('/[а-яё]/ui', $word, $matches);
-
+        preg_match_all('/[аеёиоуыэюя]/ui', $word, $matches);
 
         if (isset($matches[0])) {
             $numberOfVowels = count($matches[0]);

@@ -45,7 +45,7 @@ class RhymeController extends Controller
 
     public function actionSearchRhyme()
     {
-
+//        echo "<pre>"; print_r(WordHelper::numberOfVowels('метаморфоза'));die();
         if (\Yii::$app->request->get('rhyme')) {
 
             $SearchRhyme = new SearchRhyme();

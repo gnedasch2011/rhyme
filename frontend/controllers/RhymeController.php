@@ -10,6 +10,7 @@ namespace frontend\controllers;
 
 use app\models\rhyme\HagenOrf;
 use app\models\rhyme\NamesOrf;
+use app\models\rhyme\WordHelper;
 use frontend\models\form\SearchRhyme;
 use http\Url;
 use yii\web\Controller;
@@ -44,7 +45,9 @@ class RhymeController extends Controller
 
     public function actionSearchRhyme()
     {
+
         if (\Yii::$app->request->get('rhyme')) {
+
             $SearchRhyme = new SearchRhyme();
             $SearchRhyme->query = \Yii::$app->request->get('rhyme');
             if (!$SearchRhyme->validate()) {
@@ -52,7 +55,7 @@ class RhymeController extends Controller
             };
             $searchWord = $SearchRhyme->query;
             $HagenOrf = new HagenOrf();
-            $HagenOrf->query = $searchWord;
+            $HagenOrf->query = $searchWord;       
             $HagenOrfs = $HagenOrf->mostAccurateRhymes($searchWord);
             $NamesOrf = new NamesOrf();
             $NamesOrfs = $NamesOrf->mostAccurateRhymes($searchWord);
@@ -99,10 +102,15 @@ class RhymeController extends Controller
                     'label' => $searchWord,
                 );
             }
+         
             $anotherFormWord = $HagenOrf->anotherFormWord();
             $anotherFormWord = $HagenOrf->getArrUrlName([$anotherFormWord]);
+
+            $model = HagenOrf::find()->where(['word'=>$searchWord])->one();
+
             return $this->render('/rhyme/search_page', [
                 'searchWord' => $searchWord,
+                'model' => $model,
                 'rhymesArrGroup' => $rhymesArrGroup,
                 'popularWords' => $popularWords,
                 'anotherFormWord' => $anotherFormWord,

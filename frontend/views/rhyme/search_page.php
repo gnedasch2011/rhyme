@@ -2,6 +2,19 @@
     <h1>Рифма к <?= ($isName) ? 'имени' : 'слову'; ?> <?= $searchWord; ?></h1>
 </div>
 
+<p>
+    <?= $searchWord; ?> - ударный слог "<?= $model->accent; ?>" (Ударение на "<?= $model->accent; ?>
+    "). В слове содержится <?= \app\models\rhyme\WordHelper::numberOfVowels($searchWord); ?> гласные
+    и <?= \app\models\rhyme\WordHelper::numberOfConsonants($searchWord); ?>
+    согласные буквы. Наш генератор подобрал в
+    онлайн-режиме <?= count($rhymesArrGroup, COUNT_RECURSIVE); ?> рифм
+    на <?= implode(',', array_keys($rhymesArrGroup)); ?> слогов. Ниже вы можете осуществить подбор
+    рифм к любым другим словоформам. Надеемся наш сервис станет вашим
+    лучшим помощником при написании стихов и песен.
+</p>
+
+<br>
+
 <?php if (empty($rhymesArrGroup)): ?>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h3>Рифм на такое слово</h3>

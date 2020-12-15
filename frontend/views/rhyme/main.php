@@ -1,11 +1,31 @@
 <?php
 $SearchRhyme = new \frontend\models\form\SearchRhyme();
-?>
+?> <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Рифмы | Виды рифм",
+      "description": "Виды рифм",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/RyiEmCqESsg/maxresdefault.jpg"
+       ],
+      "uploadDate": "2016-03-31T08:00:00+08:00",
+      "duration": "PT1M54S",
+      "contentUrl": "https://www.youtube.com/embed/RyiEmCqESsg?controls=0",
+      "embedUrl": "https://www.youtube.com/embed/RyiEmCqESsg?controls=0",
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": { "@type": "http://schema.org/WatchAction" },
+        "userInteractionCount": 5647018
+      },
+      "regionsAllowed": "NL"
+    }
+    </script>
 
-<h1>Генератор рифмы онлайн</h1>
+<h1>Генератор рифм онлайн</h1>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <p>Введите слово в поле ввода, затем нажмите «Найти» для поиска рифмы к нужному слову. Если в слове есть буква ё, то не
+    <p>Введите слово в поле ввода, затем нажмите «Найти» для поиска рифм к нужному слову. Если в слове есть буква ё, то не
         заменяйте её буквой е.</p>
     <div>
         <form action="/search/default/index" method="post">
@@ -52,7 +72,9 @@ $SearchRhyme = new \frontend\models\form\SearchRhyme();
 			<p>Мы хотим предложить поэтам по всему миру лучший сервис для того, чтобы вы могли работать, а мы могли наслаждаться вашим творчеством! Мы проанализировали сотни тысяч страниц и миллионы строк, чтобы достичь этого!
 			</p>
 			
-             
+			
+			
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/RyiEmCqESsg?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <?php if ($popularWords): ?>

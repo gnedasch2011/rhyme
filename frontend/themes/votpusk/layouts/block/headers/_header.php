@@ -17,7 +17,7 @@ $SearchQuery = new SearchQuery();
                     <div class="top_left">
                         <div class="logo"><a href="/"><img src="/images/main/logo.png"
                                                            alt=""></a></div>
-                        <span class="top_city"><?= Yii::$app->params['mainBreadcrumbsName']; ?></span>
+                        <span class="top_city">rifma.org</span>
                     </div>
                 </div>
                 <div class="col-md-8">

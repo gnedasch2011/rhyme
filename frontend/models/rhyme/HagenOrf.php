@@ -148,6 +148,21 @@ class HagenOrf extends \yii\db\ActiveRecord
 
         return $res;
     }
+    
+    public function getAccentInWord()
+    {
+        if(isset($this->word_with_accent)){
+            $s = 'горизо\'нт';
+            $arr = explode("'", $s);
+            if(isset($arr[0])){
+                $res = mb_substr($arr[0], -2);
+            }
+
+        }
+
+
+        return $res;
+    }
 
 
 }

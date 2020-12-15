@@ -1,10 +1,10 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <h1>Рифма к <?= ($isName) ? 'имени' : 'слову'; ?> <?= $searchWord; ?></h1>
+
 </div>
 
 <p>
-    <?= $searchWord; ?> - ударный слог "<?= $model->accent; ?>" (Ударение на "<?= $model->accent; ?>
-    "). В слове содержится <?= \app\models\rhyme\WordHelper::numberOfVowels($searchWord); ?> гласные
+    <?= $searchWord; ?> - ударный слог "<?= $model->getAccentInWord(); ?>" (Ударение на
+    "<?= $model->getAccentInWord(); ?>"). В слове содержится <?= \app\models\rhyme\WordHelper::numberOfVowels($searchWord); ?> гласные
     и <?= \app\models\rhyme\WordHelper::numberOfConsonants($searchWord); ?>
     согласные буквы. Наш генератор подобрал в
     онлайн-режиме <?= count($rhymesArrGroup, COUNT_RECURSIVE); ?> рифм
